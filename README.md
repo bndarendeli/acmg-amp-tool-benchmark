@@ -4,7 +4,7 @@ This repository contains the analysis scripts and outputs for the ACMG/AMP varia
 
 ## Overview
 
-This benchmark evaluates 14 automated ACMG/AMP variant interpretation tools across multiple clinical variant datasets, analyzing both classification-level and evidence-level concordance with expert-curated reference standards.
+This benchmark evaluates 12 automated or semi-automated ACMG/AMP interpretation tools, represented by 14 benchmark instances, across multiple clinical variant datasets.
 
 ## Repository Structure
 
@@ -50,8 +50,8 @@ This benchmark evaluates 14 automated ACMG/AMP variant interpretation tools acro
 
 ```bash
 # Clone repository
-git clone <repository-url>
-cd acmg-benchmark-analysis
+git clone https://github.com/bndarendeli/acmg-amp-tool-benchmark.git
+cd acmg-amp-tool-benchmark
 
 # Install dependencies
 pip install -r requirements.txt
@@ -78,7 +78,7 @@ data/
     └── ... (other tools)
 ```
 
-**Note:** Tool result files and HGMD-derived datasets are not included in this public release pending redistribution rights review. Contact the authors for data access.
+**Note:** Tool result files and HGMD-derived datasets are not included in this public release pending redistribution rights review. HGMD-derived datasets are not distributed in this repository because of licensing restrictions. Users should obtain the relevant source data directly from the original providers under their applicable terms.
 
 ## Usage
 
@@ -160,37 +160,3 @@ Strength modifiers (e.g., `PM2_Supporting`) are collapsed to canonical forms (e.
 - PNG (300 DPI) for presentations
 - PDF (vector) for publication
 - SVG (vector) for editing
-
-## Citation
-
-If you use these scripts or data, please cite:
-
-[Citation to be added upon publication]
-
-## License
-
-[License to be determined]
-
-## Contact
-
-For questions about the analysis or data access:
-
-- [Contact information to be added]
-
-## Acknowledgments
-
-This work was supported by [funding information to be added].
-
-## Version History
-
-- **v1.0.0** (2026-09-12): Initial public release
-  - Corrected Figure 3 evidence semantics (11,152 ClinGen variants)
-  - Renamed Figure 4 → Figure 5 (evidence-level concordance)
-  - Excluded archival and development artifacts
-  - Clean public-facing documentation
-
-## Notes
-
-- **Archival repository:** The complete development history, including audit trails and reproduction artifacts, is maintained separately
-- **HGMD data:** Tool results and datasets containing HGMD-derived information are not included pending redistribution rights review
-- **Figure numbering:** This release uses the final manuscript figure numbering (Figures 2-5)
