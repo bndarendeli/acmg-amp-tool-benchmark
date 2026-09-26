@@ -1,0 +1,1378 @@
+[
+  {
+    "source": "Results/Intervar_20180118/HGMD_Clinvar_Cancer_hg38_fixed.hg38_multianno.txt",
+    "tool": "InterVar_2018",
+    "bytes": 193411,
+    "sha256": "b12f8cb1ebd77c5550c812c534ae760f41034861ebceebd210e6112e5d1696d3",
+    "parsed_rows": 2000,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/Intervar_20180118/HGMD_Clinvar_Cancer_hg38_notvus_fixed.hg38_multianno.txt",
+    "tool": "InterVar_2018",
+    "bytes": 147251,
+    "sha256": "3b8f84c60159d946c1c3a3a16c5c88968d1b7094fe94e9ab3f6f9d64af34324e",
+    "parsed_rows": 1500,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/Intervar_20180118/HGMD_Clinvar_HL_hg38_fixed.hg38_multianno.txt",
+    "tool": "InterVar_2018",
+    "bytes": 193871,
+    "sha256": "8a2b5b893de9f36874ac977a6fdca6d7d544ca20fc845b0b83af6ec1115ffab1",
+    "parsed_rows": 2000,
+    "duplicate_keys": 9,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/Intervar_20180118/HGMD_Clinvar_HL_hg38_notvus_fixed.hg38_multianno.txt",
+    "tool": "InterVar_2018",
+    "bytes": 144008,
+    "sha256": "75cda80601945fce25c726a6289c348e7800ada0401f4bba01e5fd154b2a1825",
+    "parsed_rows": 1500,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/Intervar_20180118/clingen_28012026_hg38.hg38_multianno.txt",
+    "tool": "InterVar_2018",
+    "bytes": 1450973,
+    "sha256": "4c1364762d9dc0fc55b93cdea4355b4032a61f837448194e385999eaa0fb19c2",
+    "parsed_rows": 11419,
+    "duplicate_keys": 10,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/Intervar_20180118/clingen_28012026_hg38_notvus.hg38_multianno.txt",
+    "tool": "InterVar_2018",
+    "bytes": 917894,
+    "sha256": "5b946368eb3799d174bdc76c852bac80aa7757a03ebd3cee6af669b4b98ad284",
+    "parsed_rows": 7864,
+    "duplicate_keys": 9,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/Intervar_20180118/clingen_cancerpredisposition_hg38_28012026.hg38_multianno.txt",
+    "tool": "InterVar_2018",
+    "bytes": 401450,
+    "sha256": "31cf8f37115f03e42904e19b3d755438c77c04889fa2bf904dd961a86c764d3e",
+    "parsed_rows": 2917,
+    "duplicate_keys": 1,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/Intervar_20180118/clingen_cancerpredisposition_hg38_28012026_notvus.hg38_multianno.txt",
+    "tool": "InterVar_2018",
+    "bytes": 276133,
+    "sha256": "1663e392a04b89e4f3e6ed2ce52d1b5dc7a40e65df0020b6da58e10bf0037836",
+    "parsed_rows": 1657,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/Intervar_20180118/clingen_hearing_loss_hg38_28012026.hg38_multianno.txt",
+    "tool": "InterVar_2018",
+    "bytes": 21097,
+    "sha256": "5ebd7f7d033ddb8e825479630161443143d1e8210e8b1da09673b28bfb6994a9",
+    "parsed_rows": 208,
+    "duplicate_keys": 1,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/Intervar_20180118/clingen_hearing_loss_hg38_28012026_notvus.hg38_multianno.txt",
+    "tool": "InterVar_2018",
+    "bytes": 16042,
+    "sha256": "397bd57e9d97b89ef8ae595fbfd6756d8105fbc3dbe4eda4ec9abc5b3a2c2a53",
+    "parsed_rows": 159,
+    "duplicate_keys": 1,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/Intervar_20250721/HGMD_Clinvar_Cancer_hg38_fixed.hg38_multianno.txt",
+    "tool": "InterVar_2025",
+    "bytes": 190881,
+    "sha256": "d9dc22c664a58a32941033c025b06f1eb1defa6b18809fad67edc2770c9573d6",
+    "parsed_rows": 2000,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/Intervar_20250721/HGMD_Clinvar_Cancer_hg38_notvus_fixed.hg38_multianno.txt",
+    "tool": "InterVar_2025",
+    "bytes": 141605,
+    "sha256": "41fb4301db5fb006d12bbe201e2e575f223929b307d78a9b62565f605edd1b1e",
+    "parsed_rows": 1500,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/Intervar_20250721/HGMD_Clinvar_HL_hg38_fixed.hg38_multianno.txt",
+    "tool": "InterVar_2025",
+    "bytes": 195464,
+    "sha256": "757115d089f5b0c3088f5e6020f0c6b6c584183c6b3972535c16c3a0a5db7c36",
+    "parsed_rows": 2000,
+    "duplicate_keys": 9,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/Intervar_20250721/HGMD_Clinvar_HL_hg38_notvus_fixed.hg38_multianno.txt",
+    "tool": "InterVar_2025",
+    "bytes": 146005,
+    "sha256": "6f68799f4f984f4cc693782308b46095fe937903543ab4e58e2ab3c935df3cf8",
+    "parsed_rows": 1500,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/Intervar_20250721/clingen_28012026_hg38.hg38_multianno.txt",
+    "tool": "InterVar_2025",
+    "bytes": 1466921,
+    "sha256": "02971d1006b0b8a4b196c0c2d1a82f57401516701157125582fc9f5e699d4501",
+    "parsed_rows": 11419,
+    "duplicate_keys": 10,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/Intervar_20250721/clingen_28012026_hg38_notvus.hg38_multianno.txt",
+    "tool": "InterVar_2025",
+    "bytes": 930719,
+    "sha256": "c6cbfc7e6a983d4ad7925d08cc1fbe007618962646d1ccaf28572884456ec5ae",
+    "parsed_rows": 7864,
+    "duplicate_keys": 9,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/Intervar_20250721/clingen_cancerpredisposition_hg38_28012026.hg38_multianno.txt",
+    "tool": "InterVar_2025",
+    "bytes": 404434,
+    "sha256": "50a077eb972ee9e2f675e590fe3e88e901e074065b22a9d3db7946373fe00e1b",
+    "parsed_rows": 2917,
+    "duplicate_keys": 1,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/Intervar_20250721/clingen_cancerpredisposition_hg38_28012026_notvus.hg38_multianno.txt",
+    "tool": "InterVar_2025",
+    "bytes": 279170,
+    "sha256": "90cdbb2bc2885cf7dfa891abb2104ed1aa3fc9b0b987519e4d41ccd4e6dbba8d",
+    "parsed_rows": 1657,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/Intervar_20250721/clingen_hearing_loss_hg38_28012026.hg38_multianno.txt",
+    "tool": "InterVar_2025",
+    "bytes": 21185,
+    "sha256": "e960fc1cb2f41bd93947c5322b36a5487d6f12150518ac79c89396d81885cc1b",
+    "parsed_rows": 208,
+    "duplicate_keys": 1,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/Intervar_20250721/clingen_hearing_loss_hg38_28012026_notvus.hg38_multianno.txt",
+    "tool": "InterVar_2025",
+    "bytes": 16123,
+    "sha256": "f97caa91966f5fd0600a4ea72edb100caed33551cfdd57d19f54d01bee852de5",
+    "parsed_rows": 159,
+    "duplicate_keys": 1,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/BIAS/HGMD_Clinvar_Cancer_hg38.tsv",
+    "tool": "BIAS",
+    "bytes": 2141668,
+    "sha256": "5ae4f770189c33e82f6d8fee9590c863246744f3ffd56e81978ca37eb70a730f",
+    "parsed_rows": 2000,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/BIAS/HGMD_Clinvar_Cancer_hg38_notvus.tsv",
+    "tool": "BIAS",
+    "bytes": 1674187,
+    "sha256": "b0e2858dab5b29693b49b2bf0ce749121285e87548d9ce12bb7bb44b249d4771",
+    "parsed_rows": 1500,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/BIAS/HGMD_Clinvar_HL_hg38.tsv",
+    "tool": "BIAS",
+    "bytes": 2362577,
+    "sha256": "768adb786b4b40cc9d0943a430801ca74d205f82a8826a92ce6d88d577ca8578",
+    "parsed_rows": 1996,
+    "duplicate_keys": 9,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/BIAS/HGMD_Clinvar_HL_hg38_notvus.tsv",
+    "tool": "BIAS",
+    "bytes": 1855503,
+    "sha256": "250cdc7a9dd01206f5665d51ad9be10154fe54715faebb7e603e6d0d1f17fd29",
+    "parsed_rows": 1496,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/BIAS/clingen_28012026_hg38.tsv",
+    "tool": "BIAS",
+    "bytes": 13740715,
+    "sha256": "db4bb734c07918d2c81511a81b8f8729927527235ece818aa0ca56dbeb15cf56",
+    "parsed_rows": 11419,
+    "duplicate_keys": 10,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/BIAS/clingen_28012026_hg38_notvus.tsv",
+    "tool": "BIAS",
+    "bytes": 9919830,
+    "sha256": "46c83d3a1694d15209461869fdb95fff023691795ab054539cc7956bff053590",
+    "parsed_rows": 7864,
+    "duplicate_keys": 7,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/BIAS/clingen_cancerpredisposition_hg38_28012026.tsv",
+    "tool": "BIAS",
+    "bytes": 3334396,
+    "sha256": "155e23a01682751c6fccc6e65b8d81e86fcaa51c20b756c74bd13cbee92f177a",
+    "parsed_rows": 2917,
+    "duplicate_keys": 1,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/BIAS/clingen_cancerpredisposition_hg38_28012026_notvus.tsv",
+    "tool": "BIAS",
+    "bytes": 2085014,
+    "sha256": "0051e47fa76f0ac2769aa9553bf2451b0a8f7d41fc4283d627fb30b704510581",
+    "parsed_rows": 1657,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/BIAS/clingen_hearing_loss_hg38_28012026.tsv",
+    "tool": "BIAS",
+    "bytes": 269893,
+    "sha256": "a99378f149ffae8e88e13511b49e80a022c7a44103c0b0a8a291de98c5aafdd4",
+    "parsed_rows": 208,
+    "duplicate_keys": 1,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/BIAS/clingen_hearing_loss_hg38_28012026_notvus.tsv",
+    "tool": "BIAS",
+    "bytes": 211084,
+    "sha256": "8287389bc5ed5fcdd89ccf3678f0992fbe641d602e02125f500a80533d2c6386",
+    "parsed_rows": 159,
+    "duplicate_keys": 1,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/CharGer_local/HGMD_Clinvar_Cancer_hg38_CharGer_local_annotated_VEPv97_results.tsv",
+    "tool": "CharGer_Local",
+    "bytes": 7949418,
+    "sha256": "548021778af8b50b9ecb721ef89f7d77775b7133ba915e6c625d78e8b843eab2",
+    "parsed_rows": 2000,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/CharGer_local/HGMD_Clinvar_Cancer_hg38_notvus_CharGer_local_annotated_VEPv97_results.tsv",
+    "tool": "CharGer_Local",
+    "bytes": 6028216,
+    "sha256": "ca08054f04827f4a1d753a62344d6f9b468c63f663008d86f3b431dd51b1be88",
+    "parsed_rows": 1500,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/CharGer_local/HGMD_Clinvar_HL_hg38_CharGer_local_annotated_VEPv97_results.tsv",
+    "tool": "CharGer_Local",
+    "bytes": 5473499,
+    "sha256": "c43a29edc948408cf2af67b498882dbe90d8d5cbf86d237cf3a966da20389903",
+    "parsed_rows": 1996,
+    "duplicate_keys": 9,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/CharGer_local/HGMD_Clinvar_HL_hg38_notvus_CharGer_local_annotated_VEPv97_results.tsv",
+    "tool": "CharGer_Local",
+    "bytes": 4530258,
+    "sha256": "05b7b236eb73abffda88835f4fbadbba7bd10e632273c8449a0d76c345152afb",
+    "parsed_rows": 1496,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/CharGer_local/clingen_28012026_hg38_fixed_CharGer_local_annotated_VEPv97_results.tsv",
+    "tool": "CharGer_Local",
+    "bytes": 83484036,
+    "sha256": "3a89a6b1340c9e870f59a14894ff23f13b688a5bc36406720100dc7ca3815f9d",
+    "parsed_rows": 11419,
+    "duplicate_keys": 10,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/CharGer_local/clingen_28012026_hg38_notvus_fixed_CharGer_local_annotated_VEPv97_results.tsv",
+    "tool": "CharGer_Local",
+    "bytes": 67809714,
+    "sha256": "21101d069a52d6d5c9bc2cdb39f38ac5562fd0b0898cef9c780b733c6a14ee99",
+    "parsed_rows": 7864,
+    "duplicate_keys": 7,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/CharGer_local/clingen_cancerpredisposition_hg38_28012026_fixed_CharGer_local_annotated_VEPv97_results.tsv",
+    "tool": "CharGer_Local",
+    "bytes": 14670054,
+    "sha256": "6153a3e0fb1b02bbc8b68dc2cbc2c9734ca6fef497b24da1caf95895d3a68d44",
+    "parsed_rows": 2917,
+    "duplicate_keys": 1,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/CharGer_local/clingen_cancerpredisposition_hg38_28012026_notvus_fixed_CharGer_local_annotated_VEPv97_results.tsv",
+    "tool": "CharGer_Local",
+    "bytes": 9763161,
+    "sha256": "dc105b68127fe6c90b7191cb628fe495bf768758cbb6ad84c42f6a0bfc29132c",
+    "parsed_rows": 1657,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/CharGer_local/clingen_hearing_loss_hg38_28012026_fixed_CharGer_local_annotated_VEPv97_results.tsv",
+    "tool": "CharGer_Local",
+    "bytes": 681666,
+    "sha256": "6f250ca5afa0462ca66bf804470d2d7430b5f8c2e01b19596af5926f78b5e1b6",
+    "parsed_rows": 208,
+    "duplicate_keys": 1,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/CharGer_local/clingen_hearing_loss_hg38_28012026_notvus_fixed_CharGer_local_annotated_VEPv97_results.tsv",
+    "tool": "CharGer_Local",
+    "bytes": 511574,
+    "sha256": "02f68e40228b8ef35439202f83f00b5e7ce883fcef4756affaec284c5b4dd6ac",
+    "parsed_rows": 159,
+    "duplicate_keys": 1,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/CharGer_online/HGMD_Clinvar_Cancer_hg38_CharGer_online_annotated_and_local_ClinVar_results.tsv",
+    "tool": "CharGer_Online",
+    "bytes": 1296094,
+    "sha256": "f26f12f8bc349e6a6a4d8c1417a95478cdb98f22390469763af20f6cc5882292",
+    "parsed_rows": 2000,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/CharGer_online/HGMD_Clinvar_Cancer_hg38_notvus_CharGer_online_annotated_and_local_ClinVar_results.tsv",
+    "tool": "CharGer_Online",
+    "bytes": 892617,
+    "sha256": "29bca2438cf2d07e6e151b90a7d294fd462b1ee364cb830d94db484db43e56ca",
+    "parsed_rows": 1500,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/CharGer_online/HGMD_Clinvar_HL_hg38_CharGer_online_annotated_and_local_ClinVar_results.tsv",
+    "tool": "CharGer_Online",
+    "bytes": 1225240,
+    "sha256": "a443144fe76f797cd77938e7a4e83b23456974144ee86c3af87f4d3ee8967a82",
+    "parsed_rows": 2000,
+    "duplicate_keys": 9,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/CharGer_online/HGMD_Clinvar_HL_hg38_notvus_CharGer_online_annotated_and_local_ClinVar_results.tsv",
+    "tool": "CharGer_Online",
+    "bytes": 856287,
+    "sha256": "33c1fca4f21cf0bf93e90ba3871ce502fd45fcdb6dcc0fad859f046640348945",
+    "parsed_rows": 1500,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/CharGer_online/clingen_28012026_hg38_fixed_CharGer_online_annotated_and_local_ClinVar_results.tsv",
+    "tool": "CharGer_Online",
+    "bytes": 7343797,
+    "sha256": "5fcab775bdc7b9480a603af3d8221481d40bbbc4a5f1b1be352377516c75d34d",
+    "parsed_rows": 11419,
+    "duplicate_keys": 10,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/CharGer_online/clingen_28012026_hg38_notvus_fixed_CharGer_online_annotated_and_local_ClinVar_results.tsv",
+    "tool": "CharGer_Online",
+    "bytes": 5381331,
+    "sha256": "bf1aaccf0905b0cd4b3c55f963fd8ca45df6d4e098e1f6cd06ff48dad9273bc5",
+    "parsed_rows": 7864,
+    "duplicate_keys": 7,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/CharGer_online/clingen_cancerpredisposition_hg38_28012026_fixed_CharGer_online_annotated_and_local_ClinVar_results.tsv",
+    "tool": "CharGer_Online",
+    "bytes": 2233834,
+    "sha256": "aaf55840bd1969cab0707b1d1beb77d0a08da01e4287bb482861604afe380924",
+    "parsed_rows": 2917,
+    "duplicate_keys": 1,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/CharGer_online/clingen_cancerpredisposition_hg38_28012026_notvus_fixed_CharGer_online_annotated_and_local_ClinVar_results.tsv",
+    "tool": "CharGer_Online",
+    "bytes": 1488719,
+    "sha256": "4ea72b7522140844ea858d41bdbd6c8a64bf50e979e108c2c4e0d9036a7dae07",
+    "parsed_rows": 1657,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/CharGer_online/clingen_hearing_loss_hg38_28012026_fixed_CharGer_online_annotated_and_local_ClinVar_results.tsv",
+    "tool": "CharGer_Online",
+    "bytes": 116044,
+    "sha256": "0287933aab21f10cbdd978c81a1dee144f0c86c5181f758abdcadee3d9eb97f0",
+    "parsed_rows": 208,
+    "duplicate_keys": 1,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/CharGer_online/clingen_hearing_loss_hg38_28012026_notvus_fixed_CharGer_online_annotated_and_local_ClinVar_results.tsv",
+    "tool": "CharGer_Online",
+    "bytes": 88922,
+    "sha256": "2a0459f48adf24238bbb36b60893dac683ee9a4d0167de85a215167f3e588373",
+    "parsed_rows": 159,
+    "duplicate_keys": 1,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/DiabloACMG/HGMD_hg38_Clinvar_Cancer_annotated.tsv",
+    "tool": "DiabloACMG",
+    "bytes": 24597684,
+    "sha256": "5771e36ec8a41372c5e0cbfc0d0bee0c98ab27850f104cd562909bdc517d5037",
+    "parsed_rows": 2000,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/DiabloACMG/HGMD_hg38_Clinvar_Cancer_notvus_annotated.tsv",
+    "tool": "DiabloACMG",
+    "bytes": 21590310,
+    "sha256": "6ff30cccf53c2fed9fb70ff94c6c203a3d8e7867fd7d48960d41ffa324ccff3a",
+    "parsed_rows": 1500,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/DiabloACMG/HGMD_hg38_Clinvar_HL_annotated.tsv",
+    "tool": "DiabloACMG",
+    "bytes": 20710195,
+    "sha256": "b2a2b1c47c2de15ace928b2c633815ee03bd3cbbac380d8bfbe1ef7ae897597a",
+    "parsed_rows": 1987,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/DiabloACMG/HGMD_hg38_Clinvar_HL_notvus_annotated.tsv",
+    "tool": "DiabloACMG",
+    "bytes": 17961161,
+    "sha256": "d8ac66bcccd12f3891bead277b396ede302305fc56eb8ce6371658414863918d",
+    "parsed_rows": 1496,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/DiabloACMG/clingen_hg38_28012026_annotated.tsv",
+    "tool": "DiabloACMG",
+    "bytes": 150017858,
+    "sha256": "45adaa90deba2f5e920bd2078f3362f656ca4ae98305f54bc970e6af263b12f0",
+    "parsed_rows": 11406,
+    "duplicate_keys": 2,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/DiabloACMG/clingen_hg38_28012026_notvus_fixed_annotated.tsv",
+    "tool": "DiabloACMG",
+    "bytes": 106435837,
+    "sha256": "1aa392182d44bd6592c888bf754cca4e991c8e0e5afa6eb10991ea5453b2d847",
+    "parsed_rows": 7855,
+    "duplicate_keys": 2,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/DiabloACMG/clingen_hg38_cancerpredisposition_fixed_annotated.tsv",
+    "tool": "DiabloACMG",
+    "bytes": 33864048,
+    "sha256": "6f3231262d410a13ab889ecea1cc1ab35bf87e43762785abaf31bf4b301d3641",
+    "parsed_rows": 2914,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/DiabloACMG/clingen_hg38_cancerpredisposition_notvus_fixed_annotated.tsv",
+    "tool": "DiabloACMG",
+    "bytes": 21153059,
+    "sha256": "208e1b4e5b185770a138a81547e0e8244d62d4c7abae8b2b17a3088d9310b27e",
+    "parsed_rows": 1655,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/DiabloACMG/clingen_hg38_hearing_loss_annotated.tsv",
+    "tool": "DiabloACMG",
+    "bytes": 1949151,
+    "sha256": "5f055847d1e06da00889088eed62d4283cc2eb7f95e236def906bb4888b3b43a",
+    "parsed_rows": 207,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/DiabloACMG/clingen_hg38_hearing_loss_notvus_annotated.tsv",
+    "tool": "DiabloACMG",
+    "bytes": 1331405,
+    "sha256": "aa89e912d11742ba6516089839781ea3e0d078623d50d0766c8784728d1410a2",
+    "parsed_rows": 158,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/Exomiser/HGMD_Clinvar_Cancer_hg38-exomiser.variants.tsv",
+    "tool": "Exomiser",
+    "bytes": 1037928,
+    "sha256": "7e7ae0af645063a91aaa3ca92cb4b0605925ceee7a5cb56de3f08db8ea681579",
+    "parsed_rows": 3203,
+    "duplicate_keys": 1578,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/Exomiser/HGMD_Clinvar_Cancer_hg38_notvus-exomiser.variants.tsv",
+    "tool": "Exomiser",
+    "bytes": 778653,
+    "sha256": "4b501365d93136e251f71098c391529fdae6b758815f0c1c0ab1de7710db996c",
+    "parsed_rows": 2498,
+    "duplicate_keys": 1227,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/Exomiser/HGMD_Clinvar_HL_hg38-exomiser.variants.tsv",
+    "tool": "Exomiser",
+    "bytes": 1125013,
+    "sha256": "25944e20efb217468b77b509223f4e4d984abd9dae78d119a5c6d9e004967603",
+    "parsed_rows": 2960,
+    "duplicate_keys": 1431,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/Exomiser/HGMD_Clinvar_HL_hg38_notvus-exomiser.variants.tsv",
+    "tool": "Exomiser",
+    "bytes": 753600,
+    "sha256": "070ac4e3a9c22c20bf36f5552c9b4e0677175dc81c39ed6fd6a6a57b48ab0f56",
+    "parsed_rows": 1996,
+    "duplicate_keys": 950,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/Exomiser/clingen_28012026_hg38-exomiser.variants.tsv",
+    "tool": "Exomiser",
+    "bytes": 7919201,
+    "sha256": "5948dc953cd44d26944fe77e5540a2eeac2a096d480e1d28c696a55fd8c63e3f",
+    "parsed_rows": 20254,
+    "duplicate_keys": 9802,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/Exomiser/clingen_28012026_hg38_notvus_gatk-exomiser.variants.tsv",
+    "tool": "Exomiser",
+    "bytes": 5529544,
+    "sha256": "e0e229694769237f0b10f9dd88519ea0735206efec90242136baad42da243a11",
+    "parsed_rows": 13612,
+    "duplicate_keys": 6510,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/Exomiser/clingen_cancerpredisposition_hg38_28012026-exomiser.variants.tsv",
+    "tool": "Exomiser",
+    "bytes": 2379939,
+    "sha256": "6dd3b7e63b33ae21e6f36aabb2433939585e6a7804473be2cc66e5333d31cff6",
+    "parsed_rows": 4986,
+    "duplicate_keys": 2450,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/Exomiser/clingen_cancerpredisposition_hg38_28012026_notvus-exomiser.variants.tsv",
+    "tool": "Exomiser",
+    "bytes": 1568954,
+    "sha256": "8bdd7bb18669b2bf414c9ae40fab9f9bbec911d48b70a08aab59b61a68d8c87f",
+    "parsed_rows": 2631,
+    "duplicate_keys": 1274,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/Exomiser/clingen_hearing_loss_hg38_28012026-exomiser.variants.tsv",
+    "tool": "Exomiser",
+    "bytes": 145567,
+    "sha256": "1d2f9dcd596bced879e648ac86a32b414c1299c48c7cff0eee3be9d78f922a84",
+    "parsed_rows": 340,
+    "duplicate_keys": 144,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/Exomiser/clingen_hearing_loss_hg38_28012026_notvu-exomiser.variants.tsv",
+    "tool": "Exomiser",
+    "bytes": 108319,
+    "sha256": "08ef2295c7d95cba81a89b476fd2b094bf625363be57095850025d0b3dfc7f8a",
+    "parsed_rows": 256,
+    "duplicate_keys": 107,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/Genebe/HGMD_Clinvar_Cancer_hg38_genebe.vcf",
+    "tool": "Genebe",
+    "bytes": 17010937,
+    "sha256": "aa0bf44d3d78182aaecdafbe92aa75f4a7ef7fab0745fb39617af552d4a26288",
+    "parsed_rows": 2000,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/Genebe/HGMD_Clinvar_Cancer_hg38_notvus_genebe.vcf",
+    "tool": "Genebe",
+    "bytes": 15178672,
+    "sha256": "467c7163109d19aa5b3fa1a4fd7cb87b5293523d826438feb5b43b9c4b21d0ab",
+    "parsed_rows": 1500,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/Genebe/HGMD_Clinvar_HL_hg38_genebe.vcf",
+    "tool": "Genebe",
+    "bytes": 5357557,
+    "sha256": "ac1b8a2c9aa5303527644681e8e3bbaba8b37d4210c5600758e2da898ae76193",
+    "parsed_rows": 1996,
+    "duplicate_keys": 9,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/Genebe/HGMD_Clinvar_HL_hg38_notvus_genebe.vcf",
+    "tool": "Genebe",
+    "bytes": 4117682,
+    "sha256": "571cf5cf914cccb46ede7c8d817533ef21990d6e5b8988852174c6de2be637a4",
+    "parsed_rows": 1496,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/Genebe/clingen_28012026_hg38_genebe.vcf",
+    "tool": "Genebe",
+    "bytes": 63317118,
+    "sha256": "188bf5fcf64ac6c9ab0beca1e45f34f2fda15700c3811ba4f4a01d4248bb1bb2",
+    "parsed_rows": 11419,
+    "duplicate_keys": 10,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/Genebe/clingen_28012026_hg38_notvus_genebe.vcf",
+    "tool": "Genebe",
+    "bytes": 43584661,
+    "sha256": "e9f88bc317bdeeaaa8b202a934f2a0a73c81b511840cb6ad2fed960438ea55b2",
+    "parsed_rows": 7864,
+    "duplicate_keys": 7,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/Genebe/clingen_cancerpredisposition_hg38_28012026_genebe.vcf",
+    "tool": "Genebe",
+    "bytes": 15839072,
+    "sha256": "057925c8c4fe627267656c2b36f01f7406b39dc83c93c70231412c6f67dae993",
+    "parsed_rows": 2917,
+    "duplicate_keys": 1,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/Genebe/clingen_cancerpredisposition_hg38_28012026_notvus_genebe.vcf",
+    "tool": "Genebe",
+    "bytes": 9405387,
+    "sha256": "ed2a1fa193a498b87daa5e29eb5796e3bf6660eca5792a98578693aedb9054ba",
+    "parsed_rows": 1657,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/Genebe/clingen_hearing_loss_hg38_28012026_genebe.vcf",
+    "tool": "Genebe",
+    "bytes": 742852,
+    "sha256": "1ebcd4fbddf84245ca765443fd129ea598785a364b8ff748f2669eca44531af4",
+    "parsed_rows": 208,
+    "duplicate_keys": 1,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/Genebe/clingen_hearing_loss_hg38_28012026_notvus_genebe.vcf",
+    "tool": "Genebe",
+    "bytes": 562742,
+    "sha256": "86f5d1ca9b43dfc62ffa63354e39ff2ae6d3b7900f4d37bba63a5757b2bb4d5a",
+    "parsed_rows": 159,
+    "duplicate_keys": 1,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/Genebe/run_genebe.txt",
+    "tool": "Genebe",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "status": "no parsed rows",
+    "parser_messages": ""
+  },
+  {
+    "source": "Results/TAPES/tapes_HGMD_Clinvar_Cancer_hg38.csv",
+    "tool": "TAPES",
+    "bytes": 5921668,
+    "sha256": "5fe4241ed7d683e6016fd6b4dbe56b31f9d9534ddf071b1edeb6527a295c5b04",
+    "parsed_rows": 999,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/TAPES/tapes_HGMD_Clinvar_Cancer_hg38_notvus.csv",
+    "tool": "TAPES",
+    "bytes": 2927746,
+    "sha256": "e201ee490fcbd3f08e63cb87da709d6d9c81bcdb64550a481d63d0fa343f44f9",
+    "parsed_rows": 499,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/TAPES/tapes_HGMD_Clinvar_HL_hg38.csv",
+    "tool": "TAPES",
+    "bytes": 3274501,
+    "sha256": "080155d2bb546b581080ec4eb6dc36dcff4192da1604a7b23d1691571573f887",
+    "parsed_rows": 999,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/TAPES/tapes_HGMD_Clinvar_HL_hg38_notvus.csv",
+    "tool": "TAPES",
+    "bytes": 1671871,
+    "sha256": "b693d1aef4abf261b479c1cb1c98402e438792885181c036a637d0797667795e",
+    "parsed_rows": 499,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/TAPES/tapes_clingen_28012026_hg38_fixed.csv",
+    "tool": "TAPES",
+    "bytes": 48009251,
+    "sha256": "3e77c945622e7a0af6af3bd1d66c1a32bb7568da64e1c25d422625b102917a05",
+    "parsed_rows": 11419,
+    "duplicate_keys": 10,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/TAPES/tapes_clingen_28012026_hg38_notvus_fixed.csv",
+    "tool": "TAPES",
+    "bytes": 32712216,
+    "sha256": "f4797d49aafc09f91bdddc34c0fb240558bb3a0b5b8547f2b0669e7305484d79",
+    "parsed_rows": 7864,
+    "duplicate_keys": 7,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/TAPES/tapes_clingen_cancerpredisposition_hg38_28012026_fixed.csv",
+    "tool": "TAPES",
+    "bytes": 15087778,
+    "sha256": "b2becdc702dac250456f0ccb1dc4f3d0073f364a9427c630c5efd2f84c9f02c4",
+    "parsed_rows": 2917,
+    "duplicate_keys": 1,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/TAPES/tapes_clingen_cancerpredisposition_hg38_28012026_notvus_fixed.csv",
+    "tool": "TAPES",
+    "bytes": 8982454,
+    "sha256": "b8f640a00c1a75e0902c07d14e6d73325cd4f1f562d3bb8b90f9990c62005133",
+    "parsed_rows": 1657,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/TAPES/tapes_clingen_hearing_loss_hg38_28012026_fixed.csv",
+    "tool": "TAPES",
+    "bytes": 771650,
+    "sha256": "270ee6191d984aed20e7576c9b61a5b6011ba855aa7af1e34376361ef8c58f47",
+    "parsed_rows": 208,
+    "duplicate_keys": 1,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/TAPES/tapes_clingen_hearing_loss_hg38_28012026_notvus_fixed.csv",
+    "tool": "TAPES",
+    "bytes": 563000,
+    "sha256": "d014da96a4191e3fccc8dfa73659daaafe933c8c27f32eff78f91a294fbbb3d2",
+    "parsed_rows": 159,
+    "duplicate_keys": 1,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/Franklin/merged_HGMD_Clinvar_Cancer_hg19_last_single_snp_variants.csv",
+    "tool": "Franklin",
+    "bytes": 210578,
+    "sha256": "6b852ebdbd97891cc1b3ddf95980215a205518d245859c9c4204aeaada046377",
+    "parsed_rows": 1331,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/Franklin/merged_HGMD_Clinvar_Cancer_hg19_notvus_last_single_snp_variants.csv",
+    "tool": "Franklin",
+    "bytes": 156558,
+    "sha256": "55818b23c22dbdf2cc45fc3e8fc62618bf91805ff3d191bebbc745905e0aacbe",
+    "parsed_rows": 1002,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/Franklin/merged_HGMD_Clinvar_HL_hg19_last_single_snp_variants.csv",
+    "tool": "Franklin",
+    "bytes": 251484,
+    "sha256": "d452233723ae6c74bc77f038e41257a62de861f02daa35f202c4788106a26ae5",
+    "parsed_rows": 1530,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/Franklin/merged_HGMD_Clinvar_HL_hg19_notvus_last_single_snp_variants.csv",
+    "tool": "Franklin",
+    "bytes": 172586,
+    "sha256": "0e9d67dafc28ccf9563985ed2f2829092393a559b5b24012a3de015405f24bff",
+    "parsed_rows": 1055,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/Franklin/merged_all_clingen_28012026_hg19_last_single_snp_variants.csv",
+    "tool": "Franklin",
+    "bytes": 1625876,
+    "sha256": "072de3fdf93901f7142ba66fd3b934455dfe31038b6fd2806551659acc0b7ae5",
+    "parsed_rows": 9434,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/Franklin/merged_clingen_28012026_hg19_notvus_last_single_snp_variants.csv",
+    "tool": "Franklin",
+    "bytes": 1101706,
+    "sha256": "53a8c80ba41fe9f63c7808c21f6f87f3a7e71afee2b9581b63847ddd8dfa8726",
+    "parsed_rows": 6302,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/Franklin/merged_clingen_cancerpredisposition_hg19_28012026_last_single_snp_variants.csv",
+    "tool": "Franklin",
+    "bytes": 337216,
+    "sha256": "fc3407b39031b9655c398c642d0aeb41f73d55f6d04670666525970a0ae1590f",
+    "parsed_rows": 2078,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/Franklin/merged_clingen_cancerpredisposition_hg19_28012026_notvus_last_single_snp_variants.csv",
+    "tool": "Franklin",
+    "bytes": 166295,
+    "sha256": "40b1ad2ea118ac5031ad49105a0d2e0ca9b219239ad585d92aaacc4a811460f8",
+    "parsed_rows": 1024,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/Franklin/merged_variants-clingen_hearing_loss_hg19_28012026_last.csv",
+    "tool": "Franklin",
+    "bytes": 33784,
+    "sha256": "aae821a45e0742668b5f67d1455ac70ee972a826da3e03e177ae082babf2ce2f",
+    "parsed_rows": 194,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/Franklin/merged_variants-clingen_hl_notvus.csv",
+    "tool": "Franklin",
+    "bytes": 25586,
+    "sha256": "1014cc8bc96fa50bf0024a72444093cba8ad0b7a1bbf3fc698ed619e89c83c12",
+    "parsed_rows": 148,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/AutoGVP/HGMD_Clinvar_Cancer_hg38_FINAL_CLEAN-autogvp-annotated-full_acmg_criteria_parsed.tsv",
+    "tool": "AutoGVP",
+    "bytes": 485619,
+    "sha256": "f06d85ad25f1738d7ae272e75011466ba8a272b4716c1555daa6ed0f022ff91a",
+    "parsed_rows": 1889,
+    "duplicate_keys": 6,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/AutoGVP/HGMD_Clinvar_Cancer_hg38_notvus_FINAL_CLEAN-autogvp-annotated-full_acmg_criteria_parsed.tsv",
+    "tool": "AutoGVP",
+    "bytes": 358789,
+    "sha256": "c844b1dc0455c719a8646d0683dddb9f82fea1b2d8af32d03ba5560b20129c86",
+    "parsed_rows": 1417,
+    "duplicate_keys": 6,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/AutoGVP/HGMD_Clinvar_HL_hg38_FINAL_CLEAN-autogvp-annotated-full_acmg_criteria_parsed.tsv",
+    "tool": "AutoGVP",
+    "bytes": 505973,
+    "sha256": "f458aedcf127434e5cc60f47958f2a22984347e02fef4cb0112a994b66b96987",
+    "parsed_rows": 1886,
+    "duplicate_keys": 12,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/AutoGVP/HGMD_Clinvar_HL_hg38_notvus_FINAL_CLEAN-autogvp-annotated-full_acmg_criteria_parsed.tsv",
+    "tool": "AutoGVP",
+    "bytes": 370061,
+    "sha256": "291536e53ed350b5e504b8546283a05f757000baa9ff0207aab5cc9d37bad2f7",
+    "parsed_rows": 1399,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/AutoGVP/clingen_28012026_hg38_FINAL_CLEAN-autogvp-annotated-full_acmg_criteria_parsed.tsv",
+    "tool": "AutoGVP",
+    "bytes": 2651366,
+    "sha256": "039523a977d3c9c5246f3f7d8bd6cfcb9b85c1e0876b4ea044296c4f3b3bc4c8",
+    "parsed_rows": 9803,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/AutoGVP/clingen_28012026_hg38_notvus_FINAL_CLEAN-autogvp-annotated-full_acmg_criteria_parsed.tsv",
+    "tool": "AutoGVP",
+    "bytes": 1719238,
+    "sha256": "c623ce099881bf9209e118a1632f26209a472275632eb401a3e77ac93781eb69",
+    "parsed_rows": 6476,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/AutoGVP/clingen_cancerpredisposition_hg38_28012026_FINAL_CLEAN-autogvp-annotated-full_acmg_criteria_parsed.tsv",
+    "tool": "AutoGVP",
+    "bytes": 674736,
+    "sha256": "2e92a1c7f052b476c64ad4860789272c585eb4eba3e8fc5d322a2016fb531b9e",
+    "parsed_rows": 2493,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/AutoGVP/clingen_cancerpredisposition_hg38_28012026_notvus_FINAL_CLEAN-autogvp-annotated-full_acmg_criteria_parsed.tsv",
+    "tool": "AutoGVP",
+    "bytes": 346027,
+    "sha256": "9479322da2d2d4132faf34b10351c3ca6e82e77d5ec4097f1264fd56b55e77f3",
+    "parsed_rows": 1325,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/AutoGVP/clingen_hearing_loss_hg38_28012026_FINAL_CLEAN-autogvp-annotated-full_acmg_criteria_parsed.tsv",
+    "tool": "AutoGVP",
+    "bytes": 53380,
+    "sha256": "66d94d315110a6e60c1dabd8fd17d505e3451590ab319b583e9f4963922631ab",
+    "parsed_rows": 196,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/AutoGVP/clingen_hearing_loss_hg38_28012026_notvus_FINAL_CLEAN-autogvp-annotated-full_acmg_criteria_parsed.tsv",
+    "tool": "AutoGVP",
+    "bytes": 39643,
+    "sha256": "0203bb39ea60ca8736f48f38a2718509248ad789d63ae6144b09ae742a738aea",
+    "parsed_rows": 147,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/VIP-HL/HGMD_Clinvar_HL_hg19_notvus_viphl_results.tsv",
+    "tool": "VIP-HL",
+    "bytes": 159158,
+    "sha256": "67a542c54e0ffbd84f49bc41cee800445cd078cb3793013c18b05a84e1621872",
+    "parsed_rows": 1500,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/VIP-HL/HGMD_Clinvar_HL_hg19_viphl_results.tsv",
+    "tool": "VIP-HL",
+    "bytes": 215618,
+    "sha256": "703d9e93489497efa78db06bc97b5cdba5464012432b5b093494ce8b8d9d91ec",
+    "parsed_rows": 2000,
+    "duplicate_keys": 9,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/VIP-HL/clingen_hearing_loss_28012026_hg19_notvus_viphl_results_2.tsv",
+    "tool": "VIP-HL",
+    "bytes": 17249,
+    "sha256": "841bb5651ab6b5e358f323f20ede8955bca63d14907a4c15579459f2afc618cc",
+    "parsed_rows": 159,
+    "duplicate_keys": 1,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/VIP-HL/clingen_hearing_loss_28012026_hg19_viphl_results.tsv",
+    "tool": "VIP-HL",
+    "bytes": 23256,
+    "sha256": "6113d5b0bc322f33f2dd303e5a9893d2f1d9a96f972d561907ebe64485f989ef",
+    "parsed_rows": 208,
+    "duplicate_keys": 1,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/Cancer SIGVAR/HGMD_Clinvar_Cancer_hg19_CancerSIGVAR_input_formatted_Cancer_SIGVAR_Results.tsv",
+    "tool": "CancerSIGVAR",
+    "bytes": 927357,
+    "sha256": "97173c6d6cee627cfcdff2ea37b034b68aacfdd5c62cd185f8344ffaa6338ab5",
+    "parsed_rows": 1440,
+    "duplicate_keys": 3,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/Cancer SIGVAR/HGMD_Clinvar_Cancer_hg19_notvus_CancerSIGVAR_input_formatted_Cancer_SIGVAR_Results.tsv",
+    "tool": "CancerSIGVAR",
+    "bytes": 927637,
+    "sha256": "ef7791e6e6c5888e7bfb98ff652a203edcfabbcd5b3e60e9f6897ca2b9088cc3",
+    "parsed_rows": 1440,
+    "duplicate_keys": 3,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/Cancer SIGVAR/clingen_cancerpredisposition_28012026_hg19_CancerSIGVAR_input_formatted_Cancer_SIGVAR_Results.tsv",
+    "tool": "CancerSIGVAR",
+    "bytes": 686995,
+    "sha256": "829b3b8cc1e4554c742ec55335be14fd37abd77e7d4ade7056308619d7fcdf9e",
+    "parsed_rows": 995,
+    "duplicate_keys": 6,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/Cancer SIGVAR/clingen_cancerpredisposition_28012026_hg19_notvus_CancerSIGVAR_input_formatted_Cancer_SIGVAR_Results.tsv",
+    "tool": "CancerSIGVAR",
+    "bytes": 561731,
+    "sha256": "1da0b5e099212a937b384d3a8b767e15de88c3a2999b12d5976be0f227474b7c",
+    "parsed_rows": 803,
+    "duplicate_keys": 3,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/CPSR/HGMD_Clinvar_Cancer_hg38_grch38.cpsr.grch38.classification.tsv",
+    "tool": "CPSR",
+    "bytes": 3793289,
+    "sha256": "b6bbc363c886236d986a273f845ed83212ffedd16922bcae4905cb48e2793227",
+    "parsed_rows": 1521,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/CPSR/HGMD_Clinvar_Cancer_hg38_notvus_grch38.cpsr.grch38.classification.tsv",
+    "tool": "CPSR",
+    "bytes": 3673263,
+    "sha256": "ba226f03ba5b63a68ac8b0ab1321adfe9aca0046b2da4888fe29ed178f7d74a9",
+    "parsed_rows": 1453,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/CPSR/HGMD_Clinvar_HL_hg38_grch38.cpsr.grch38.classification.tsv",
+    "tool": "CPSR",
+    "bytes": 179682,
+    "sha256": "fe3a0699d70c52e7412b90d6d388f576725c3a921e20927c9f87c862c9e2731a",
+    "parsed_rows": 140,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/CPSR/HGMD_Clinvar_HL_hg38_notvus_grch38.cpsr.grch38.classification.tsv",
+    "tool": "CPSR",
+    "bytes": 180662,
+    "sha256": "08f367259bc10d4f5522618bf066b8552fc54b87d02ac9dd678c63659a6e81bf",
+    "parsed_rows": 140,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/CPSR/clingen_28012026_hg38_grch38.cpsr.grch38.classification.tsv",
+    "tool": "CPSR",
+    "bytes": 8636133,
+    "sha256": "e4ab478aa85a4ea7e74bce320a99d722c077249b54e77d3d78406ca70b703d77",
+    "parsed_rows": 3614,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/CPSR/clingen_28012026_hg38_notvus_grch38.cpsr.grch38.classification.tsv",
+    "tool": "CPSR",
+    "bytes": 5794780,
+    "sha256": "43063b9c78ed2f328f41c491736703847320406a94c9e489a3e7576b5b047256",
+    "parsed_rows": 2315,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/CPSR/clingen_cancerpred_grch38.cpsr.grch38.classification.tsv",
+    "tool": "CPSR",
+    "bytes": 5433815,
+    "sha256": "d973a95fb2fe4e892739dacc447f50618c77d68611e9fbb1d2c86013cd225957",
+    "parsed_rows": 2587,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/CPSR/clingen_cancerpred_notvus_grch38.cpsr.grch38.classification.tsv",
+    "tool": "CPSR",
+    "bytes": 3368706,
+    "sha256": "a58a121f7d0e62ba745fbb59335e62f2b04499b77a78b7505e996b35472695a6",
+    "parsed_rows": 1522,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/CPSR/clingen_hl_grch38.cpsr.grch38.classification.tsv",
+    "tool": "CPSR",
+    "bytes": 7373,
+    "sha256": "f5029cd28fc6e465704a94b0b4c5105f91daa1c26f42aac37dff04e77c2b1fa1",
+    "parsed_rows": 6,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "Results/CPSR/clingen_hl_notvus_grch38.cpsr.grch38.classification.tsv",
+    "tool": "CPSR",
+    "bytes": 6402,
+    "sha256": "3fc60ebbf1901184855e8acce76784655c51b56819dd4e06d6729e0170b1ab67",
+    "parsed_rows": 5,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "datasets/foxl2/results/foxl2_hg19_franklin.csv",
+    "tool": "Franklin",
+    "bytes": 89086,
+    "sha256": "428128bb3b3f836212facfe4f360979618b0c814071951ba3f65ba770de0b915",
+    "parsed_rows": 288,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "datasets/foxl2/results/foxl2_hg19_viphl.tsv",
+    "tool": "VIP-HL",
+    "bytes": 22444,
+    "sha256": "501ba99d47055a208043f10b2d7a7e4069d4241491bc882e8feaf6e61a8d09a9",
+    "parsed_rows": 290,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "datasets/foxl2/results/foxl2_hg38_BIAS.tsv",
+    "tool": "BIAS",
+    "bytes": 269811,
+    "sha256": "d1e238d011d1fd07f6de0bb1455eb40cfc501754a47c9bb55c8317377e21143e",
+    "parsed_rows": 290,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "datasets/foxl2/results/foxl2_hg38_CharGer_local_annotated_VEPv97_results.tsv",
+    "tool": "CharGer_Local",
+    "bytes": 784586,
+    "sha256": "98db377fe9dc58028332a7a6852e990c52d334461b25b4afa865d9874f33f812",
+    "parsed_rows": 290,
+    "duplicate_keys": 1,
+    "status": "parsed"
+  },
+  {
+    "source": "datasets/foxl2/results/foxl2_hg38_CharGer_online_annotated_and_local_ClinVar_results.tsv",
+    "tool": "CharGer_Online",
+    "bytes": 160053,
+    "sha256": "3ff77220f0a0c90aa7a0c36242074771880e520eb665e18150add7ebdbc879a9",
+    "parsed_rows": 290,
+    "duplicate_keys": 1,
+    "status": "parsed"
+  },
+  {
+    "source": "datasets/foxl2/results/foxl2_hg38_DiabloACMG.tsv",
+    "tool": "DiabloACMG",
+    "bytes": 1812729,
+    "sha256": "8f060e5bf31b9e8f55c151c445fab52ae32a2ad8806ceb597a69c4164f406585",
+    "parsed_rows": 290,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "datasets/foxl2/results/foxl2_hg38_exomiser.tsv",
+    "tool": "Exomiser",
+    "bytes": 180663,
+    "sha256": "86613c15d0cbc8eb7c69e69baa90f9a3e02250e06980e4b119dc911b1e49194f",
+    "parsed_rows": 580,
+    "duplicate_keys": 290,
+    "status": "parsed"
+  },
+  {
+    "source": "datasets/foxl2/results/foxl2_hg38_exomiser_withhpo.tsv",
+    "tool": "Exomiser",
+    "bytes": 180735,
+    "sha256": "e66027ed1cb28401da83f46f7b3c4f048000d3c2f53d03dc9f30c88b2891219f",
+    "parsed_rows": 580,
+    "duplicate_keys": 290,
+    "status": "parsed"
+  },
+  {
+    "source": "datasets/foxl2/results/foxl2_hg38_genebe.vcf",
+    "tool": "Genebe",
+    "bytes": 409502,
+    "sha256": "d0d09e088de9e8a7aa78811e133bfb40252d2c2bdbcae8cc423520a6b17d78f9",
+    "parsed_rows": 290,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "datasets/foxl2/results/foxl2_hg38_intervar_20180118.txt",
+    "tool": "InterVar_2018",
+    "bytes": 29377,
+    "sha256": "0d27de8cf94cd26e8ef5c56bf9ffc920780305e2ca4647fe4a8d18137f72ca86",
+    "parsed_rows": 290,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "datasets/foxl2/results/foxl2_hg38_intervar_20250721.txt",
+    "tool": "InterVar_2025",
+    "bytes": 29821,
+    "sha256": "d79f67e5d45a951cb1bc7b4d666748e0565e55aebf29b5dbeac1838363d40b30",
+    "parsed_rows": 290,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "datasets/foxl2/results/foxl2_hg38_tapes.csv",
+    "tool": "TAPES",
+    "bytes": 992086,
+    "sha256": "770eee37a5af2eb0b1ad5649aa40b5b50316c846d116e8c47ccecc7f74570175",
+    "parsed_rows": 290,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "datasets/foxl2/results_fix/foxl2_hg19_franklin.csv",
+    "tool": "Franklin",
+    "bytes": 52557,
+    "sha256": "9f6ea16331608eddc1065221331781b6c6657c921fbf804b99aa45643d2cd82f",
+    "parsed_rows": 288,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "datasets/foxl2/results_fix/foxl2_hg19_viphl.tsv",
+    "tool": "VIP-HL",
+    "bytes": 35401,
+    "sha256": "95d36280d5fca2ca6e7f5c724f93ac76bb138f9edb437b05f9d0cdce55c6cacc",
+    "parsed_rows": 290,
+    "duplicate_keys": 2,
+    "status": "parsed"
+  },
+  {
+    "source": "datasets/foxl2/results_fix/foxl2_hg38_BIAS.tsv",
+    "tool": "BIAS",
+    "bytes": 269725,
+    "sha256": "2b372f0f4bdf43d69643bed008a22cd6ce55a7dab61659749ebdd69d784ae0d0",
+    "parsed_rows": 290,
+    "duplicate_keys": 2,
+    "status": "parsed"
+  },
+  {
+    "source": "datasets/foxl2/results_fix/foxl2_hg38_CharGer_local_annotated_VEPv97.tsv",
+    "tool": "CharGer_Local",
+    "bytes": 775094,
+    "sha256": "096ad4749e83d9aafaf201cb5b5623b7fcb3dfbf049ceb1b8011d8258e0ae184",
+    "parsed_rows": 290,
+    "duplicate_keys": 2,
+    "status": "parsed"
+  },
+  {
+    "source": "datasets/foxl2/results_fix/foxl2_hg38_CharGer_online.tsv",
+    "tool": "CharGer_Online",
+    "bytes": 146141,
+    "sha256": "dc7bd0be5e6674bf0608d8f776bc756d8c571ecf51222971ea6195f65ad2e47f",
+    "parsed_rows": 290,
+    "duplicate_keys": 2,
+    "status": "parsed"
+  },
+  {
+    "source": "datasets/foxl2/results_fix/foxl2_hg38_DiabloACMG.tsv",
+    "tool": "DiabloACMG",
+    "bytes": 1792989,
+    "sha256": "c5f054b1b857e54cdbd4bc26683948f949986a2ed32e7106ce3aea6265e6f88b",
+    "parsed_rows": 288,
+    "duplicate_keys": 0,
+    "status": "parsed"
+  },
+  {
+    "source": "datasets/foxl2/results_fix/foxl2_hg38_autogvp.tsv",
+    "tool": "AutoGVP",
+    "bytes": 31777,
+    "sha256": "01b414dbf9d98881cebf3a8d0bc0c340aa8e316dac6be515e7fb6d91351a8196",
+    "parsed_rows": 140,
+    "duplicate_keys": 7,
+    "status": "parsed"
+  },
+  {
+    "source": "datasets/foxl2/results_fix/foxl2_hg38_exomiser.tsv",
+    "tool": "Exomiser",
+    "bytes": 168221,
+    "sha256": "451ca9ff2a32822665cc4e1feaec42a81e42b3ab23ab729ff33668b6f707fe7d",
+    "parsed_rows": 576,
+    "duplicate_keys": 288,
+    "status": "parsed"
+  },
+  {
+    "source": "datasets/foxl2/results_fix/foxl2_hg38_genebe.vcf",
+    "tool": "Genebe",
+    "bytes": 424338,
+    "sha256": "591bd6a308dfb800063bae8103c8a12995b8ddb7612461431fb92ae8a3e72910",
+    "parsed_rows": 290,
+    "duplicate_keys": 2,
+    "status": "parsed"
+  },
+  {
+    "source": "datasets/foxl2/results_fix/foxl2_hg38_intervar_20180118.txt",
+    "tool": "InterVar_2018",
+    "bytes": 29363,
+    "sha256": "fc5fe84cb67313b9da7dc792420d62fe018f6187a0cc4e41e4a3f1239e1aad4d",
+    "parsed_rows": 290,
+    "duplicate_keys": 2,
+    "status": "parsed"
+  },
+  {
+    "source": "datasets/foxl2/results_fix/foxl2_hg38_intervar_20250721.txt",
+    "tool": "InterVar_2025",
+    "bytes": 29807,
+    "sha256": "6db8561647b630ca96a96e5b9608304db1eceedd1f42044115dc05bb6f3a23ac",
+    "parsed_rows": 290,
+    "duplicate_keys": 2,
+    "status": "parsed"
+  },
+  {
+    "source": "datasets/foxl2/results_fix/foxl2_hg38_tapes.csv",
+    "tool": "TAPES",
+    "bytes": 1006395,
+    "sha256": "5c103f7be6a6c1b5d260c7d97c6220b8a831ffda95600345006b52aacdc26cdd",
+    "parsed_rows": 290,
+    "duplicate_keys": 2,
+    "status": "parsed"
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "variants": 11409,
+  "missing_reference": 257,
+  "policies": {
+    "exclude_missing_reference": {
+      "sum": 283,
+      "count": 392
+    },
+    "include_missing_reference": {
+      "sum": 392,
+      "count": 392
+    }
+  }
+}

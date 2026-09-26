@@ -1,0 +1,167 @@
+[
+  {
+    "path": "fig2/corrected_call_rates.csv",
+    "equivalent": true,
+    "detail": ""
+  },
+  {
+    "path": "fig3/figures/figure3_clingen_criterion_counts.csv",
+    "equivalent": true,
+    "detail": ""
+  },
+  {
+    "path": "fig3/figures/figure3_clingen_jaccard.csv",
+    "equivalent": true,
+    "detail": ""
+  },
+  {
+    "path": "fig3/figures/figure3_foxl2_criterion_counts.csv",
+    "equivalent": true,
+    "detail": ""
+  },
+  {
+    "path": "fig3/figures/figure3_foxl2_jaccard.csv",
+    "equivalent": true,
+    "detail": ""
+  },
+  {
+    "path": "fig3/jaccard_per_criterion_clingen_28012026.csv",
+    "equivalent": true,
+    "detail": ""
+  },
+  {
+    "path": "fig3/jaccard_per_criterion_foxl2.csv",
+    "equivalent": true,
+    "detail": ""
+  },
+  {
+    "path": "fig4/data/corrected/ClinGen_corrected_metrics.csv",
+    "equivalent": true,
+    "detail": ""
+  },
+  {
+    "path": "fig4/data/corrected/FOXL2_corrected_metrics.csv",
+    "equivalent": true,
+    "detail": ""
+  },
+  {
+    "path": "fig4/data/corrected/HGMD+ClinVar_Cancer_corrected_metrics.csv",
+    "equivalent": true,
+    "detail": ""
+  },
+  {
+    "path": "fig4/data/corrected/HGMD+ClinVar_HL_corrected_metrics.csv",
+    "equivalent": true,
+    "detail": ""
+  },
+  {
+    "path": "fig5/outputs/clingen_supplementary/supplementary_table_clingen_criterion_decomposition.csv",
+    "equivalent": true,
+    "detail": ""
+  },
+  {
+    "path": "fig5/outputs/clingen_supplementary/supplementary_table_clingen_tool_summary.csv",
+    "equivalent": true,
+    "detail": ""
+  },
+  {
+    "path": "fig5/outputs/clingen_supplementary/supplementary_table_tool_capabilities.csv",
+    "equivalent": true,
+    "detail": ""
+  },
+  {
+    "path": "fig5/outputs/fig4_capability_adjusted_summary.csv",
+    "equivalent": true,
+    "detail": ""
+  },
+  {
+    "path": "fig5/outputs/fig4_capability_adjusted_variant_tool.csv",
+    "equivalent": true,
+    "detail": ""
+  },
+  {
+    "path": "fig5/outputs/fig4_classification_vs_evidence.csv",
+    "equivalent": true,
+    "detail": ""
+  },
+  {
+    "path": "fig5/outputs/fig4_common_discordances.csv",
+    "equivalent": true,
+    "detail": ""
+  },
+  {
+    "path": "fig5/outputs/fig4_evidence_distributions.csv",
+    "equivalent": true,
+    "detail": ""
+  },
+  {
+    "path": "fig5/outputs/fig4_jaccard_bins.csv",
+    "equivalent": true,
+    "detail": ""
+  },
+  {
+    "path": "fig5/outputs/fig4_master_variant_tool.csv",
+    "equivalent": true,
+    "detail": ""
+  },
+  {
+    "path": "fig5/outputs/fig4_missing_criteria_decomposition.csv",
+    "equivalent": true,
+    "detail": ""
+  },
+  {
+    "path": "fig5/outputs/fig4_pooled_criterion_drivers.csv",
+    "equivalent": true,
+    "detail": ""
+  },
+  {
+    "path": "fig5/outputs/fig4_summary_by_tool_dataset.csv",
+    "equivalent": true,
+    "detail": ""
+  },
+  {
+    "path": "fig5/outputs/fig4_tool_criterion_drivers.csv",
+    "equivalent": true,
+    "detail": ""
+  },
+  {
+    "path": "fig5/outputs/foxl2_supplementary/foxl2_capability_adjusted_summary.csv",
+    "equivalent": true,
+    "detail": ""
+  },
+  {
+    "path": "fig5/outputs/foxl2_supplementary/foxl2_capability_adjusted_variant_tool.csv",
+    "equivalent": true,
+    "detail": ""
+  },
+  {
+    "path": "fig5/outputs/foxl2_supplementary/foxl2_criterion_missing_decomposition.csv",
+    "equivalent": true,
+    "detail": ""
+  },
+  {
+    "path": "fig5/outputs/foxl2_supplementary/foxl2_fig4_master_table.csv",
+    "equivalent": true,
+    "detail": ""
+  },
+  {
+    "path": "fig5/outputs/foxl2_supplementary/foxl2_tool_evidence_summary.csv",
+    "equivalent": true,
+    "detail": ""
+  },
+  {
+    "path": "fig5/outputs/population_reconciliation.csv",
+    "equivalent": true,
+    "detail": ""
+  },
+  {
+    "path": "fig5/outputs/tool_criterion_capability_matrix.csv",
+    "equivalent": true,
+    "detail": ""
+  },
+  {
+    "path": "fig5/reference/tool_acmg_capabilities.csv",
+    "equivalent": true,
+    "detail": ""
+  }
+]

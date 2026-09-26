@@ -1,0 +1,15 @@
+{
+  "merged_rows": 15433,
+  "dataset_counts": {
+    "clingen_28012026": 11409,
+    "HGMD_Clinvar_HL": 1948,
+    "HGMD_Clinvar_Cancer": 1788,
+    "<missing>": 288
+  },
+  "merged_vs_fixed_columns_equal": true,
+  "merged_vs_fixed_different_cells_by_column": {
+    "Ground_Truth_Classification": 288
+  },
+  "viphl_duplicate_keys": 2,
+  "viphl_label_difference_counts": "raw_parsed_class  merged_class\nUnknown           NaN             8"
+}

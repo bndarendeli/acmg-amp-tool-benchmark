@@ -1,0 +1,393 @@
+tool,criterion,documented_status,operational_status,requirement,source_note
+AutoGVP,PVS1,automated,supported,none,Listed in reference without markers
+AutoGVP,PS1,automated,supported,none,Listed in reference without markers
+AutoGVP,PS2,unsupported,unsupported,n/a,Not listed in reference
+AutoGVP,PS3,unsupported,unsupported,n/a,Not listed in reference
+AutoGVP,PS4,automated,supported,none,Listed in reference without markers
+AutoGVP,PM1,automated,supported,none,Listed in reference without markers
+AutoGVP,PM2,automated,supported,none,Listed in reference without markers
+AutoGVP,PM3,unsupported,unsupported,n/a,Not listed in reference
+AutoGVP,PM4,automated,supported,none,Listed in reference without markers
+AutoGVP,PM5,automated,supported,none,Listed in reference without markers
+AutoGVP,PM6,unsupported,unsupported,n/a,Not listed in reference
+AutoGVP,PP1,unsupported,unsupported,n/a,Not listed in reference
+AutoGVP,PP2,automated,supported,none,Listed in reference without markers
+AutoGVP,PP3,automated,supported,none,Listed in reference without markers
+AutoGVP,PP4,unsupported,unsupported,n/a,Not listed in reference
+AutoGVP,PP5,unsupported,unsupported,n/a,Not listed in reference
+AutoGVP,BA1,automated,supported,none,Listed in reference without markers
+AutoGVP,BS1,automated,supported,none,Listed in reference without markers
+AutoGVP,BS2,automated,supported,none,Listed in reference without markers
+AutoGVP,BS3,unsupported,unsupported,n/a,Not listed in reference
+AutoGVP,BS4,unsupported,unsupported,n/a,Not listed in reference
+AutoGVP,BP1,automated,supported,none,Listed in reference without markers
+AutoGVP,BP2,unsupported,unsupported,n/a,Not listed in reference
+AutoGVP,BP3,automated,supported,none,Listed in reference without markers
+AutoGVP,BP4,automated,supported,none,Listed in reference without markers
+AutoGVP,BP5,unsupported,unsupported,n/a,Not listed in reference
+AutoGVP,BP6,unsupported,unsupported,n/a,Not listed in reference
+AutoGVP,BP7,automated,supported,none,Listed in reference without markers
+BIAS,PVS1,automated,supported,none,Listed in reference without markers
+BIAS,PS1,automated,supported,none,Listed in reference without markers
+BIAS,PS2,unsupported,unsupported,n/a,Not listed in reference
+BIAS,PS3,automated,supported,none,Listed in reference without markers
+BIAS,PS4,automated,supported,none,Listed in reference without markers
+BIAS,PM1,automated,supported,none,Listed in reference without markers
+BIAS,PM2,automated,supported,none,Listed in reference without markers
+BIAS,PM3,unsupported,unsupported,n/a,Not listed in reference
+BIAS,PM4,automated,supported,none,Listed in reference without markers
+BIAS,PM5,automated,supported,none,Listed in reference without markers
+BIAS,PM6,unsupported,unsupported,n/a,Not listed in reference
+BIAS,PP1,unsupported,unsupported,n/a,Not listed in reference
+BIAS,PP2,automated,supported,none,Listed in reference without markers
+BIAS,PP3,automated,supported,none,Listed in reference without markers
+BIAS,PP4,unsupported,unsupported,n/a,Not listed in reference
+BIAS,PP5,automated,supported,none,Listed in reference without markers
+BIAS,BA1,automated,supported,none,Listed in reference without markers
+BIAS,BS1,automated,supported,none,Listed in reference without markers
+BIAS,BS2,automated,supported,none,Listed in reference without markers
+BIAS,BS3,unsupported,unsupported,n/a,Not listed in reference
+BIAS,BS4,unsupported,unsupported,n/a,Not listed in reference
+BIAS,BP1,automated,supported,none,Listed in reference without markers
+BIAS,BP2,unsupported,unsupported,n/a,Not listed in reference
+BIAS,BP3,automated,supported,none,Listed in reference without markers
+BIAS,BP4,automated,supported,none,Listed in reference without markers
+BIAS,BP5,unsupported,unsupported,n/a,Not listed in reference
+BIAS,BP6,automated,supported,none,Listed in reference without markers
+BIAS,BP7,automated,supported,none,Listed in reference without markers
+CharGer_Local,PVS1,automated,supported,none,Listed in reference without markers
+CharGer_Local,PS1,automated,supported,none,Listed in reference without markers
+CharGer_Local,PS2,unsupported,unsupported,n/a,Not listed in reference
+CharGer_Local,PS3,unsupported,unsupported,n/a,Not listed in reference
+CharGer_Local,PS4,unsupported,unsupported,n/a,Not listed in reference
+CharGer_Local,PM1,automated,supported,none,Listed in reference without markers
+CharGer_Local,PM2,automated,supported,none,Listed in reference without markers
+CharGer_Local,PM3,unsupported,unsupported,n/a,Not listed in reference
+CharGer_Local,PM4,automated,supported,none,Listed in reference without markers
+CharGer_Local,PM5,automated,supported,none,Listed in reference without markers
+CharGer_Local,PM6,unsupported,unsupported,n/a,Not listed in reference
+CharGer_Local,PP1,unsupported,unsupported,n/a,Not listed in reference
+CharGer_Local,PP2,automated,supported,none,Listed in reference without markers
+CharGer_Local,PP3,automated,supported,none,Listed in reference without markers
+CharGer_Local,PP4,unsupported,unsupported,n/a,Not listed in reference
+CharGer_Local,PP5,unsupported,unsupported,n/a,Not listed in reference
+CharGer_Local,BA1,automated,supported,none,Listed in reference without markers
+CharGer_Local,BS1,unsupported,unsupported,n/a,Not listed in reference
+CharGer_Local,BS2,unsupported,unsupported,n/a,Not listed in reference
+CharGer_Local,BS3,unsupported,unsupported,n/a,Not listed in reference
+CharGer_Local,BS4,unsupported,unsupported,n/a,Not listed in reference
+CharGer_Local,BP1,unsupported,unsupported,n/a,Not listed in reference
+CharGer_Local,BP2,unsupported,unsupported,n/a,Not listed in reference
+CharGer_Local,BP3,unsupported,unsupported,n/a,Not listed in reference
+CharGer_Local,BP4,automated,supported,none,Listed in reference without markers
+CharGer_Local,BP5,unsupported,unsupported,n/a,Not listed in reference
+CharGer_Local,BP6,unsupported,unsupported,n/a,Not listed in reference
+CharGer_Local,BP7,unsupported,unsupported,n/a,Not listed in reference
+CharGer_Online,PVS1,automated,supported,none,Listed in reference without markers
+CharGer_Online,PS1,automated,supported,none,Listed in reference without markers
+CharGer_Online,PS2,unsupported,unsupported,n/a,Not listed in reference
+CharGer_Online,PS3,unsupported,unsupported,n/a,Not listed in reference
+CharGer_Online,PS4,unsupported,unsupported,n/a,Not listed in reference
+CharGer_Online,PM1,automated,supported,none,Listed in reference without markers
+CharGer_Online,PM2,automated,supported,none,Listed in reference without markers
+CharGer_Online,PM3,unsupported,unsupported,n/a,Not listed in reference
+CharGer_Online,PM4,automated,supported,none,Listed in reference without markers
+CharGer_Online,PM5,automated,supported,none,Listed in reference without markers
+CharGer_Online,PM6,unsupported,unsupported,n/a,Not listed in reference
+CharGer_Online,PP1,unsupported,unsupported,n/a,Not listed in reference
+CharGer_Online,PP2,automated,supported,none,Listed in reference without markers
+CharGer_Online,PP3,automated,supported,none,Listed in reference without markers
+CharGer_Online,PP4,unsupported,unsupported,n/a,Not listed in reference
+CharGer_Online,PP5,unsupported,unsupported,n/a,Not listed in reference
+CharGer_Online,BA1,automated,supported,none,Listed in reference without markers
+CharGer_Online,BS1,unsupported,unsupported,n/a,Not listed in reference
+CharGer_Online,BS2,unsupported,unsupported,n/a,Not listed in reference
+CharGer_Online,BS3,unsupported,unsupported,n/a,Not listed in reference
+CharGer_Online,BS4,unsupported,unsupported,n/a,Not listed in reference
+CharGer_Online,BP1,unsupported,unsupported,n/a,Not listed in reference
+CharGer_Online,BP2,unsupported,unsupported,n/a,Not listed in reference
+CharGer_Online,BP3,unsupported,unsupported,n/a,Not listed in reference
+CharGer_Online,BP4,automated,supported,none,Listed in reference without markers
+CharGer_Online,BP5,unsupported,unsupported,n/a,Not listed in reference
+CharGer_Online,BP6,unsupported,unsupported,n/a,Not listed in reference
+CharGer_Online,BP7,unsupported,unsupported,n/a,Not listed in reference
+DiabloACMG,PVS1,automated,supported,none,Listed in reference without markers
+DiabloACMG,PS1,automated,supported,none,Listed in reference without markers
+DiabloACMG,PS2,unsupported,unsupported,n/a,Not listed in reference
+DiabloACMG,PS3,automated,supported,none,Listed in reference without markers
+DiabloACMG,PS4,unsupported,unsupported,n/a,Not listed in reference
+DiabloACMG,PM1,automated,supported,none,Listed in reference without markers
+DiabloACMG,PM2,automated,supported,none,Listed in reference without markers
+DiabloACMG,PM3,unsupported,unsupported,n/a,Not listed in reference
+DiabloACMG,PM4,automated,supported,none,Listed in reference without markers
+DiabloACMG,PM5,automated,supported,none,Listed in reference without markers
+DiabloACMG,PM6,unsupported,unsupported,n/a,Not listed in reference
+DiabloACMG,PP1,unsupported,unsupported,n/a,Not listed in reference
+DiabloACMG,PP2,automated,supported,none,Listed in reference without markers
+DiabloACMG,PP3,automated,supported,none,Listed in reference without markers
+DiabloACMG,PP4,unsupported,unsupported,n/a,Not listed in reference
+DiabloACMG,PP5,automated,supported,none,Listed in reference without markers
+DiabloACMG,BA1,automated,supported,none,Listed in reference without markers
+DiabloACMG,BS1,automated,supported,none,Listed in reference without markers
+DiabloACMG,BS2,automated,supported,none,Listed in reference without markers
+DiabloACMG,BS3,automated,supported,none,Listed in reference without markers
+DiabloACMG,BS4,unsupported,unsupported,n/a,Not listed in reference
+DiabloACMG,BP1,automated,supported,none,Listed in reference without markers
+DiabloACMG,BP2,unsupported,unsupported,n/a,Not listed in reference
+DiabloACMG,BP3,automated,supported,none,Listed in reference without markers
+DiabloACMG,BP4,automated,supported,none,Listed in reference without markers
+DiabloACMG,BP5,unsupported,unsupported,n/a,Not listed in reference
+DiabloACMG,BP6,automated,supported,none,Listed in reference without markers
+DiabloACMG,BP7,automated,supported,none,Listed in reference without markers
+Exomiser,PVS1,automated,supported,none,Listed in reference without markers
+Exomiser,PS1,automated,supported,none,Listed in reference without markers
+Exomiser,PS2,conditional_parental_vcf,unsupported,parental_vcf,Marked with * (requires parental VCF)
+Exomiser,PS3,unsupported,unsupported,n/a,Not listed in reference
+Exomiser,PS4,unsupported,unsupported,n/a,Not listed in reference
+Exomiser,PM1,automated,supported,none,Listed in reference without markers
+Exomiser,PM2,automated,supported,none,Listed in reference without markers
+Exomiser,PM3,conditional_phased_vcf,unsupported,phased_vcf,Marked with + (requires phased VCF)
+Exomiser,PM4,automated,supported,none,Listed in reference without markers
+Exomiser,PM5,automated,supported,none,Listed in reference without markers
+Exomiser,PM6,unsupported,unsupported,n/a,Not listed in reference
+Exomiser,PP1,unsupported,unsupported,n/a,Not listed in reference
+Exomiser,PP2,automated,supported,none,Listed in reference without markers
+Exomiser,PP3,automated,supported,none,Listed in reference without markers
+Exomiser,PP4,automated,supported,none,Listed in reference without markers
+Exomiser,PP5,automated,supported,none,Listed in reference without markers
+Exomiser,BA1,automated,supported,none,Listed in reference without markers
+Exomiser,BS1,automated,supported,none,Listed in reference without markers
+Exomiser,BS2,automated,supported,none,Listed in reference without markers
+Exomiser,BS3,unsupported,unsupported,n/a,Not listed in reference
+Exomiser,BS4,unsupported,unsupported,n/a,Not listed in reference
+Exomiser,BP1,automated,supported,none,Listed in reference without markers
+Exomiser,BP2,conditional_phased_vcf,unsupported,phased_vcf,Marked with + (requires phased VCF)
+Exomiser,BP3,unsupported,unsupported,n/a,Not listed in reference
+Exomiser,BP4,automated,supported,none,Listed in reference without markers
+Exomiser,BP5,unsupported,unsupported,n/a,Not listed in reference
+Exomiser,BP6,automated,supported,none,Listed in reference without markers
+Exomiser,BP7,automated,supported,none,Listed in reference without markers
+Franklin,PVS1,automated,supported,none,Listed in reference without markers
+Franklin,PS1,automated,supported,none,Listed in reference without markers
+Franklin,PS2,unsupported,unsupported,n/a,Not listed in reference
+Franklin,PS3,unsupported,unsupported,n/a,Not listed in reference
+Franklin,PS4,automated,supported,none,Listed in reference without markers
+Franklin,PM1,automated,supported,none,Listed in reference without markers
+Franklin,PM2,automated,supported,none,Listed in reference without markers
+Franklin,PM3,unsupported,unsupported,n/a,Not listed in reference
+Franklin,PM4,automated,supported,none,Listed in reference without markers
+Franklin,PM5,automated,supported,none,Listed in reference without markers
+Franklin,PM6,unsupported,unsupported,n/a,Not listed in reference
+Franklin,PP1,unsupported,unsupported,n/a,Not listed in reference
+Franklin,PP2,automated,supported,none,Listed in reference without markers
+Franklin,PP3,automated,supported,none,Listed in reference without markers
+Franklin,PP4,automated,supported,none,Listed in reference without markers
+Franklin,PP5,automated,supported,none,Listed in reference without markers
+Franklin,BA1,automated,supported,none,Listed in reference without markers
+Franklin,BS1,automated,supported,none,Listed in reference without markers
+Franklin,BS2,automated,supported,none,Listed in reference without markers
+Franklin,BS3,unsupported,unsupported,n/a,Not listed in reference
+Franklin,BS4,unsupported,unsupported,n/a,Not listed in reference
+Franklin,BP1,automated,supported,none,Listed in reference without markers
+Franklin,BP2,unsupported,unsupported,n/a,Not listed in reference
+Franklin,BP3,automated,supported,none,Listed in reference without markers
+Franklin,BP4,automated,supported,none,Listed in reference without markers
+Franklin,BP5,unsupported,unsupported,n/a,Not listed in reference
+Franklin,BP6,automated,supported,none,Listed in reference without markers
+Franklin,BP7,automated,supported,none,Listed in reference without markers
+Genebe,PVS1,automated,supported,none,Listed in reference without markers
+Genebe,PS1,automated,supported,none,Listed in reference without markers
+Genebe,PS2,unsupported,unsupported,n/a,Not listed in reference
+Genebe,PS3,unsupported,unsupported,n/a,Not listed in reference
+Genebe,PS4,unsupported,unsupported,n/a,Not listed in reference
+Genebe,PM1,automated,supported,none,Listed in reference without markers
+Genebe,PM2,automated,supported,none,Listed in reference without markers
+Genebe,PM3,unsupported,unsupported,n/a,Not listed in reference
+Genebe,PM4,automated,supported,none,Listed in reference without markers
+Genebe,PM5,automated,supported,none,Listed in reference without markers
+Genebe,PM6,unsupported,unsupported,n/a,Not listed in reference
+Genebe,PP1,unsupported,unsupported,n/a,Not listed in reference
+Genebe,PP2,automated,supported,none,Listed in reference without markers
+Genebe,PP3,automated,supported,none,Listed in reference without markers
+Genebe,PP4,unsupported,unsupported,n/a,Not listed in reference
+Genebe,PP5,automated,supported,none,Listed in reference without markers
+Genebe,BA1,automated,supported,none,Listed in reference without markers
+Genebe,BS1,automated,supported,none,Listed in reference without markers
+Genebe,BS2,automated,supported,none,Listed in reference without markers
+Genebe,BS3,unsupported,unsupported,n/a,Not listed in reference
+Genebe,BS4,unsupported,unsupported,n/a,Not listed in reference
+Genebe,BP1,automated,supported,none,Listed in reference without markers
+Genebe,BP2,unsupported,unsupported,n/a,Not listed in reference
+Genebe,BP3,automated,supported,none,Listed in reference without markers
+Genebe,BP4,automated,supported,none,Listed in reference without markers
+Genebe,BP5,unsupported,unsupported,n/a,Not listed in reference
+Genebe,BP6,automated,supported,none,Listed in reference without markers
+Genebe,BP7,automated,supported,none,Listed in reference without markers
+InterVar_2018,PVS1,automated,supported,none,Listed in reference without markers
+InterVar_2018,PS1,automated,supported,none,Listed in reference without markers
+InterVar_2018,PS2,unsupported,unsupported,n/a,Not listed in reference
+InterVar_2018,PS3,unsupported,unsupported,n/a,Not listed in reference
+InterVar_2018,PS4,automated,supported,none,Listed in reference without markers
+InterVar_2018,PM1,automated,supported,none,Listed in reference without markers
+InterVar_2018,PM2,automated,supported,none,Listed in reference without markers
+InterVar_2018,PM3,unsupported,unsupported,n/a,Not listed in reference
+InterVar_2018,PM4,automated,supported,none,Listed in reference without markers
+InterVar_2018,PM5,automated,supported,none,Listed in reference without markers
+InterVar_2018,PM6,unsupported,unsupported,n/a,Not listed in reference
+InterVar_2018,PP1,unsupported,unsupported,n/a,Not listed in reference
+InterVar_2018,PP2,automated,supported,none,Listed in reference without markers
+InterVar_2018,PP3,automated,supported,none,Listed in reference without markers
+InterVar_2018,PP4,unsupported,unsupported,n/a,Not listed in reference
+InterVar_2018,PP5,automated,supported,none,Listed in reference without markers
+InterVar_2018,BA1,automated,supported,none,Listed in reference without markers
+InterVar_2018,BS1,automated,supported,none,Listed in reference without markers
+InterVar_2018,BS2,automated,supported,none,Listed in reference without markers
+InterVar_2018,BS3,unsupported,unsupported,n/a,Not listed in reference
+InterVar_2018,BS4,unsupported,unsupported,n/a,Not listed in reference
+InterVar_2018,BP1,automated,supported,none,Listed in reference without markers
+InterVar_2018,BP2,unsupported,unsupported,n/a,Not listed in reference
+InterVar_2018,BP3,automated,supported,none,Listed in reference without markers
+InterVar_2018,BP4,automated,supported,none,Listed in reference without markers
+InterVar_2018,BP5,unsupported,unsupported,n/a,Not listed in reference
+InterVar_2018,BP6,automated,supported,none,Listed in reference without markers
+InterVar_2018,BP7,automated,supported,none,Listed in reference without markers
+InterVar_2025,PVS1,automated,supported,none,Listed in reference without markers
+InterVar_2025,PS1,automated,supported,none,Listed in reference without markers
+InterVar_2025,PS2,unsupported,unsupported,n/a,Not listed in reference
+InterVar_2025,PS3,unsupported,unsupported,n/a,Not listed in reference
+InterVar_2025,PS4,automated,supported,none,Listed in reference without markers
+InterVar_2025,PM1,automated,supported,none,Listed in reference without markers
+InterVar_2025,PM2,automated,supported,none,Listed in reference without markers
+InterVar_2025,PM3,unsupported,unsupported,n/a,Not listed in reference
+InterVar_2025,PM4,automated,supported,none,Listed in reference without markers
+InterVar_2025,PM5,automated,supported,none,Listed in reference without markers
+InterVar_2025,PM6,unsupported,unsupported,n/a,Not listed in reference
+InterVar_2025,PP1,unsupported,unsupported,n/a,Not listed in reference
+InterVar_2025,PP2,automated,supported,none,Listed in reference without markers
+InterVar_2025,PP3,automated,supported,none,Listed in reference without markers
+InterVar_2025,PP4,unsupported,unsupported,n/a,Not listed in reference
+InterVar_2025,PP5,automated,supported,none,Listed in reference without markers
+InterVar_2025,BA1,automated,supported,none,Listed in reference without markers
+InterVar_2025,BS1,automated,supported,none,Listed in reference without markers
+InterVar_2025,BS2,automated,supported,none,Listed in reference without markers
+InterVar_2025,BS3,unsupported,unsupported,n/a,Not listed in reference
+InterVar_2025,BS4,unsupported,unsupported,n/a,Not listed in reference
+InterVar_2025,BP1,automated,supported,none,Listed in reference without markers
+InterVar_2025,BP2,unsupported,unsupported,n/a,Not listed in reference
+InterVar_2025,BP3,automated,supported,none,Listed in reference without markers
+InterVar_2025,BP4,automated,supported,none,Listed in reference without markers
+InterVar_2025,BP5,unsupported,unsupported,n/a,Not listed in reference
+InterVar_2025,BP6,automated,supported,none,Listed in reference without markers
+InterVar_2025,BP7,automated,supported,none,Listed in reference without markers
+TAPES,PVS1,automated,supported,none,Listed in reference without markers
+TAPES,PS1,automated,supported,none,Listed in reference without markers
+TAPES,PS2,conditional_parental_vcf,unsupported,parental_vcf,Marked with * (requires parental VCF)
+TAPES,PS3,automated,supported,none,Listed in reference without markers
+TAPES,PS4,automated,supported,none,Listed in reference without markers
+TAPES,PM1,automated,supported,none,Listed in reference without markers
+TAPES,PM2,automated,supported,none,Listed in reference without markers
+TAPES,PM3,unsupported,unsupported,n/a,Not listed in reference
+TAPES,PM4,automated,supported,none,Listed in reference without markers
+TAPES,PM5,automated,supported,none,Listed in reference without markers
+TAPES,PM6,unsupported,unsupported,n/a,Not listed in reference
+TAPES,PP1,unsupported,unsupported,n/a,Not listed in reference
+TAPES,PP2,automated,supported,none,Listed in reference without markers
+TAPES,PP3,automated,supported,none,Listed in reference without markers
+TAPES,PP4,unsupported,unsupported,n/a,Not listed in reference
+TAPES,PP5,automated,supported,none,Listed in reference without markers
+TAPES,BA1,automated,supported,none,Listed in reference without markers
+TAPES,BS1,automated,supported,none,Listed in reference without markers
+TAPES,BS2,automated,supported,none,Listed in reference without markers
+TAPES,BS3,automated,supported,none,Listed in reference without markers
+TAPES,BS4,unsupported,unsupported,n/a,Not listed in reference
+TAPES,BP1,automated,supported,none,Listed in reference without markers
+TAPES,BP2,unsupported,unsupported,n/a,Not listed in reference
+TAPES,BP3,automated,supported,none,Listed in reference without markers
+TAPES,BP4,automated,supported,none,Listed in reference without markers
+TAPES,BP5,unsupported,unsupported,n/a,Not listed in reference
+TAPES,BP6,automated,supported,none,Listed in reference without markers
+TAPES,BP7,automated,supported,none,Listed in reference without markers
+CancerSIGVAR,PVS1,automated,supported,none,Listed in reference without markers
+CancerSIGVAR,PS1,automated,supported,none,Listed in reference without markers
+CancerSIGVAR,PS2,semi_automated,unsupported,manual_input,Marked with - (requires manual quantitative input)
+CancerSIGVAR,PS3,unsupported,unsupported,n/a,Not listed in reference
+CancerSIGVAR,PS4,semi_automated,unsupported,manual_input,Marked with - (requires manual quantitative input)
+CancerSIGVAR,PM1,automated,supported,none,Listed in reference without markers
+CancerSIGVAR,PM2,automated,supported,none,Listed in reference without markers
+CancerSIGVAR,PM3,semi_automated,unsupported,manual_input,Marked with - (requires manual quantitative input)
+CancerSIGVAR,PM4,automated,supported,none,Listed in reference without markers
+CancerSIGVAR,PM5,automated,supported,none,Listed in reference without markers
+CancerSIGVAR,PM6,semi_automated,unsupported,manual_input,Marked with - (requires manual quantitative input)
+CancerSIGVAR,PP1,unsupported,unsupported,n/a,Not listed in reference
+CancerSIGVAR,PP2,unsupported,unsupported,n/a,Not listed in reference
+CancerSIGVAR,PP3,automated,supported,none,Listed in reference without markers
+CancerSIGVAR,PP4,unsupported,unsupported,n/a,Not listed in reference
+CancerSIGVAR,PP5,automated,supported,none,Listed in reference without markers
+CancerSIGVAR,BA1,automated,supported,none,Listed in reference without markers
+CancerSIGVAR,BS1,automated,supported,none,Listed in reference without markers
+CancerSIGVAR,BS2,automated,supported,none,Listed in reference without markers
+CancerSIGVAR,BS3,unsupported,unsupported,n/a,Not listed in reference
+CancerSIGVAR,BS4,unsupported,unsupported,n/a,Not listed in reference
+CancerSIGVAR,BP1,automated,supported,none,Listed in reference without markers
+CancerSIGVAR,BP2,automated,supported,none,Listed in reference without markers
+CancerSIGVAR,BP3,automated,supported,none,Listed in reference without markers
+CancerSIGVAR,BP4,automated,supported,none,Listed in reference without markers
+CancerSIGVAR,BP5,unsupported,unsupported,n/a,Not listed in reference
+CancerSIGVAR,BP6,automated,supported,none,Listed in reference without markers
+CancerSIGVAR,BP7,automated,supported,none,Listed in reference without markers
+CPSR,PVS1,automated,supported,none,Listed in reference without markers
+CPSR,PS1,automated,supported,none,Listed in reference without markers
+CPSR,PS2,unsupported,unsupported,n/a,Not listed in reference
+CPSR,PS3,unsupported,unsupported,n/a,Not listed in reference
+CPSR,PS4,unsupported,unsupported,n/a,Not listed in reference
+CPSR,PM1,automated,supported,none,Listed in reference without markers
+CPSR,PM2,automated,supported,none,Listed in reference without markers
+CPSR,PM3,unsupported,unsupported,n/a,Not listed in reference
+CPSR,PM4,automated,supported,none,Listed in reference without markers
+CPSR,PM5,automated,supported,none,Listed in reference without markers
+CPSR,PM6,unsupported,unsupported,n/a,Not listed in reference
+CPSR,PP1,unsupported,unsupported,n/a,Not listed in reference
+CPSR,PP2,automated,supported,none,Listed in reference without markers
+CPSR,PP3,automated,supported,none,Listed in reference without markers
+CPSR,PP4,unsupported,unsupported,n/a,Not listed in reference
+CPSR,PP5,unsupported,unsupported,n/a,Not listed in reference
+CPSR,BA1,automated,supported,none,Listed in reference without markers
+CPSR,BS1,automated,supported,none,Listed in reference without markers
+CPSR,BS2,automated,supported,none,Listed in reference without markers
+CPSR,BS3,unsupported,unsupported,n/a,Not listed in reference
+CPSR,BS4,unsupported,unsupported,n/a,Not listed in reference
+CPSR,BP1,automated,supported,none,Listed in reference without markers
+CPSR,BP2,unsupported,unsupported,n/a,Not listed in reference
+CPSR,BP3,automated,supported,none,Listed in reference without markers
+CPSR,BP4,automated,supported,none,Listed in reference without markers
+CPSR,BP5,unsupported,unsupported,n/a,Not listed in reference
+CPSR,BP6,unsupported,unsupported,n/a,Not listed in reference
+CPSR,BP7,automated,supported,none,Listed in reference without markers
+VIP-HL,PVS1,automated,supported,none,Listed in reference without markers
+VIP-HL,PS1,automated,supported,none,Listed in reference without markers
+VIP-HL,PS2,unsupported,unsupported,n/a,Not listed in reference
+VIP-HL,PS3,unsupported,unsupported,n/a,Not listed in reference
+VIP-HL,PS4,unsupported,unsupported,n/a,Not listed in reference
+VIP-HL,PM1,automated,supported,none,Listed in reference without markers
+VIP-HL,PM2,automated,supported,none,Listed in reference without markers
+VIP-HL,PM3,unsupported,unsupported,n/a,Not listed in reference
+VIP-HL,PM4,automated,supported,none,Listed in reference without markers
+VIP-HL,PM5,automated,supported,none,Listed in reference without markers
+VIP-HL,PM6,unsupported,unsupported,n/a,Not listed in reference
+VIP-HL,PP1,unsupported,unsupported,n/a,Not listed in reference
+VIP-HL,PP2,unsupported,unsupported,n/a,Not listed in reference
+VIP-HL,PP3,automated,supported,none,Listed in reference without markers
+VIP-HL,PP4,unsupported,unsupported,n/a,Not listed in reference
+VIP-HL,PP5,unsupported,unsupported,n/a,Not listed in reference
+VIP-HL,BA1,automated,supported,none,Listed in reference without markers
+VIP-HL,BS1,automated,supported,none,Listed in reference without markers
+VIP-HL,BS2,automated,supported,none,Listed in reference without markers
+VIP-HL,BS3,unsupported,unsupported,n/a,Not listed in reference
+VIP-HL,BS4,unsupported,unsupported,n/a,Not listed in reference
+VIP-HL,BP1,unsupported,unsupported,n/a,Not listed in reference
+VIP-HL,BP2,unsupported,unsupported,n/a,Not listed in reference
+VIP-HL,BP3,automated,supported,none,Listed in reference without markers
+VIP-HL,BP4,automated,supported,none,Listed in reference without markers
+VIP-HL,BP5,unsupported,unsupported,n/a,Not listed in reference
+VIP-HL,BP6,unsupported,unsupported,n/a,Not listed in reference
+VIP-HL,BP7,automated,supported,none,Listed in reference without markers

@@ -1,0 +1,204 @@
+================================================================================
+FIGURE 2 - COMPREHENSIVE VARIANT CLASSIFICATION ANALYSIS - FILE MANIFEST
+================================================================================
+
+Directory: /mnt/d/busra-research/doktora/1002/code_works/dataset_prep/analysis_scripts/fig2
+
+PURPOSE:
+--------
+Generate Figure 2: Comprehensive 3-panel analysis of variant classification
+tool performance across multiple evaluation cohorts.
+
+SCRIPTS (4 files):
+------------------
+1. create_figure2_comprehensive.py (20 KB)
+   - Main figure generation script
+   - Creates 3-panel comprehensive analysis figure
+   - Panel A: Call Rate Spectrum (14 tools × 4 cohorts)
+   - Panel B: Unresolved Variants Ground Truth Analysis
+   - Panel C: InterVar 2018 vs 2025 Comparison
+   - Output: Figure2_Comprehensive.png/pdf
+
+2. parse_all_results.py (11 KB) **[NEW!]**
+   - Generates merged_results.tsv from tool output files
+   - Parses results from 14 classification tools
+   - Merges with ground truth annotations
+   - Output: merged_results.tsv (6.6 MB)
+   - Requires: parsers/ directory, ground truth files, tool results
+
+3. recalculate_call_rates.py (5 KB)
+   - Generates corrected_call_rates.csv from merged_results.tsv
+   - Calculates call rates for all tools across datasets
+   - Output: corrected_call_rates.csv
+
+4. utils_criteria_parser.py (3 KB)
+   - ACMG criteria parsing utilities
+   - Used by parse_all_results.py
+   - Parses criteria strings from tool outputs
+
+DATA FILES (1 file):
+--------------------
+1. corrected_call_rates.csv (2.6 KB)
+   - Pre-calculated call rates for Panel A
+   - Format: Tool, Dataset, Call_Rate
+   - Used for horizontal stacked bar chart
+
+PARSERS DIRECTORY (17 files):
+------------------------------
+parsers/ - Tool-specific parsers for 14 classification tools
+   - __init__.py
+   - base_parser.py - Base parser class
+   - parser_factory.py - Parser factory pattern
+   - autogvp_parser.py - AutoGVP parser
+   - bias_parser.py - BIAS parser
+   - cancer_sigvar_parser.py - CancerSIGVAR parser
+   - charger_parser.py - CharGer (Local/Online) parser
+   - cpsr_parser.py - CPSR parser
+   - diabloacmg_parser.py - DiabloACMG parser
+   - exomiser_parser.py - Exomiser parser
+   - franklin_parser.py - Franklin parser
+   - genebe_parser.py - Genebe parser
+   - intervar_parser.py - InterVar (2018/2025) parser
+   - tapes_parser.py - TAPES parser
+   - vcf_parser.py - VCF parsing utilities
+   - viphl_parser.py - VIP-HL parser
+   - __pycache__/ - Python cache
+
+REQUIRED EXTERNAL DATA:
+-----------------------
+From ../../analysis_last/data/:
+- merged_results.tsv (6.6 MB) - Main dataset with all tool classifications
+  (Can be generated using parse_all_results.py)
+
+From ../../analysis_2/ground_truth/ (for parse_all_results.py):
+- clingen_28012026.tsv
+- clingen_cancerpredisposition_28012026.tsv
+- clingen_hearing_loss_28012026.tsv
+- HGMD_Clinvar_Cancer.tsv
+- HGMD_Clinvar_HL.tsv
+
+From ../../Results/ (for parse_all_results.py):
+- Tool output directories for all 14 tools
+
+DOCUMENTATION (4 files):
+------------------------
+1. README.md (4.8 KB)
+   - Comprehensive documentation
+   - Figure description and panel details
+   - Usage instructions (quick start + full pipeline)
+   - Technical specifications
+
+2. MANIFEST.txt (this file)
+   - Complete file listing
+   - File descriptions and purposes
+   - Updated with all new scripts
+
+3. SUMMARY.md (2.9 KB)
+   - Quick reference guide
+   - Status and verification info
+
+4. DATA_REQUIREMENTS.md (5.0 KB)
+   - Detailed data requirements
+   - Data flow diagram
+   - Generation instructions for all data files
+
+TOTAL FILES: 10 files + 17 parsers (~52 KB + parsers)
+
+OUTPUT LOCATION:
+----------------
+Figures are saved to:
+../figures/ (analysis_scripts/figures/)
+  - Figure2_Comprehensive.png (300 DPI, ~379 KB)
+  - Figure2_Comprehensive.pdf (vector, ~41 KB)
+
+FIGURE PANELS:
+--------------
+Panel A (Left, spans 2 rows):
+  - Call Rate Spectrum
+  - 14 tools × 4 evaluation cohorts
+  - Horizontal stacked bars
+  - Colors: ClinGen (blue), HGMD+ClinVar HL (coral), 
+           FOXL2 (teal), HGMD+ClinVar Cancer (gray)
+
+Panel B (Top Right):
+  - Ground Truth of Unresolved Variants
+  - Stacked bar chart
+  - 6 tools with highest unknown rates
+  - Categories: Unknown, NULL/Not_VUS, VUS, LB, B, LP, P
+
+Panel C (Bottom Right):
+  - InterVar 2018 vs 2025 vs Ground Truth
+  - Grouped bar chart
+  - 3 groups: InterVar 2018, InterVar 2025, Ground Truth
+  - Categories: P, LP, VUS, LB, B, Unk
+
+QUICK START:
+------------
+Option 1: Generate figure only (data already exists)
+cd /mnt/d/busra-research/doktora/1002/code_works/dataset_prep/analysis_scripts/fig2
+python3 create_figure2_comprehensive.py
+
+Option 2: Full pipeline (regenerate all data)
+cd /mnt/d/busra-research/doktora/1002/code_works/dataset_prep/analysis_scripts/fig2
+python3 parse_all_results.py           # Generate merged_results.tsv
+python3 recalculate_call_rates.py      # Generate corrected_call_rates.csv
+python3 create_figure2_comprehensive.py # Generate figure
+
+DEPENDENCIES:
+-------------
+- Python 3.x
+- pandas
+- numpy
+- matplotlib
+
+PUBLICATION SPECS:
+------------------
+- Font: Arial (Nature Genetics standard)
+- DPI: 300 (publication quality)
+- Format: PNG + PDF
+- Panel Labels: Bold A/B/C
+- Layout: 2×2 grid (A spans left, B top-right, C bottom-right)
+
+DATA FLOW:
+----------
+LEVEL 1: Parse Tool Outputs (parse_all_results.py)
+  Tool Results (14 tools) + Ground Truth Files
+    ↓
+  merged_results.tsv (6.6 MB)
+
+LEVEL 2: Calculate Call Rates (recalculate_call_rates.py)
+  merged_results.tsv
+    ↓
+  corrected_call_rates.csv (2.6 KB)
+
+LEVEL 3: Generate Figure (create_figure2_comprehensive.py)
+  merged_results.tsv + corrected_call_rates.csv
+    ↓
+  Panel A: Call Rate Spectrum
+  Panel B: Unresolved Variants Analysis
+  Panel C: InterVar Comparison
+    ↓
+  Figure2_Comprehensive.png/pdf
+
+NOTES:
+------
+- All calculations are dynamic (no hardcoded values)
+- Designed for Nature Genetics publication
+- Optimized layout for clarity
+- Consistent color scheme across panels
+
+PACKAGE STATUS:
+---------------
+✅ COMPLETE SELF-CONTAINED PACKAGE
+✅ All figure generation scripts included
+✅ All data generation scripts included (parse_all_results.py)
+✅ All tool parsers included (14 tools)
+✅ All utilities included (utils_criteria_parser.py)
+✅ Full documentation provided
+✅ Can regenerate all data from tool outputs
+✅ Can generate figure from existing data
+
+================================================================================
+LAST UPDATED: 2026-09-05 18:45
+VERSION: 2.0 (Complete Package with Data Generation)
+================================================================================

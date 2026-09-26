@@ -1,0 +1,57 @@
+================================================================================
+FIGURE 3 - UNIFIED ACMG HEATMAP - FILE MANIFEST
+================================================================================
+
+Directory: /mnt/d/busra-research/doktora/1002/code_works/dataset_prep/analysis_scripts/fig3
+
+SCRIPTS (3 files):
+------------------
+1. create_unified_acmg_heatmap.py (9.5 KB)
+   - Main figure generation script
+   - Creates two-panel ACMG heatmap
+   - Output: Figure_Unified_ACMG_Heatmap_TwoPanel.png/pdf
+
+2. generate_clingen_jaccard_heatmaps.py (12 KB)
+   - Generates ClinGen Jaccard similarity data
+   - Output: jaccard_per_criterion_clingen_28012026.csv
+
+3. analyze_foxl2_comprehensive.py (15 KB)
+   - Generates FOXL2 Jaccard similarity data
+   - Output: jaccard_per_criterion_foxl2.csv
+
+DATA FILES (2 files):
+--------------------
+1. jaccard_per_criterion_clingen_28012026.csv (19 KB)
+   - Pre-generated Jaccard similarity data for ClinGen
+   - Used by Panel A of the figure
+
+2. jaccard_per_criterion_foxl2.csv (8.4 KB)
+   - Pre-generated Jaccard similarity data for FOXL2
+   - Used by Panel B of the figure
+
+DOCUMENTATION (2 files):
+-----------------------
+1. README.md (2.5 KB)
+   - Comprehensive documentation
+   - Usage instructions
+   - Requirements and dependencies
+
+2. MANIFEST.txt (this file)
+   - Complete file listing
+   - File descriptions
+
+TOTAL: 7 files (66.9 KB)
+
+OUTPUT LOCATION:
+---------------
+Figures are saved to:
+../figures/ (analysis_scripts/figures/)
+  - Figure3_Unified_ACMG_Heatmap_TwoPanel.png (300 DPI, ~552 KB)
+  - Figure3_Unified_ACMG_Heatmap_TwoPanel.pdf (vector, ~48 KB)
+
+QUICK START:
+-----------
+cd /mnt/d/busra-research/doktora/1002/code_works/dataset_prep/analysis_scripts/fig3
+python3 create_figure3_unified_acmg_heatmap.py
+
+================================================================================

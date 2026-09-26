@@ -1,0 +1,50 @@
+[
+  {
+    "script": "fig4/scripts/calculate_metrics_from_variants.py",
+    "exit_code": 0
+  },
+  {
+    "script": "fig5/build_fig4_master_table.py",
+    "exit_code": 0
+  },
+  {
+    "script": "fig5/perform_capability_adjusted_analysis.py",
+    "exit_code": 0
+  },
+  {
+    "script": "fig5/perform_foxl2_capability_adjusted_analysis.py",
+    "exit_code": 0
+  },
+  {
+    "script": "fig5/generate_foxl2_criterion_decomposition.py",
+    "exit_code": 0
+  },
+  {
+    "script": "fig5/generate_clingen_supplementary_tables.py",
+    "exit_code": 0
+  },
+  {
+    "script": "fig2/create_figure2_comprehensive.py",
+    "exit_code": 0
+  },
+  {
+    "script": "fig2/create_supp_intervar_comparison.py",
+    "exit_code": 0
+  },
+  {
+    "script": "fig3/create_figure3_criterion_counts_and_jaccard.py",
+    "exit_code": 0
+  },
+  {
+    "script": "fig4/create_figure4_dotplot.py",
+    "exit_code": 0
+  },
+  {
+    "script": "fig5/generate_foxl2_supplementary_figure.py",
+    "exit_code": 0
+  },
+  {
+    "script": "fig5/generate_figure4_refined.py",
+    "exit_code": 0
+  }
+]

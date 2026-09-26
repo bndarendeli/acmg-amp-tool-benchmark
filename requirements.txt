@@ -1,0 +1,8 @@
+# Unpinned dependencies inferred from archived imports; not an original environment lock.
+pandas
+numpy
+matplotlib
+seaborn
+scikit-learn
+adjustText
+openpyxl

@@ -1,0 +1,391 @@
+[
+  {
+    "source": "analysis_2/results/all_variants/merged_results.tsv",
+    "dataset": "clingen_28012026",
+    "rows": 11409,
+    "expected_rows": 11409,
+    "duplicate_variant_keys": 0,
+    "invalid_reference": 0,
+    "reference_counts": {
+      "Uncertain_Significance": 3552,
+      "Pathogenic": 3001,
+      "Likely_Pathogenic": 2312,
+      "Likely_Benign": 1368,
+      "Benign": 1176
+    },
+    "metric_cells": 154,
+    "metric_mismatches": 0,
+    "missing_tools": [],
+    "status": "match"
+  },
+  {
+    "source": "analysis_2/results/all_variants/merged_results.tsv",
+    "dataset": "HGMD_Clinvar_HL",
+    "rows": 1948,
+    "expected_rows": 1948,
+    "duplicate_variant_keys": 0,
+    "invalid_reference": 499,
+    "reference_counts": {
+      "Uncertain_significance": 499,
+      "Benign": 490,
+      "Likely_Pathogenic": 482,
+      "Pathogenic": 477
+    },
+    "status": "invalid reference labels; metric comparison not performed"
+  },
+  {
+    "source": "analysis_2/results/all_variants/merged_results.tsv",
+    "dataset": "HGMD_Clinvar_Cancer",
+    "rows": 1788,
+    "expected_rows": 1788,
+    "duplicate_variant_keys": 0,
+    "invalid_reference": 326,
+    "reference_counts": {
+      "Likely_Pathogenic": 495,
+      "Pathogenic": 484,
+      "Benign": 483,
+      "Uncertain_significance": 326
+    },
+    "status": "invalid reference labels; metric comparison not performed"
+  },
+  {
+    "source": "analysis_2/results/all_variants/merged_results_backup.tsv",
+    "dataset": "clingen_28012026",
+    "rows": 11409,
+    "expected_rows": 11409,
+    "duplicate_variant_keys": 0,
+    "invalid_reference": 0,
+    "reference_counts": {
+      "Uncertain_Significance": 3552,
+      "Pathogenic": 3001,
+      "Likely_Pathogenic": 2312,
+      "Likely_Benign": 1368,
+      "Benign": 1176
+    },
+    "metric_cells": 154,
+    "metric_mismatches": 0,
+    "missing_tools": [],
+    "status": "match"
+  },
+  {
+    "source": "analysis_2/results/all_variants/merged_results_backup.tsv",
+    "dataset": "HGMD_Clinvar_HL",
+    "rows": 1948,
+    "expected_rows": 1948,
+    "duplicate_variant_keys": 0,
+    "invalid_reference": 499,
+    "reference_counts": {
+      "Uncertain_significance": 499,
+      "Benign": 490,
+      "Likely_Pathogenic": 482,
+      "Pathogenic": 477
+    },
+    "status": "invalid reference labels; metric comparison not performed"
+  },
+  {
+    "source": "analysis_2/results/all_variants/merged_results_backup.tsv",
+    "dataset": "HGMD_Clinvar_Cancer",
+    "rows": 1788,
+    "expected_rows": 1788,
+    "duplicate_variant_keys": 0,
+    "invalid_reference": 326,
+    "reference_counts": {
+      "Likely_Pathogenic": 495,
+      "Pathogenic": 484,
+      "Benign": 483,
+      "Uncertain_significance": 326
+    },
+    "status": "invalid reference labels; metric comparison not performed"
+  },
+  {
+    "source": "analysis_2/results/per_dataset/HGMD_Clinvar_Cancer_merged_results.tsv",
+    "dataset": "HGMD_Clinvar_Cancer",
+    "rows": 1788,
+    "expected_rows": 1788,
+    "duplicate_variant_keys": 0,
+    "invalid_reference": 326,
+    "reference_counts": {
+      "Likely_Pathogenic": 495,
+      "Pathogenic": 484,
+      "Benign": 483,
+      "Uncertain_significance": 326
+    },
+    "status": "invalid reference labels; metric comparison not performed"
+  },
+  {
+    "source": "analysis_2/results/per_dataset/HGMD_Clinvar_HL_merged_results.tsv",
+    "dataset": "HGMD_Clinvar_HL",
+    "rows": 1948,
+    "expected_rows": 1948,
+    "duplicate_variant_keys": 0,
+    "invalid_reference": 499,
+    "reference_counts": {
+      "Uncertain_significance": 499,
+      "Benign": 490,
+      "Likely_Pathogenic": 482,
+      "Pathogenic": 477
+    },
+    "status": "invalid reference labels; metric comparison not performed"
+  },
+  {
+    "source": "analysis_2/results/per_dataset/clingen_28012026_merged_results.tsv",
+    "dataset": "clingen_28012026",
+    "rows": 11409,
+    "expected_rows": 11409,
+    "duplicate_variant_keys": 0,
+    "invalid_reference": 0,
+    "reference_counts": {
+      "Uncertain_Significance": 3552,
+      "Pathogenic": 3001,
+      "Likely_Pathogenic": 2312,
+      "Likely_Benign": 1368,
+      "Benign": 1176
+    },
+    "metric_cells": 154,
+    "metric_mismatches": 0,
+    "missing_tools": [],
+    "status": "match"
+  },
+  {
+    "source": "analysis_last/data/foxl2_merged_results.tsv",
+    "dataset": "foxl2",
+    "rows": 288,
+    "expected_rows": 288,
+    "duplicate_variant_keys": 0,
+    "invalid_reference": 0,
+    "reference_counts": {
+      "LP": 201,
+      "P": 82,
+      "VUS": 5
+    },
+    "metric_cells": 132,
+    "metric_mismatches": 0,
+    "missing_tools": [],
+    "status": "match"
+  },
+  {
+    "source": "analysis_last/data/merged_results.tsv",
+    "dataset": "clingen_28012026",
+    "rows": 11409,
+    "expected_rows": 11409,
+    "duplicate_variant_keys": 0,
+    "invalid_reference": 0,
+    "reference_counts": {
+      "Uncertain_Significance": 3552,
+      "Pathogenic": 3001,
+      "Likely_Pathogenic": 2312,
+      "Likely_Benign": 1368,
+      "Benign": 1176
+    },
+    "metric_cells": 154,
+    "metric_mismatches": 0,
+    "missing_tools": [],
+    "status": "match"
+  },
+  {
+    "source": "analysis_last/data/merged_results.tsv",
+    "dataset": "HGMD_Clinvar_HL",
+    "rows": 1948,
+    "expected_rows": 1948,
+    "duplicate_variant_keys": 0,
+    "invalid_reference": 0,
+    "reference_counts": {
+      "Uncertain_Significance": 499,
+      "Benign": 490,
+      "Likely_Pathogenic": 482,
+      "Pathogenic": 477
+    },
+    "metric_cells": 154,
+    "metric_mismatches": 0,
+    "missing_tools": [],
+    "status": "match"
+  },
+  {
+    "source": "analysis_last/data/merged_results.tsv",
+    "dataset": "HGMD_Clinvar_Cancer",
+    "rows": 1788,
+    "expected_rows": 1788,
+    "duplicate_variant_keys": 0,
+    "invalid_reference": 0,
+    "reference_counts": {
+      "Likely_Pathogenic": 495,
+      "Pathogenic": 484,
+      "Benign": 483,
+      "Uncertain_Significance": 326
+    },
+    "metric_cells": 154,
+    "metric_mismatches": 0,
+    "missing_tools": [],
+    "status": "match"
+  },
+  {
+    "source": "analysis_last/data/merged_results_backup.tsv",
+    "dataset": "clingen_28012026",
+    "rows": 11409,
+    "expected_rows": 11409,
+    "duplicate_variant_keys": 0,
+    "invalid_reference": 0,
+    "reference_counts": {
+      "Uncertain_Significance": 3552,
+      "Pathogenic": 3001,
+      "Likely_Pathogenic": 2312,
+      "Likely_Benign": 1368,
+      "Benign": 1176
+    },
+    "metric_cells": 154,
+    "metric_mismatches": 0,
+    "missing_tools": [],
+    "status": "match"
+  },
+  {
+    "source": "analysis_last/data/merged_results_backup.tsv",
+    "dataset": "HGMD_Clinvar_HL",
+    "rows": 1948,
+    "expected_rows": 1948,
+    "duplicate_variant_keys": 0,
+    "invalid_reference": 499,
+    "reference_counts": {
+      "Uncertain_significance": 499,
+      "Benign": 490,
+      "Likely_Pathogenic": 482,
+      "Pathogenic": 477
+    },
+    "status": "invalid reference labels; metric comparison not performed"
+  },
+  {
+    "source": "analysis_last/data/merged_results_backup.tsv",
+    "dataset": "HGMD_Clinvar_Cancer",
+    "rows": 1788,
+    "expected_rows": 1788,
+    "duplicate_variant_keys": 0,
+    "invalid_reference": 326,
+    "reference_counts": {
+      "Likely_Pathogenic": 495,
+      "Pathogenic": 484,
+      "Benign": 483,
+      "Uncertain_significance": 326
+    },
+    "status": "invalid reference labels; metric comparison not performed"
+  },
+  {
+    "source": "analysis_last/data/merged_results_fixed.tsv",
+    "dataset": "clingen_28012026",
+    "rows": 11409,
+    "expected_rows": 11409,
+    "duplicate_variant_keys": 0,
+    "invalid_reference": 0,
+    "reference_counts": {
+      "Uncertain_Significance": 3552,
+      "Pathogenic": 3001,
+      "Likely_Pathogenic": 2312,
+      "Likely_Benign": 1368,
+      "Benign": 1176
+    },
+    "metric_cells": 154,
+    "metric_mismatches": 0,
+    "missing_tools": [],
+    "status": "match"
+  },
+  {
+    "source": "analysis_last/data/merged_results_fixed.tsv",
+    "dataset": "HGMD_Clinvar_HL",
+    "rows": 1948,
+    "expected_rows": 1948,
+    "duplicate_variant_keys": 0,
+    "invalid_reference": 0,
+    "reference_counts": {
+      "Uncertain_Significance": 499,
+      "Benign": 490,
+      "Likely_Pathogenic": 482,
+      "Pathogenic": 477
+    },
+    "metric_cells": 154,
+    "metric_mismatches": 0,
+    "missing_tools": [],
+    "status": "match"
+  },
+  {
+    "source": "analysis_last/data/merged_results_fixed.tsv",
+    "dataset": "HGMD_Clinvar_Cancer",
+    "rows": 1788,
+    "expected_rows": 1788,
+    "duplicate_variant_keys": 0,
+    "invalid_reference": 0,
+    "reference_counts": {
+      "Likely_Pathogenic": 495,
+      "Pathogenic": 484,
+      "Benign": 483,
+      "Uncertain_Significance": 326
+    },
+    "metric_cells": 154,
+    "metric_mismatches": 0,
+    "missing_tools": [],
+    "status": "match"
+  },
+  {
+    "source": "analysis_last/data/merged_results_with_genebe_gene.tsv",
+    "dataset": "clingen_28012026",
+    "rows": 11409,
+    "expected_rows": 11409,
+    "duplicate_variant_keys": 0,
+    "invalid_reference": 0,
+    "reference_counts": {
+      "Uncertain_Significance": 3552,
+      "Pathogenic": 3001,
+      "Likely_Pathogenic": 2312,
+      "Likely_Benign": 1368,
+      "Benign": 1176
+    },
+    "metric_cells": 154,
+    "metric_mismatches": 0,
+    "missing_tools": [],
+    "status": "match"
+  },
+  {
+    "source": "analysis_last/data/merged_results_with_genebe_gene.tsv",
+    "dataset": "HGMD_Clinvar_HL",
+    "rows": 1948,
+    "expected_rows": 1948,
+    "duplicate_variant_keys": 0,
+    "invalid_reference": 499,
+    "reference_counts": {
+      "Uncertain_significance": 499,
+      "Benign": 490,
+      "Likely_Pathogenic": 482,
+      "Pathogenic": 477
+    },
+    "status": "invalid reference labels; metric comparison not performed"
+  },
+  {
+    "source": "analysis_last/data/merged_results_with_genebe_gene.tsv",
+    "dataset": "HGMD_Clinvar_Cancer",
+    "rows": 1788,
+    "expected_rows": 1788,
+    "duplicate_variant_keys": 0,
+    "invalid_reference": 326,
+    "reference_counts": {
+      "Likely_Pathogenic": 495,
+      "Pathogenic": 484,
+      "Benign": 483,
+      "Uncertain_significance": 326
+    },
+    "status": "invalid reference labels; metric comparison not performed"
+  },
+  {
+    "source": "datasets/foxl2/analysis/results/foxl2_merged_results.tsv",
+    "dataset": "foxl2",
+    "rows": 288,
+    "expected_rows": 288,
+    "duplicate_variant_keys": 0,
+    "invalid_reference": 0,
+    "reference_counts": {
+      "LP": 201,
+      "P": 82,
+      "VUS": 5
+    },
+    "metric_cells": 132,
+    "metric_mismatches": 0,
+    "missing_tools": [],
+    "status": "match"
+  }
+]

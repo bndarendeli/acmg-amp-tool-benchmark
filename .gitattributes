@@ -1,0 +1,5 @@
+# Keep archived scientific files byte-identical, including line endings.
+analysis/** -text
+data/** -text
+*.png binary
+*.pdf binary
