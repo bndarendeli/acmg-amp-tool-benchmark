@@ -1,5 +1,6 @@
 __pycache__/
 *.py[cod]
+*$py.class
 .venv/
 venv/
 .env
@@ -9,7 +10,9 @@ venv/
 Thumbs.db
 .idea/
 .vscode/
+.ipynb_checkpoints/
 .pytest_cache/
+.mypy_cache/
 .mplconfig/
 reproduced/
 external_inputs/

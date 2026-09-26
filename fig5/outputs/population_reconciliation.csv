@@ -1,0 +1,15 @@
+tool,n_original_class_concordant_evidence_evaluable,n_capability_input,n_missing,reason_for_exclusion
+AutoGVP,9393,9160,233,reference_criteria_NA
+BIAS,5905,5726,179,reference_criteria_NA
+CPSR,2213,2135,78,reference_criteria_NA
+CancerSIGVAR,317,312,5,reference_criteria_NA
+CharGer_Local,3482,3235,247,reference_criteria_NA
+CharGer_Online,3960,3715,245,reference_criteria_NA
+DiabloACMG,6898,6687,211,reference_criteria_NA
+Exomiser,46,46,0,none
+Franklin,3732,3725,7,reference_criteria_NA
+Genebe,9720,9704,16,reference_criteria_NA
+InterVar_2018,3336,3188,148,reference_criteria_NA
+InterVar_2025,3702,3560,142,reference_criteria_NA
+TAPES,4558,4324,234,reference_criteria_NA
+VIP-HL,92,88,4,reference_criteria_NA
