@@ -74,8 +74,7 @@ ClinGen and FOXL2 inputs. The Figure 6 chain now builds the master variant/tool 
 matrix, capability-adjusted summaries, evidence distributions and total criterion Jaccard tables.
 It reads ClinGen predictions from `data/processed/merged_results_noHGMD.tsv` and FOXL2 predictions
 from `data/processed/foxl2_merged_results.tsv`; the FOXL2 rows in the combined file are filtered
-out to prevent duplication. It does not use HGMD/ClinVar benchmark cohorts or rerun external
-annotation services.
+out to prevent duplication.
 
 Each figure folder contains the selected manuscript figure files, their producing scripts, and required data. Follow this README
 for installation and execution. There is no shared top-level `figures` directory.
