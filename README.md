@@ -2,7 +2,6 @@
 
 Analysis data, scripts and figures for the ClinGen and FOXL2 benchmark.
 This release contains **11,409 ClinGen variants** and **288 FOXL2 variants**.
-The former HGMD–ClinVar evaluation cohorts are excluded from the current data and pipeline.
 
 ## Install
 
