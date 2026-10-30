@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Figure 4 Supplementary: Classification Performance with Precision/Recall - DOT PLOT DESIGN
-2x2 Multi-Panel Layout with Horizontal Multi-Marker Dot Plots + Precision/Recall Values
+1x2 Multi-Panel Layout with Horizontal Multi-Marker Dot Plots + Precision/Recall Values
 
 UPDATED: 2026-09-26
 Uses reconstructed metrics with 3-class Accuracy (NOT Weighted F1)
@@ -38,7 +38,7 @@ print("FIGURE 4 SUPPLEMENTARY: CLASSIFICATION PERFORMANCE WITH PRECISION/RECALL"
 print("=" * 80)
 
 # Paths
-base_dir = Path(__file__).parent
+base_dir = Path(__file__).resolve().parent
 data_dir = base_dir / 'data' / 'reconstructed'
 output_dir = base_dir / 'figures'
 output_dir.mkdir(parents=True, exist_ok=True)
@@ -60,20 +60,6 @@ cohorts = {
         'panel_label': 'b',
         'title': 'FOXL2 Disease-Specific Cohort',
         'expected_tools': 12
-    },
-    'HGMD–ClinVar HL': {
-        'n': 1948,
-        'file': 'HGMD_ClinVar_HL_reconstructed_metrics.csv',
-        'panel_label': 'c',
-        'title': 'HGMD–ClinVar Hearing Loss',
-        'expected_tools': 14
-    },
-    'HGMD–ClinVar Cancer': {
-        'n': 1788,
-        'file': 'HGMD_ClinVar_Cancer_reconstructed_metrics.csv',
-        'panel_label': 'd',
-        'title': 'HGMD–ClinVar Cancer Predisposition',
-        'expected_tools': 14
     }
 }
 
@@ -195,14 +181,11 @@ column_order = [
 ]
 df_combined = df_combined[column_order]
 
-combined_csv_path = output_dir / 'Figure4_Supplementary_combined_classification_performance.csv'
-df_combined.to_csv(combined_csv_path, index=False)
-print(f"  ✓ Saved: {combined_csv_path}")
 
 # Create figure
 print("\n3. Creating Figure 4 Supplementary...")
 
-fig, axes = plt.subplots(2, 2, figsize=(12, 10))
+fig, axes = plt.subplots(1, 2, figsize=(12, 6.5))
 axes = axes.flatten()
 
 
@@ -295,10 +278,7 @@ for idx, (cohort_name, cohort_info) in enumerate(cohorts.items()):
     ax.tick_params(axis='y', length=3, pad=4)
     
     # X-axis
-    if idx >= 2:
-        ax.set_xlabel('Performance Score', fontsize=10, fontweight='bold')
-    else:
-        ax.set_xlabel('')
+    ax.set_xlabel('Performance Score', fontsize=10, fontweight='bold')
     ax.set_xlim(-0.05, 1.05)
     ax.set_xticks([0, 0.2, 0.4, 0.6, 0.8, 1.0])
     ax.tick_params(axis='x', labelsize=8)
@@ -328,7 +308,7 @@ for idx, (cohort_name, cohort_info) in enumerate(cohorts.items()):
         fontweight='bold',
         loc='center'
     )
-plt.tight_layout(rect=[0, 0, 1, 0.92])
+plt.tight_layout(rect=[0, 0, 1, 0.84])
 
 # Add shared legend at top center (3 columns for better organization)
 fig.legend(legend_handles, legend_labels,
@@ -346,10 +326,8 @@ print("\n4. Saving figure...")
 png_path = output_dir / 'Figure4_Supplementary_Performance_DotPlot_with_PrecisionRecall.png'
 pdf_path = output_dir / 'Figure4_Supplementary_Performance_DotPlot_with_PrecisionRecall.pdf'
 
-plt.savefig(png_path, dpi=300, bbox_inches='tight')
 plt.savefig(pdf_path, bbox_inches='tight')
 
-print(f"  ✓ PNG: {png_path}")
 print(f"  ✓ PDF: {pdf_path}")
 
 plt.close()
@@ -362,8 +340,6 @@ print("=" * 80)
 print("\nValidation Results:")
 print(f"  ✓ ClinGen: {len(cohort_data['ClinGen'])} tools")
 print(f"  ✓ FOXL2: {len(cohort_data['FOXL2'])} tools")
-print(f"  ✓ HGMD–ClinVar HL: {len(cohort_data['HGMD–ClinVar HL'])} tools")
-print(f"  ✓ HGMD–ClinVar Cancer: {len(cohort_data['HGMD–ClinVar Cancer'])} tools")
 print(f"  ✓ All accuracy values = n_correct / cohort_n")
 print(f"  ✓ All values in range [0, 1]")
 print(f"  ✓ FOXL2 B_LB_f1 all NA")
@@ -371,8 +347,6 @@ print(f"  ✓ No Weighted F1 column used")
 print(f"  ✓ Precision/Recall values added to each panel")
 
 print("\nOutput Files:")
-print(f"  ✓ {png_path}")
 print(f"  ✓ {pdf_path}")
-print(f"  ✓ {combined_csv_path}")
 
 print("\n" + "=" * 80)

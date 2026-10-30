@@ -68,9 +68,9 @@ def main():
     print("RECALCULATING CALL RATES CORRECTLY")
     print("=" * 80)
     
-    base_dir = FilePath(__file__).parent.parent
-    data_file = base_dir / 'data' / 'merged_results.tsv'
-    output_dir = base_dir / 'results' / 'corrected_metrics'
+    base_dir = FilePath(__file__).resolve().parents[2]
+    data_file = base_dir / 'data/processed/merged_results_noHGMD.tsv'
+    output_dir = FilePath(__file__).resolve().parent
     output_dir.mkdir(parents=True, exist_ok=True)
     
     # All tools
@@ -82,9 +82,7 @@ def main():
     
     # Datasets
     datasets = [
-        ('clingen_28012026', 'ClinGen', 11409),
-        ('HGMD_Clinvar_HL', 'HGMD+ClinVar HL', 1948),
-        ('HGMD_Clinvar_Cancer', 'HGMD+ClinVar Cancer', 1788)
+        ('clingen_28012026', 'ClinGen', 11409)
     ]
     
     print("\n1. Calculating correct call rates from actual data...")
@@ -103,7 +101,7 @@ def main():
     
     # Add FOXL2 from separate analysis
     print(f"\n  Processing FOXL2 (from separate analysis)...")
-    foxl2_dir = base_dir / 'results' / 'foxl2'
+    foxl2_dir = base_dir / 'data/supporting/foxl2'
     foxl2_metrics = foxl2_dir / 'classification_metrics_summary.csv'
     
     if foxl2_metrics.exists():
@@ -119,8 +117,9 @@ def main():
         print(f"    Added FOXL2 data for {len(foxl2_results)} tools")
     
     # Save corrected call rates
-    output_file = output_dir / 'corrected_call_rates.csv'
+    output_file = output_dir / 'corrected_call_rates_noHGMD.csv'
     combined.to_csv(output_file, index=False)
+    combined.to_csv(FilePath(__file__).resolve().parent / 'corrected_call_rates.csv', index=False)
     
     print(f"\n2. Saved corrected call rates to: {output_file}")
     

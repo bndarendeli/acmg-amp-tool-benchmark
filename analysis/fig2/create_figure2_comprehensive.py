@@ -27,7 +27,7 @@ print("=" * 100)
 # LOAD DATA
 # ==============================================================================
 print("\n1. Loading data...")
-data_file = '/mnt/d/busra-research/doktora/1002/code_works/dataset_prep/analysis_last/data/merged_results.tsv'
+data_file = Path(__file__).resolve().parents[2] / 'data/processed/merged_results_noHGMD.tsv'
 df = pd.read_csv(data_file, sep='\t', low_memory=False)
 clingen_df = df[df['Dataset'] == 'clingen_28012026'].copy()
 total_clingen = len(clingen_df)
@@ -39,7 +39,7 @@ print(f"   ClinGen variants: {total_clingen:,}")
 print("\n2. Loading Panel A: Call Rate Spectrum from CSV...")
 
 # Load corrected call rates from CSV
-call_rates_csv = '/mnt/d/busra-research/doktora/1002/code_works/dataset_prep/analysis_last/results/corrected_metrics/corrected_call_rates.csv'
+call_rates_csv = Path(__file__).resolve().parent / 'corrected_call_rates.csv'
 call_rates_df = pd.read_csv(call_rates_csv)
 
 # Pivot to get tools x datasets
@@ -49,13 +49,9 @@ panel_a_df = call_rates_df.pivot(index='Tool', columns='Dataset', values='Call_R
 panel_a_df.columns.name = None
 if 'ClinGen' not in panel_a_df.columns:
     panel_a_df = panel_a_df.rename(columns={'clingen_28012026': 'ClinGen'})
-if 'HGMD+ClinVar HL' not in panel_a_df.columns:
-    panel_a_df = panel_a_df.rename(columns={'HGMD_Clinvar_HL': 'HGMD+ClinVar HL'})
-if 'HGMD+ClinVar Cancer' not in panel_a_df.columns:
-    panel_a_df = panel_a_df.rename(columns={'HGMD_Clinvar_Cancer': 'HGMD+ClinVar Cancer'})
 
 # Ensure all expected columns exist
-datasets_cols = ['ClinGen', 'FOXL2', 'HGMD+ClinVar HL', 'HGMD+ClinVar Cancer']
+datasets_cols = ['ClinGen', 'FOXL2']
 for col in datasets_cols:
     if col not in panel_a_df.columns:
         panel_a_df[col] = 0.0
@@ -170,21 +166,19 @@ ax_a_label.axis('off')
 
 # Plot grouped bars
 n_tools = len(panel_a_df)
-bar_height = 0.18
+bar_height = 0.35
 spacing = 0.05
 y_positions = np.arange(n_tools)
 
 # Dataset colors (matching original)
 colors = {
     'ClinGen': '#2E5090',
-    'FOXL2': '#C4515C',
-    'HGMD+ClinVar HL': '#4DBEAA',
-    'HGMD+ClinVar Cancer': '#6B6B6B'
+    'FOXL2': '#C4515C'
 }
 
 # Plot bars for each dataset
 for i, dataset in enumerate(datasets_cols):
-    offset = (i - 1.5) * (bar_height + spacing)
+    offset = (i - (len(datasets_cols) - 1) / 2) * (bar_height + spacing)
     values = panel_a_df[dataset].values
     ax_a.barh(y_positions + offset, values, height=bar_height, 
               color=colors[dataset], label=dataset, zorder=3)
@@ -200,7 +194,7 @@ ax_a.spines['right'].set_visible(False)
 
 # Legend
 legend = ax_a.legend(title='Evaluation Cohorts', loc='lower right', 
-                     frameon=False, ncol=2, fontsize=9,
+                     frameon=False, ncol=1, fontsize=9,
                      title_fontproperties={'weight': 'bold', 'size': 10})
 
 # ==============================================================================
@@ -338,21 +332,19 @@ ax_c.spines['right'].set_visible(False)
 print("\n6. Saving figure...")
 
 # Output to analysis_scripts/figures directory
-script_dir = Path(__file__).parent
-output_dir = script_dir.parent / 'figures'
+script_dir = Path(__file__).resolve().parent
+output_dir = script_dir / 'figures'
 output_dir.mkdir(parents=True, exist_ok=True)
 
 output_png = output_dir / 'Figure2_Comprehensive.png'
 output_pdf = output_dir / 'Figure2_Comprehensive.pdf'
 
-plt.savefig(output_png, dpi=300, bbox_inches='tight', facecolor='white')
 plt.savefig(output_pdf, dpi=300, bbox_inches='tight', facecolor='white')
 
 print("\n" + "=" * 100)
 print("✓ FIGURE 2 CREATED - COMPREHENSIVE ANALYSIS")
 print("=" * 100)
 print(f"\nOutput files:")
-print(f"  - {output_png}")
 print(f"  - {output_pdf}")
 print(f"\nLayout: 2x2 Grid")
 print(f"  A (Left, spans 2 rows): Call Rate Spectrum ({len(panel_a_df)} tools, {len(datasets_cols)} cohorts)")

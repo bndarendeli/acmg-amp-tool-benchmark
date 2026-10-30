@@ -1,0 +1,429 @@
+[
+  {
+    "source": "fig2/corrected_call_rates.csv",
+    "path": "analysis/fig2/corrected_call_rates.csv",
+    "source_sha256": "709d85b838cf4ca331d88a757bbf76ecf08e5e29425f79b7a6e29f070b8904db",
+    "sha256": "709d85b838cf4ca331d88a757bbf76ecf08e5e29425f79b7a6e29f070b8904db",
+    "status": "copied_unchanged"
+  },
+  {
+    "source": "fig2/create_figure2_comprehensive.py",
+    "path": "analysis/fig2/create_figure2_comprehensive.py",
+    "source_sha256": "457306f24e83dd10b4389497f92969d18c425a38c18a5cc847692f37278ffeb7",
+    "sha256": "28246577e8296b9b6c582a3ce9969cd14f1cd70ac3baca1c5e3887d02b63db34",
+    "status": "repository_paths_or_documentation"
+  },
+  {
+    "source": "fig2/create_supp_intervar_comparison.py",
+    "path": "analysis/fig2/create_supp_intervar_comparison.py",
+    "source_sha256": "263782ad01a58fb7d4f55348a3a16b4ab3050c2b198a335b8befd944f01b3454",
+    "sha256": "8c2a251dd1d15a7191b0a92de6712bcf34bfb75f5ca33acd81b01cbe1368afeb",
+    "status": "repository_paths_or_documentation"
+  },
+  {
+    "source": "fig2/parse_all_results.py",
+    "path": "analysis/fig2/parse_all_results.py",
+    "source_sha256": "f440dfa0561e8dd24688a6a4723413921f38b610a18507c50c1e3ac8337f1079",
+    "sha256": "6ffc81f2d2799394d44957febe5e97006292de32d12078eabe59191c30762bd0",
+    "status": "repository_paths_or_documentation"
+  },
+  {
+    "source": "fig2/README.md",
+    "path": "analysis/fig2/README.md",
+    "source_sha256": "2221f2de15d7de0a20a6e75ff87a9884308dac4b451b8bfa8695409382e21006",
+    "sha256": "237c892666c76bd067adb02acc00711dd13ad154431dbb73df4caf4589eda89d",
+    "status": "repository_paths_or_documentation"
+  },
+  {
+    "source": "fig2/recalculate_call_rates.py",
+    "path": "analysis/fig2/recalculate_call_rates.py",
+    "source_sha256": "6ae133317691688ec1a62de137461d68af6ec957a445abf20823f06e6e73f2b4",
+    "sha256": "12d36d06305158b1c6fc9c524082116a353b9bda855f2ae258d9149d15c1bc73",
+    "status": "repository_paths_or_documentation"
+  },
+  {
+    "source": "fig2/utils_criteria_parser.py",
+    "path": "analysis/fig2/utils_criteria_parser.py",
+    "source_sha256": "d83c0668f8d0eb66ef555d863a807b57b1e6debcb593584fa1d0e3c691f17a6f",
+    "sha256": "d83c0668f8d0eb66ef555d863a807b57b1e6debcb593584fa1d0e3c691f17a6f",
+    "status": "copied_unchanged"
+  },
+  {
+    "source": "fig2/parsers/autogvp_parser.py",
+    "path": "analysis/fig2/parsers/autogvp_parser.py",
+    "source_sha256": "1080cc56c7133253b5beb2e2efa482c93ed5ae0ab7f2cabb95ec134941318c6b",
+    "sha256": "1080cc56c7133253b5beb2e2efa482c93ed5ae0ab7f2cabb95ec134941318c6b",
+    "status": "copied_unchanged"
+  },
+  {
+    "source": "fig2/parsers/base_parser.py",
+    "path": "analysis/fig2/parsers/base_parser.py",
+    "source_sha256": "674b93666b0f90794f01abb934c3df2ec794a2b49227064d7d00c142cbd175a8",
+    "sha256": "674b93666b0f90794f01abb934c3df2ec794a2b49227064d7d00c142cbd175a8",
+    "status": "copied_unchanged"
+  },
+  {
+    "source": "fig2/parsers/bias_parser.py",
+    "path": "analysis/fig2/parsers/bias_parser.py",
+    "source_sha256": "f5722cdb3d05312401edc59d8654cf71a4496736aeadb1656c4bacc2be78796f",
+    "sha256": "f5722cdb3d05312401edc59d8654cf71a4496736aeadb1656c4bacc2be78796f",
+    "status": "copied_unchanged"
+  },
+  {
+    "source": "fig2/parsers/cancer_sigvar_parser.py",
+    "path": "analysis/fig2/parsers/cancer_sigvar_parser.py",
+    "source_sha256": "c62269e9cacda0c465936e65a8e8c0ce00d28159c31164a0da2ed352c4a9393d",
+    "sha256": "c62269e9cacda0c465936e65a8e8c0ce00d28159c31164a0da2ed352c4a9393d",
+    "status": "copied_unchanged"
+  },
+  {
+    "source": "fig2/parsers/charger_parser.py",
+    "path": "analysis/fig2/parsers/charger_parser.py",
+    "source_sha256": "260dbf7575398bbae9ea5a52d99dd1b74c7600cb4685f2774182838ba83c1fbd",
+    "sha256": "260dbf7575398bbae9ea5a52d99dd1b74c7600cb4685f2774182838ba83c1fbd",
+    "status": "copied_unchanged"
+  },
+  {
+    "source": "fig2/parsers/cpsr_parser.py",
+    "path": "analysis/fig2/parsers/cpsr_parser.py",
+    "source_sha256": "fa297cf3f95588461c08e01839309bd4d21f321105f660c65200d25b73e542bf",
+    "sha256": "fa297cf3f95588461c08e01839309bd4d21f321105f660c65200d25b73e542bf",
+    "status": "copied_unchanged"
+  },
+  {
+    "source": "fig2/parsers/diabloacmg_parser.py",
+    "path": "analysis/fig2/parsers/diabloacmg_parser.py",
+    "source_sha256": "8b52dad413c019b3c8a90533c7b1806b81799d9086f150c4bf2ff910f6c66bd8",
+    "sha256": "8b52dad413c019b3c8a90533c7b1806b81799d9086f150c4bf2ff910f6c66bd8",
+    "status": "copied_unchanged"
+  },
+  {
+    "source": "fig2/parsers/exomiser_parser.py",
+    "path": "analysis/fig2/parsers/exomiser_parser.py",
+    "source_sha256": "4e03f4931152fe3bdb14cf0db0eb6d412ae2f520ea82757c8e860218feb2af1c",
+    "sha256": "4e03f4931152fe3bdb14cf0db0eb6d412ae2f520ea82757c8e860218feb2af1c",
+    "status": "copied_unchanged"
+  },
+  {
+    "source": "fig2/parsers/franklin_parser.py",
+    "path": "analysis/fig2/parsers/franklin_parser.py",
+    "source_sha256": "21eb1363f67c1cd2ec498e20647b786efbbcba6d4e550c82f458631ab5817512",
+    "sha256": "21eb1363f67c1cd2ec498e20647b786efbbcba6d4e550c82f458631ab5817512",
+    "status": "copied_unchanged"
+  },
+  {
+    "source": "fig2/parsers/genebe_parser.py",
+    "path": "analysis/fig2/parsers/genebe_parser.py",
+    "source_sha256": "268afac6e563ba1d2aba2fe16b54d46692670c8d199f290a7342a98044f22b3f",
+    "sha256": "268afac6e563ba1d2aba2fe16b54d46692670c8d199f290a7342a98044f22b3f",
+    "status": "copied_unchanged"
+  },
+  {
+    "source": "fig2/parsers/intervar_parser.py",
+    "path": "analysis/fig2/parsers/intervar_parser.py",
+    "source_sha256": "c3be35d88486349fb70a1b7183330912026672c57d2b6fccf6bfcc0acaf3d805",
+    "sha256": "c3be35d88486349fb70a1b7183330912026672c57d2b6fccf6bfcc0acaf3d805",
+    "status": "copied_unchanged"
+  },
+  {
+    "source": "fig2/parsers/parser_factory.py",
+    "path": "analysis/fig2/parsers/parser_factory.py",
+    "source_sha256": "d586c9236a47569c0c1a75267557040b950dd845adc171fde05ce725d8ad211b",
+    "sha256": "d586c9236a47569c0c1a75267557040b950dd845adc171fde05ce725d8ad211b",
+    "status": "copied_unchanged"
+  },
+  {
+    "source": "fig2/parsers/tapes_parser.py",
+    "path": "analysis/fig2/parsers/tapes_parser.py",
+    "source_sha256": "e493b7c5dca1d683179ed8011cd1b93331d6346737d2fd4a6acec8dd3717a11b",
+    "sha256": "e493b7c5dca1d683179ed8011cd1b93331d6346737d2fd4a6acec8dd3717a11b",
+    "status": "copied_unchanged"
+  },
+  {
+    "source": "fig2/parsers/vcf_parser.py",
+    "path": "analysis/fig2/parsers/vcf_parser.py",
+    "source_sha256": "8b1b836142f321e94f0220a8293dcc8adca102d89804232a12999be7392d9820",
+    "sha256": "8b1b836142f321e94f0220a8293dcc8adca102d89804232a12999be7392d9820",
+    "status": "copied_unchanged"
+  },
+  {
+    "source": "fig2/parsers/viphl_parser.py",
+    "path": "analysis/fig2/parsers/viphl_parser.py",
+    "source_sha256": "f3be01d7ad7aaaff439fec10d7ace615b06831482cd76348eadb05a83167af4a",
+    "sha256": "f3be01d7ad7aaaff439fec10d7ace615b06831482cd76348eadb05a83167af4a",
+    "status": "copied_unchanged"
+  },
+  {
+    "source": "fig2/parsers/__init__.py",
+    "path": "analysis/fig2/parsers/__init__.py",
+    "source_sha256": "baa2c02aa85cd85cfe0f6167d5435d7665ea44afec3213aa2a88bcc4be976203",
+    "sha256": "baa2c02aa85cd85cfe0f6167d5435d7665ea44afec3213aa2a88bcc4be976203",
+    "status": "copied_unchanged"
+  },
+  {
+    "source": "fig3/create_figure3_criterion_counts_and_jaccard.py",
+    "path": "analysis/fig3/create_figure3_criterion_counts_and_jaccard.py",
+    "source_sha256": "f17eb57d0303cf215a1cf2ac380d43f3007505fbeee5d09c585e300e4d4f7fc7",
+    "sha256": "c20cb61b6aec7fe9c84da91993d6a8d2803f64347ac1d943eed43c6c350a09f9",
+    "status": "repository_paths_or_documentation"
+  },
+  {
+    "source": "fig3/jaccard_per_criterion_clingen_28012026.csv",
+    "path": "analysis/fig3/jaccard_per_criterion_clingen_28012026.csv",
+    "source_sha256": "2ecb26e9057e16fa0b0043d19fa22adcbe3e935bdcb274b56a98949140dbbc5d",
+    "sha256": "2ecb26e9057e16fa0b0043d19fa22adcbe3e935bdcb274b56a98949140dbbc5d",
+    "status": "copied_unchanged"
+  },
+  {
+    "source": "fig3/jaccard_per_criterion_foxl2.csv",
+    "path": "analysis/fig3/jaccard_per_criterion_foxl2.csv",
+    "source_sha256": "c860775b1ba907b4fe5a423975b8b78a27b0e8c90626107c1e37b578061b04f7",
+    "sha256": "c860775b1ba907b4fe5a423975b8b78a27b0e8c90626107c1e37b578061b04f7",
+    "status": "copied_unchanged"
+  },
+  {
+    "source": "fig3/README.md",
+    "path": "analysis/fig3/README.md",
+    "source_sha256": "b4e6833b5e55f5517fc355af652a605d8b32ced4564731dfb4037b83251d3709",
+    "sha256": "17ba59eeaced988702152f2ec7f911e477e22f409932e3af4005e4eefdb8a7a0",
+    "status": "repository_paths_or_documentation"
+  },
+  {
+    "source": "fig4/create_figure4_reconstructed.py",
+    "path": "analysis/fig4/create_figure4_reconstructed.py",
+    "source_sha256": "2fe60cfdd468af3341e78f9351482561bfaeefe985ea63de69a33b68b6d66bca",
+    "sha256": "a3e79eb7304e388968c08faa6b84451699edcbe390e7c1fb6c153acfce8a6120",
+    "status": "repository_paths_or_documentation"
+  },
+  {
+    "source": "fig4/create_figure4_supplementary.py",
+    "path": "analysis/fig4/create_figure4_supplementary.py",
+    "source_sha256": "40510d67b09987f36b0a9dc148eb9591480a7c312a866efa8b3191d187832a73",
+    "sha256": "75db0af85617b7bbbc65d76a5551c43e61db4522de03cb881ecbc38bab5943db",
+    "status": "repository_paths_or_documentation"
+  },
+  {
+    "source": "fig4/figures/Figure4_Performance_DotPlot.pdf",
+    "path": "analysis/fig4/figures/Figure4_Performance_DotPlot.pdf",
+    "source_sha256": "a078a470313075f2fba01ffba3b33446b088241475cd789862b68adfff007705",
+    "sha256": "a078a470313075f2fba01ffba3b33446b088241475cd789862b68adfff007705",
+    "status": "copied_unchanged"
+  },
+  {
+    "source": "fig4/figures/Figure4_Supplementary_Performance_DotPlot_with_PrecisionRecall.pdf",
+    "path": "analysis/fig4/figures/Figure4_Supplementary_Performance_DotPlot_with_PrecisionRecall.pdf",
+    "source_sha256": "548ac1deac71d0dada8b3232adba9395f43b8840aa05b4bb8e4a51dfa2b00f21",
+    "sha256": "548ac1deac71d0dada8b3232adba9395f43b8840aa05b4bb8e4a51dfa2b00f21",
+    "status": "copied_unchanged"
+  },
+  {
+    "source": "fig4/scripts/reconstruct_classification_metrics.py",
+    "path": "analysis/fig4/scripts/reconstruct_classification_metrics.py",
+    "source_sha256": "08282cba9a6e28442e955b8469e53a8dbdc35eb352952b8fcc4a3db224416677",
+    "sha256": "f5618457baccba1ab92aee211f51fc799935e0cb4c6d5d5a0cb4929883bcc0fd",
+    "status": "repository_paths_or_documentation"
+  },
+  {
+    "source": "fig4/data/reconstructed/ClinGen_reconstructed_metrics.csv",
+    "path": "analysis/fig4/data/reconstructed/ClinGen_reconstructed_metrics.csv",
+    "source_sha256": "6fb40a76345fc622c21c9fa3909eb344de0ca5777870189379e9732e1799d6d8",
+    "sha256": "6fb40a76345fc622c21c9fa3909eb344de0ca5777870189379e9732e1799d6d8",
+    "status": "copied_unchanged"
+  },
+  {
+    "source": "fig4/data/reconstructed/FOXL2_reconstructed_metrics.csv",
+    "path": "analysis/fig4/data/reconstructed/FOXL2_reconstructed_metrics.csv",
+    "source_sha256": "25c854eee81480d5499df22e1cf39d5c03849ec7482ada4fb07cb2e89092dcd6",
+    "sha256": "25c854eee81480d5499df22e1cf39d5c03849ec7482ada4fb07cb2e89092dcd6",
+    "status": "copied_unchanged"
+  },
+  {
+    "source": "fig5/build_correlation_master_table.py",
+    "path": "analysis/fig5/build_correlation_master_table.py",
+    "source_sha256": "bc5adc655a7d3463d925b9c5f392e633ca0be4b390fdf3c442ff57fef2b6997b",
+    "sha256": "fcc0e93bbf7f518513ea624a67d04d746d83f2dc9f6cb45886ebffcef6cd4306",
+    "status": "repository_paths_or_documentation"
+  },
+  {
+    "source": "fig5/calculate_pairwise_pearson_correlations.py",
+    "path": "analysis/fig5/calculate_pairwise_pearson_correlations.py",
+    "source_sha256": "962f09cfe3f9bc518ac689dbfa2c7e12c1c8218b72d785e681ecf03d1e91b931",
+    "sha256": "49173f9bb9b21a74448de66765bbdf33bcf7dd4697cbedc4a770bf64b54d715e",
+    "status": "repository_paths_or_documentation"
+  },
+  {
+    "source": "fig5/correlation_master_table.csv",
+    "path": "analysis/fig5/correlation_master_table.csv",
+    "source_sha256": "d98a055dd5881a97915cd3a60ea3507a64021e6f8f191a407bf758703145ced2",
+    "sha256": "d98a055dd5881a97915cd3a60ea3507a64021e6f8f191a407bf758703145ced2",
+    "status": "copied_unchanged"
+  },
+  {
+    "source": "fig5/Figure5_clustered_pairwise_pearson_heatmap.pdf",
+    "path": "analysis/fig5/Figure5_clustered_pairwise_pearson_heatmap.pdf",
+    "source_sha256": "1d932922f94d18d25176ff762d565c44733cdffe9a89b56134ca701516b86c74",
+    "sha256": "c231a75b49979d133415242450feb1b7a229e27b43d26c26997af705ceb77efa",
+    "status": "regenerated_repository_output"
+  },
+  {
+    "source": "fig5/pearson_fdr_matrix.csv",
+    "path": "analysis/fig5/pearson_fdr_matrix.csv",
+    "source_sha256": "105e1384f32190cfc5535bf0225f97feb9b498bade4570ddddca2454b8659a1c",
+    "sha256": "105e1384f32190cfc5535bf0225f97feb9b498bade4570ddddca2454b8659a1c",
+    "status": "copied_unchanged"
+  },
+  {
+    "source": "fig5/pearson_r_matrix.csv",
+    "path": "analysis/fig5/pearson_r_matrix.csv",
+    "source_sha256": "f9558a7562660fb97dfc5d7e22c21a8ab66ac9a89b4c39ea87bc7b043743ad5a",
+    "sha256": "f9558a7562660fb97dfc5d7e22c21a8ab66ac9a89b4c39ea87bc7b043743ad5a",
+    "status": "copied_unchanged"
+  },
+  {
+    "source": "fig5/plot_clustered_pairwise_pearson_heatmap.py",
+    "path": "analysis/fig5/plot_clustered_pairwise_pearson_heatmap.py",
+    "source_sha256": "550353ac489b30f056d55886188993793e8af52dd4df5c2e3d10430d5c9daed3",
+    "sha256": "fe77261cb3be09712db72b9a1cae5a0723ac64284f0f59a10e41b0ad4f35466b",
+    "status": "repository_paths_or_documentation"
+  },
+  {
+    "source": "fig6/generate_figure6_five_panel_v3.py",
+    "path": "analysis/fig6/generate_figure6.py",
+    "source_sha256": "379363e0d9cd842d1f9a065e1387f2cfdf0c98f19bc9262e68bb40f53303629b",
+    "sha256": "491baaf5c8cda02128e109bdd7b426ddee260e036077e71d673265b357069809",
+    "status": "repository_paths_or_documentation"
+  },
+  {
+    "source": "fig6/generate_supplementary_figure_s4.py",
+    "path": "analysis/fig6/generate_supplementary_figure_s3.py",
+    "source_sha256": "dbd3cda62e60994a0ec0c69a05c11d37721642affa6742016dac5d6696f9daa1",
+    "sha256": "9cebc84809d6bd629e93f1921be3c81f343ff0e73bd38a040b8cf282870c8f3a",
+    "status": "repository_paths_or_documentation"
+  },
+  {
+    "source": "fig6/README.md",
+    "path": "analysis/fig6/README.md",
+    "source_sha256": "a7bcc423a4891837ee641424f5526dae9915e4f0e28d7266ae23a4045d1086df",
+    "sha256": "13cd767687a9be87edc6eb8aca9f5fa181517febf82f17cf9f56bfb446195d17",
+    "status": "repository_paths_or_documentation"
+  },
+  {
+    "source": "fig6/outputs/clingen_total_criterion_jaccard.csv",
+    "path": "analysis/fig6/outputs/clingen_total_criterion_jaccard.csv",
+    "source_sha256": "3f7dac6287e3679f58b6ea0c6e52fb918170c31e49aae3e15a4f1d649051203d",
+    "sha256": "3f7dac6287e3679f58b6ea0c6e52fb918170c31e49aae3e15a4f1d649051203d",
+    "status": "copied_unchanged"
+  },
+  {
+    "source": "fig6/outputs/fig4_capability_adjusted_summary.csv",
+    "path": "analysis/fig6/outputs/fig6_capability_adjusted_summary.csv",
+    "source_sha256": "7b72526f161b65c5cf50d2251a491b2c6f9cf7c884cc75dec83dae3b741f01c1",
+    "sha256": "7b72526f161b65c5cf50d2251a491b2c6f9cf7c884cc75dec83dae3b741f01c1",
+    "status": "copied_unchanged"
+  },
+  {
+    "source": "fig6/outputs/fig4_evidence_distributions.csv",
+    "path": "analysis/fig6/outputs/fig6_evidence_distributions.csv",
+    "source_sha256": "88e185d4cec8a7c1c9f30f8a20f0cf2ba0fdf194ea8b9280f51d02089642cf59",
+    "sha256": "88e185d4cec8a7c1c9f30f8a20f0cf2ba0fdf194ea8b9280f51d02089642cf59",
+    "status": "copied_unchanged"
+  },
+  {
+    "source": "fig6/outputs/fig4_master_variant_tool.csv",
+    "path": "analysis/fig6/outputs/fig6_master_variant_tool.csv",
+    "source_sha256": "94a6600529827cb7aeb6be8d5b5f15f6f6aa85f7507bb664410ebeb7afb24a22",
+    "sha256": "94a6600529827cb7aeb6be8d5b5f15f6f6aa85f7507bb664410ebeb7afb24a22",
+    "status": "copied_unchanged"
+  },
+  {
+    "source": "fig6/outputs/tool_criterion_capability_matrix.csv",
+    "path": "analysis/fig6/outputs/tool_criterion_capability_matrix.csv",
+    "source_sha256": "93600352842e68e5c5cef23d437f4bd3a7fd12018b1d0a6c2b65e6a79889bcfd",
+    "sha256": "93600352842e68e5c5cef23d437f4bd3a7fd12018b1d0a6c2b65e6a79889bcfd",
+    "status": "copied_unchanged"
+  },
+  {
+    "source": "fig6/outputs/foxl2_supplementary/foxl2_total_criterion_jaccard.csv",
+    "path": "analysis/fig6/outputs/foxl2_supplementary/foxl2_total_criterion_jaccard.csv",
+    "source_sha256": "4ea893835fc5de04cfbbf7f690487edd146fe17928e5428ff67f37a32b1032d3",
+    "sha256": "4ea893835fc5de04cfbbf7f690487edd146fe17928e5428ff67f37a32b1032d3",
+    "status": "copied_unchanged"
+  },
+  {
+    "source": "fig6/outputs/foxl2_supplementary/Supplementary_Figure_S3.pdf",
+    "path": "analysis/fig6/outputs/foxl2_supplementary/Supplementary_Figure_S3.pdf",
+    "source_sha256": "58ca12492ae684629f832e40e4be2318ccd3bccf8e588b8366725a8a8eaca5f7",
+    "sha256": "58ca12492ae684629f832e40e4be2318ccd3bccf8e588b8366725a8a8eaca5f7",
+    "status": "copied_unchanged"
+  },
+  {
+    "source": "Current repository analysis, reduced to the selected Jaccard table",
+    "path": "analysis/fig3/calculate_clingen_jaccard.py",
+    "source_sha256": "d3d126b1377727240ac5c76dd0250a669254e67de0803624ac9247dee5937b84",
+    "sha256": "8771f903448ecc32d6981ea1545882de95ed30f8f73f47e61adc82e2ee279136",
+    "status": "repository_data_generator"
+  },
+  {
+    "source": "Current repository analysis, reduced to the selected Jaccard table",
+    "path": "analysis/fig3/calculate_foxl2_jaccard.py",
+    "source_sha256": "eb64dab68c5ac22d76600d4e08eb093761bbb313a38fe39d57d1ff35d5cf0140",
+    "sha256": "31962d394571fba6d1ae5ab2a7529b1a5c7e4726b1b994932acf540c4ac15577",
+    "status": "repository_data_generator"
+  },
+  {
+    "source_sha256": "143de949bb65042e6110c75ebbf8d1082f786ae9ad2a2c8946f3e370adfb8757",
+    "path": "analysis/fig6/build_fig4_master_table.py",
+    "status": "copied_and_adapted_for_repository_inputs",
+    "sha256": "2b4a6ca3151295b9d70962306e1214f2a9c13a5761d8c84dc48205e83329e63b",
+    "source": "analysis_last/fig5_archive/build_fig4_master_table.py"
+  },
+  {
+    "source_sha256": "c1517621c9e27b73c40189a243698909f360b3b5cd9ff75f1c41001f7b7c269c",
+    "path": "analysis/fig6/build_capability_matrix.py",
+    "status": "copied_unchanged",
+    "sha256": "c1517621c9e27b73c40189a243698909f360b3b5cd9ff75f1c41001f7b7c269c",
+    "source": "analysis_last/fig5_archive/build_capability_matrix.py"
+  },
+  {
+    "source_sha256": "3540cb82034465efd3e38fcaaab1bd68f97efff0ee9315cd1938214aa7cbba76",
+    "path": "analysis/fig6/perform_capability_adjusted_analysis.py",
+    "status": "copied_and_adapted_for_repository_inputs",
+    "sha256": "8c0836b854b8097f483fb749e22cf3206349083a6a5d99f22cf862137f032c30",
+    "source": "analysis_last/fig5_archive/perform_capability_adjusted_analysis.py"
+  },
+  {
+    "source_sha256": "cdc64e30e703c7e3dbaf0325c17afe88b23b34067a07cc47c24c95d9e8e1c666",
+    "path": "analysis/fig6/perform_foxl2_capability_adjusted_analysis.py",
+    "status": "copied_and_adapted_for_repository_inputs",
+    "sha256": "1a7d6febb1815a2192a445feb04f993350b35a90f26b18a08dd0e66d4d7b9aa8",
+    "source": "analysis_last/fig5_archive/perform_foxl2_capability_adjusted_analysis.py"
+  },
+  {
+    "source_sha256": "4a63a6644b04f66a4580a389017823b2aa64fdb331ef15cf0ba3e0ee7b4047a3",
+    "path": "analysis/fig6/build_evidence_distributions.py",
+    "status": "repository_data_generator",
+    "sha256": "62e487e97cf04f3feee9dd2540f5e28240e496a59ed6f38a748ce88d78954cfe",
+    "source": "Current repository analysis using the rebuilt Figure 6 master table"
+  },
+  {
+    "source_sha256": "92d4f349efa49d02681050b263896e46293588e09ccc3119e29fb3c86aabd8e5",
+    "path": "analysis/fig6/calculate_total_criterion_jaccard.py",
+    "status": "copied_and_adapted_for_repository_inputs",
+    "sha256": "b1057d9e80c81db8d87887d7447a27ec9945bd414a163100e7daa883448b501a",
+    "source": "analysis_last/fig5_archive/calculate_total_criterion_jaccard.py"
+  },
+  {
+    "source_sha256": "36ba1c3ce87de8c894955a4fb4e81df8ee478a04016fd961e96202f598c6f4ea",
+    "path": "analysis/fig6/calculate_foxl2_total_criterion_jaccard.py",
+    "status": "copied_and_adapted_for_repository_inputs",
+    "sha256": "e803bec3b75b750870a1994b7aa4f0ba876bbd00c7a5d217fb077e0b8e01f3bc",
+    "source": "analysis_scripts/fig6/calculate_foxl2_total_criterion_jaccard.py"
+  },
+  {
+    "source_sha256": "401a9ab270d60525d3d0205eed6030c5f3a49895f41b546331d2b8262ae51501",
+    "path": "analysis/fig6/reference/tool_acmg_capabilities.csv",
+    "status": "copied_unchanged",
+    "sha256": "401a9ab270d60525d3d0205eed6030c5f3a49895f41b546331d2b8262ae51501",
+    "source": "analysis_scripts/fig6/reference/tool_acmg_capabilities.csv"
+  }
+]

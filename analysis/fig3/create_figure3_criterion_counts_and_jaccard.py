@@ -18,7 +18,7 @@ from pathlib import Path
 import sys
 
 # Import criterion parser
-sys.path.insert(0, str(Path(__file__).parent.parent / 'fig2'))
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / 'fig2'))
 from utils_criteria_parser import parse_criteria_string
 
 # Global settings
@@ -31,8 +31,8 @@ print("FIGURE 3: CRITERION COUNTS AND JACCARD SIMILARITY")
 print("="*80)
 
 # Paths
-script_dir = Path(__file__).parent
-MASTER_TABLE = script_dir.parent / 'fig5' / 'outputs' / 'fig4_master_variant_tool.csv'
+script_dir = Path(__file__).resolve().parent
+MASTER_TABLE = script_dir.parent / 'fig6' / 'outputs' / 'fig6_master_variant_tool.csv'
 JACCARD_CLINGEN = script_dir / 'jaccard_per_criterion_clingen_28012026.csv'
 JACCARD_FOXL2 = script_dir / 'jaccard_per_criterion_foxl2.csv'
 output_dir = script_dir / 'figures'
@@ -337,8 +337,7 @@ def create_figure_for_dataset(dataset_name, count_matrix, ground_truth_counts,
     png_path = output_dir / f"{output_prefix}.png"
     pdf_path = output_dir / f"{output_prefix}.pdf"
     
-    plt.savefig(png_path, dpi=300, bbox_inches='tight')
-    print(f"  ✓ Saved: {png_path.name}")
+    # PDF is the selected manuscript output.
     
     plt.savefig(pdf_path, dpi=300, bbox_inches='tight')
     print(f"  ✓ Saved: {pdf_path.name}")
@@ -441,20 +440,13 @@ def main():
     )
     
     # Save matrices
-    save_matrices_as_csv(
-        'ClinGen',
-        clingen_counts,
-        clingen_gt,
-        clingen_jaccard,
-        clingen_tools,
-        SELECTED_CRITERIA
-    )
+
     
     # ========================================================================
     # FOXL2 Supplementary Figure
     # ========================================================================
     print("\n" + "="*80)
-    print("FOXL2 SUPPLEMENTARY FIGURE 3")
+    print("SUPPLEMENTARY FIGURE 2 (FOXL2)")
     print("="*80)
     
     # Calculate counts
@@ -496,17 +488,7 @@ def main():
         foxl2_jaccard,
         foxl2_tools,
         SELECTED_CRITERIA,
-        'Figure3_FOXL2_Counts_Jaccard'
-    )
-    
-    # Save matrices
-    save_matrices_as_csv(
-        'FOXL2',
-        foxl2_counts,
-        foxl2_gt,
-        foxl2_jaccard,
-        foxl2_tools,
-        SELECTED_CRITERIA
+        'Supp_Fig2_FOXL2_Counts_Jaccard'
     )
     
     print("\n" + "="*80)
@@ -515,15 +497,9 @@ def main():
     print(f"\nOutput directory: {output_dir}")
     print("\nGenerated files:")
     print("  ClinGen:")
-    print("    - Figure3_ClinGen_Counts_Jaccard.png")
     print("    - Figure3_ClinGen_Counts_Jaccard.pdf")
-    print("    - figure3_clingen_criterion_counts.csv")
-    print("    - figure3_clingen_jaccard.csv")
     print("  FOXL2:")
-    print("    - Figure3_FOXL2_Counts_Jaccard.png")
-    print("    - Figure3_FOXL2_Counts_Jaccard.pdf")
-    print("    - figure3_foxl2_criterion_counts.csv")
-    print("    - figure3_foxl2_jaccard.csv")
+    print("    - Supp_Fig2_FOXL2_Counts_Jaccard.pdf")
     print("\n" + "="*80)
 
 

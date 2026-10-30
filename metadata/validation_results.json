@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-28",
+  "environment": "Ubuntu WSL, Conda environment acmg-benchmarking, Python 3.9",
+  "completed_pipeline_scripts": 22,
+  "raw_rebuild": "byte-identical to supplied merged_results_noHGMD.tsv",
+  "matching_supplied_csv_files": [
+    "analysis/fig6/outputs/fig6_master_variant_tool.csv",
+    "analysis/fig6/outputs/fig6_capability_adjusted_summary.csv",
+    "analysis/fig6/outputs/fig6_evidence_distributions.csv",
+    "analysis/fig6/outputs/clingen_total_criterion_jaccard.csv",
+    "analysis/fig6/outputs/tool_criterion_capability_matrix.csv",
+    "analysis/fig6/outputs/foxl2_supplementary/foxl2_total_criterion_jaccard.csv"
+  ],
+  "source_files_verified_unchanged": 679,
+  "scope": "Current repository pipeline including restored Figure 6 upstream builders; no HGMD/ClinVar evaluation cohort used.",
+  "curation_date": "2026-10-28",
+  "current_runner_steps": 21,
+  "runner_after_curation": "completed with --from-raw in a separate temporary output copy; all 22 steps succeeded",
+  "selected_outputs": [
+    "analysis/fig2/figures/Figure2_Comprehensive.pdf",
+    "analysis/fig2/figures/Supp_Fig_InterVar_Comparison.pdf",
+    "analysis/fig3/figures/Figure3_ClinGen_Counts_Jaccard.pdf",
+    "analysis/fig3/figures/Supp_Fig2_FOXL2_Counts_Jaccard.pdf",
+    "analysis/fig4/figures/Figure4_Performance_DotPlot.pdf",
+    "analysis/fig4/figures/Figure4_Supplementary_Performance_DotPlot_with_PrecisionRecall.pdf",
+    "analysis/fig5/Figure5_clustered_pairwise_pearson_heatmap.pdf",
+    "analysis/fig6/outputs/figures/Figure6_five_panel_preview_v3.pdf",
+    "analysis/fig6/outputs/foxl2_supplementary/Supplementary_Figure_S3.pdf"
+  ]
+}

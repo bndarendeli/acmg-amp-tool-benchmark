@@ -23,7 +23,7 @@ print("=" * 100)
 # LOAD DATA
 # ==============================================================================
 print("\n1. Loading data...")
-data_file = '/mnt/d/busra-research/doktora/1002/code_works/dataset_prep/analysis_last/data/merged_results.tsv'
+data_file = Path(__file__).resolve().parents[2] / 'data/processed/merged_results_noHGMD.tsv'
 df = pd.read_csv(data_file, sep='\t', low_memory=False)
 clingen_df = df[df['Dataset'] == 'clingen_28012026'].copy()
 total_clingen = len(clingen_df)
@@ -185,22 +185,20 @@ plt.tight_layout()
 # ==============================================================================
 print("\n4. Saving figure...")
 
-# Output to the figure-specific figures directory
-script_dir = Path(__file__).parent
+# Output to analysis_scripts/figures directory
+script_dir = Path(__file__).resolve().parent
 output_dir = script_dir / 'figures'
 output_dir.mkdir(parents=True, exist_ok=True)
 
 output_png = output_dir / 'Supp_Fig_InterVar_Comparison.png'
 output_pdf = output_dir / 'Supp_Fig_InterVar_Comparison.pdf'
 
-plt.savefig(output_png, dpi=300, bbox_inches='tight', facecolor='white')
 plt.savefig(output_pdf, dpi=300, bbox_inches='tight', facecolor='white')
 
 print("\n" + "=" * 100)
 print("✓ SUPPLEMENTARY FIGURE CREATED - INTERVAR COMPARISON")
 print("=" * 100)
 print(f"\nOutput files:")
-print(f"  - {output_png}")
 print(f"  - {output_pdf}")
 print(f"\nData: ClinGen dataset ({total_clingen:,} variants)")
 print(f"Classifications: {len(panel_df)} categories")

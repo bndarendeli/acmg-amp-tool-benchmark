@@ -12,8 +12,6 @@ Metrics:
 Cohorts:
 - ClinGen Master Cohort: n = 11,409
 - FOXL2: n = 288
-- HGMD–ClinVar Hearing Loss: n = 1,948
-- HGMD–ClinVar Cancer Predisposition: n = 1,788
 """
 
 import pandas as pd
@@ -26,13 +24,13 @@ print("RECONSTRUCTING CLASSIFICATION PERFORMANCE METRICS")
 print("=" * 80)
 
 # Paths
-base_dir = Path(__file__).parent.parent
+base_dir = Path(__file__).resolve().parent.parent
 output_dir = base_dir / 'data' / 'reconstructed'
 output_dir.mkdir(parents=True, exist_ok=True)
 
 # Source data files
-source_dir = Path('/mnt/d/busra-research/doktora/1002/code_works/dataset_prep/analysis_last/data')
-merged_results_file = source_dir / 'merged_results.tsv'
+source_dir = Path(__file__).resolve().parents[3] / 'data/processed'
+merged_results_file = source_dir / 'merged_results_noHGMD.tsv'
 foxl2_results_file = source_dir / 'foxl2_merged_results.tsv'
 
 # Cohort definitions
@@ -48,18 +46,6 @@ COHORTS = {
         'dataset_filter': None,
         'expected_n': 288,
         'output_file': 'FOXL2_reconstructed_metrics.csv'
-    },
-    'HGMD–ClinVar HL': {
-        'file': merged_results_file,
-        'dataset_filter': 'HGMD_Clinvar_HL',
-        'expected_n': 1948,
-        'output_file': 'HGMD_ClinVar_HL_reconstructed_metrics.csv'
-    },
-    'HGMD–ClinVar Cancer': {
-        'file': merged_results_file,
-        'dataset_filter': 'HGMD_Clinvar_Cancer',
-        'expected_n': 1788,
-        'output_file': 'HGMD_ClinVar_Cancer_reconstructed_metrics.csv'
     }
 }
 
