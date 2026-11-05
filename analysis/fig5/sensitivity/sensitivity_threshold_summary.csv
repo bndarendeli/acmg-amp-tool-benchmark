@@ -1,0 +1,5 @@
+Min_positive_jaccard,Is_primary,N_eligible_criteria,Eligible_criteria,N_family_A_pairs_tested,N_family_A_FDR_significant,N_family_A_FDR_sig_positive,N_family_A_FDR_sig_negative,Highest_positive_pair,Highest_positive_r,Highest_positive_q,Most_negative_pair,Most_negative_r,Most_negative_q,N_family_B_tests,N_family_B_FDR_significant
+3/14,False,19,PVS1;PS1;PS3;PS4;PM1;PM2;PM4;PM5;PM6;PP2;PP3;BA1;BS1;BS2;BS3;BP1;BP2;BP4;BP7,171,155,155,0,PS4-BS3,0.9948749737207663,4.4247666473646384e-11,none,,,60,37
+4/14,False,16,PVS1;PS1;PS3;PM1;PM2;PM4;PM5;PP2;PP3;BA1;BS1;BS2;BS3;BP1;BP4;BP7,120,110,110,0,PM5-BS2,0.9741234838165603,3.236505334421711e-07,none,,,51,31
+5/14,True,15,PVS1;PS1;PS3;PM1;PM2;PM4;PM5;PP2;PP3;BA1;BS1;BS2;BP1;BP4;BP7,105,97,97,0,PM5-BS2,0.9741234838165603,4.304389049646714e-07,none,,,48,29
+7/14,False,13,PVS1;PS1;PM1;PM2;PM4;PM5;PP2;PP3;BA1;BS1;BP1;BP4;BP7,78,72,72,0,PP2-BA1,0.9565328543300683,4.8362254162486984e-06,none,,,42,25

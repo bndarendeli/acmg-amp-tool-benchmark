@@ -59,7 +59,7 @@ into their own repository figure directory. Use the runner to preserve supplied 
 | `analysis/fig3` | Criterion counts and Jaccard heatmaps |
 | `analysis/fig4` | Two-cohort classification metrics and figures |
 | `analysis/fig5` | Selected Pearson correlation heatmap and its inputs |
-| `analysis/fig6` | Figure 6, Supplementary Figure S3 and their inputs |
+| `analysis/fig6` | Figure 6, Supplementary Figure S4 and their inputs |
 | `data/processed` | Current merged predictions and the separate FOXL2 analysis input |
 | `data/reference` | ClinGen-only reference rows and the FOXL2 reference workbook |
 | `data/tool_results` | 26 compressed original outputs: 14 ClinGen and 12 FOXL2 |

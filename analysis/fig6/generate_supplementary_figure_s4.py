@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Generate Supplementary Figure S3 - FOXL2 Evidence Concordance
+Generate Supplementary Figure S4 - FOXL2 Evidence Concordance
 
 Two-panel dumbbell plot showing raw vs capability-adjusted Mean and Total
 Criterion Jaccard for FOXL2 dataset.
@@ -179,10 +179,10 @@ def plot_dumbbell_panel(ax, df, raw_col, adj_col, x_label, panel_label, show_leg
 
 
 def generate_figure(df, output_dir):
-    """Generate the two-panel Supplementary Figure S3"""
+    """Generate the two-panel Supplementary Figure S4"""
     
     print("\n" + "="*80)
-    print("GENERATING SUPPLEMENTARY FIGURE S3")
+    print("GENERATING SUPPLEMENTARY FIGURE S4")
     print("="*80)
     
     # Create figure with two panels
@@ -219,7 +219,7 @@ def generate_figure(df, output_dir):
     output_dir = Path(output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
     
-    pdf_path = output_dir / 'Supplementary_Figure_S3.pdf'
+    pdf_path = output_dir / 'Supplementary_Figure_S4.pdf'
     plt.savefig(pdf_path, bbox_inches='tight')
     
     print(f"  ✓ Saved: {pdf_path}")
@@ -233,7 +233,7 @@ def generate_report(df):
     """Generate final report"""
     
     print("\n" + "="*80)
-    print("SUPPLEMENTARY FIGURE S3 GENERATION REPORT")
+    print("SUPPLEMENTARY FIGURE S4 GENERATION REPORT")
     print("="*80)
     
     print("\n1. TOOL ORDERING (by raw Mean CJ, descending):")
@@ -241,8 +241,8 @@ def generate_report(df):
         print(f"   {i+1}. {row['tool_name']}")
     
     print("\n2. OUTPUT PATHS:")
-    print("   ✓ outputs/foxl2_supplementary/Supplementary_Figure_S3.pdf")
-    print("   ✓ outputs/foxl2_supplementary/Supplementary_Figure_S3.png")
+    print("   ✓ outputs/foxl2_supplementary/Supplementary_Figure_S4.pdf")
+    print("   ✓ outputs/foxl2_supplementary/Supplementary_Figure_S4.png")
     
     print("\n3. DATA VERIFICATION:")
     print(f"   ✓ Number of tools: {len(df)}")
@@ -257,14 +257,14 @@ def generate_report(df):
         print(f"   {row['tool_name']:<20} {row['raw_mean_jaccard']:>10.4f} {row['adjusted_mean_jaccard']:>10.4f} {row['raw_total_criterion_jaccard']:>10.4f} {row['adjusted_total_criterion_jaccard']:>10.4f}")
     
     print("\n" + "="*80)
-    print("✓ SUPPLEMENTARY FIGURE S3 GENERATION COMPLETE")
+    print("✓ SUPPLEMENTARY FIGURE S4 GENERATION COMPLETE")
     print("="*80)
 
 
 def main():
     """Main execution"""
     print("="*80)
-    print("SUPPLEMENTARY FIGURE S3 - FOXL2 EVIDENCE CONCORDANCE")
+    print("SUPPLEMENTARY FIGURE S4 - FOXL2 EVIDENCE CONCORDANCE")
     print("="*80)
     print()
     print("Two-panel dumbbell plot:")

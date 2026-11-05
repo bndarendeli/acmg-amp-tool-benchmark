@@ -1,0 +1,29 @@
+Criterion,N_tool_instances,N_zero_jaccard,N_positive_jaccard,Proportion_positive,N_distinct_values,SD_jaccard,Mean_jaccard,Max_jaccard,Instances_with_positive_jaccard,Eligible_primary,Exclusion_reason,Eligible_min3of14,Eligible_min4of14,Eligible_min5of14,Eligible_min7of14
+PVS1,14,2,12,0.8571428571428571,13,0.29962483203329887,0.33980285778089153,0.8374864572047671,AutoGVP;BIAS;CPSR;CancerSIGVAR;DiabloACMG;Exomiser;Franklin;Genebe;InterVar_2018;InterVar_2025;TAPES;VIP-HL,True,,True,True,True,True
+PS1,14,3,11,0.7857142857142857,11,0.16611497679410694,0.07722554050709123,0.6139240506329114,AutoGVP;BIAS;CPSR;CancerSIGVAR;CharGer_Online;DiabloACMG;Franklin;Genebe;InterVar_2018;InterVar_2025;TAPES,True,,True,True,True,True
+PS2,14,12,2,0.14285714285714285,3,0.26461654851931016,0.10371963777536533,0.783625730994152,Franklin;Genebe,False,positive Jaccard in 2/14 instances (< 5/14 required),False,False,False,False
+PS3,14,9,5,0.35714285714285715,6,0.2754187974879002,0.14609079661056043,0.8331108144192256,BIAS;DiabloACMG;Franklin;Genebe;TAPES,True,,True,True,True,False
+PS4,14,11,3,0.21428571428571427,4,0.25231966946522044,0.10365401162632047,0.7653846153846153,BIAS;Franklin;Genebe,False,positive Jaccard in 3/14 instances (< 5/14 required),True,False,False,False
+PM1,14,3,11,0.7857142857142857,12,0.1830720656049095,0.1569139146909053,0.6802646085997794,AutoGVP;BIAS;CPSR;DiabloACMG;Exomiser;Franklin;Genebe;InterVar_2018;InterVar_2025;TAPES;VIP-HL,True,,True,True,True,True
+PM2,14,0,14,1.0,14,0.3248557876100375,0.4745998942176879,0.9439009287925696,AutoGVP;BIAS;CPSR;CancerSIGVAR;CharGer_Local;CharGer_Online;DiabloACMG;Exomiser;Franklin;Genebe;InterVar_2018;InterVar_2025;TAPES;VIP-HL,True,,True,True,True,True
+PM3,14,12,2,0.14285714285714285,3,0.22690090740786004,0.08918469352358284,0.6484162895927602,Franklin;Genebe,False,positive Jaccard in 2/14 instances (< 5/14 required),False,False,False,False
+PM4,14,3,11,0.7857142857142857,10,0.04918645658511275,0.053121016263664736,0.1580756013745704,AutoGVP;BIAS;CPSR;CancerSIGVAR;DiabloACMG;Exomiser;Franklin;Genebe;InterVar_2018;InterVar_2025;TAPES,True,,True,True,True,True
+PM5,14,3,11,0.7857142857142857,11,0.1868096943929073,0.11882499310361493,0.6696675900277008,AutoGVP;BIAS;CPSR;CancerSIGVAR;DiabloACMG;Exomiser;Franklin;Genebe;InterVar_2018;InterVar_2025;VIP-HL,True,,True,True,True,True
+PM6,14,11,3,0.21428571428571427,4,0.25879454093267773,0.11164855975232034,0.7866108786610879,CPSR;Franklin;Genebe,False,positive Jaccard in 3/14 instances (< 5/14 required),True,False,False,False
+PP1,14,12,2,0.14285714285714285,3,0.24427849126127868,0.09559071618940311,0.7330827067669173,Franklin;Genebe,False,positive Jaccard in 2/14 instances (< 5/14 required),False,False,False,False
+PP2,14,6,8,0.5714285714285714,7,0.18586945420053105,0.10170636843613885,0.6301775147928994,AutoGVP;BIAS;CPSR;DiabloACMG;Franklin;Genebe;InterVar_2018;InterVar_2025,True,,True,True,True,True
+PP3,14,0,14,1.0,14,0.3209850176189819,0.40173881349574014,0.9245683930942896,AutoGVP;BIAS;CPSR;CancerSIGVAR;CharGer_Local;CharGer_Online;DiabloACMG;Exomiser;Franklin;Genebe;InterVar_2018;InterVar_2025;TAPES;VIP-HL,True,,True,True,True,True
+PP4,14,12,2,0.14285714285714285,3,0.22295742317486278,0.08694684633535214,0.6834972096731331,Franklin;Genebe,False,positive Jaccard in 2/14 instances (< 5/14 required),False,False,False,False
+PP5,14,14,0,0.0,1,0.0,0.0,0.0,,False,zero variance (all 14 values = 0); positive Jaccard in 0/14 instances (< 5/14 required),False,False,False,False
+BA1,14,2,12,0.8571428571428571,13,0.23006607920168057,0.18591909356795364,0.8579940417080437,AutoGVP;BIAS;CPSR;CancerSIGVAR;CharGer_Local;DiabloACMG;Franklin;Genebe;InterVar_2018;InterVar_2025;TAPES;VIP-HL,True,,True,True,True,True
+BS1,14,4,10,0.7142857142857143,11,0.2012620946608073,0.11473789575733788,0.7638121546961326,AutoGVP;BIAS;CPSR;CancerSIGVAR;Franklin;Genebe;InterVar_2018;InterVar_2025;TAPES;VIP-HL,True,,True,True,True,True
+BS2,14,9,5,0.35714285714285715,6,0.22683714580760714,0.100984458043607,0.7644287396937574,BIAS;DiabloACMG;Franklin;Genebe;TAPES,True,,True,True,True,False
+BS3,14,10,4,0.2857142857142857,5,0.28398679940031735,0.11759400474495904,0.8678571428571429,DiabloACMG;Franklin;Genebe;TAPES,False,positive Jaccard in 4/14 instances (< 5/14 required),True,True,False,False
+BS4,14,12,2,0.14285714285714285,3,0.2794250163161346,0.10583717357910905,0.9333333333333332,Franklin;Genebe,False,positive Jaccard in 2/14 instances (< 5/14 required),False,False,False,False
+BP1,14,7,7,0.5,7,0.24837845916017023,0.08507247238574547,0.9411764705882352,AutoGVP;BIAS;CPSR;DiabloACMG;Genebe;InterVar_2018;InterVar_2025,True,,True,True,True,True
+BP2,14,11,3,0.21428571428571427,4,0.2477910867421565,0.09611467392725656,0.8862559241706162,CancerSIGVAR;Franklin;Genebe,False,positive Jaccard in 3/14 instances (< 5/14 required),True,False,False,False
+BP3,14,14,0,0.0,1,0.0,0.0,0.0,,False,zero variance (all 14 values = 0); positive Jaccard in 0/14 instances (< 5/14 required),False,False,False,False
+BP4,14,0,14,1.0,14,0.23259151501462844,0.23559313701402168,0.8713921901528013,AutoGVP;BIAS;CPSR;CancerSIGVAR;CharGer_Local;CharGer_Online;DiabloACMG;Exomiser;Franklin;Genebe;InterVar_2018;InterVar_2025;TAPES;VIP-HL,True,,True,True,True,True
+BP5,14,12,2,0.14285714285714285,3,0.2513086859320469,0.09555137844611529,0.8333333333333334,Franklin;Genebe,False,positive Jaccard in 2/14 instances (< 5/14 required),False,False,False,False
+BP6,14,14,0,0.0,1,0.0,0.0,0.0,,False,zero variance (all 14 values = 0); positive Jaccard in 0/14 instances (< 5/14 required),False,False,False,False
+BP7,14,4,10,0.7142857142857143,10,0.2916745016605728,0.27220535376930405,0.8862212943632568,AutoGVP;BIAS;CPSR;CancerSIGVAR;DiabloACMG;Franklin;Genebe;InterVar_2018;InterVar_2025;VIP-HL,True,,True,True,True,True

@@ -26,8 +26,9 @@ STEPS = [
     'fig4/create_figure4_supplementary.py',
     'fig5/build_correlation_master_table.py',
     'fig5/calculate_pairwise_pearson_correlations.py',
+    'fig5/compare_criterion_assignment_counts_with_jaccard.py',
     'fig5/plot_clustered_pairwise_pearson_heatmap.py',
-    'fig6/generate_supplementary_figure_s3.py',
+    'fig6/generate_supplementary_figure_s4.py',
     'fig6/generate_figure6.py',
 ]
 

@@ -1,51 +1,56 @@
 #!/usr/bin/env python3
 """
-Plot Clustered Pairwise Pearson Correlation Heatmap
+Plot Clustered Pairwise Pearson Correlation Heatmap (Figure 5)
 
-Visualization showing the same 28×28 Pearson correlation matrix
-with hierarchical clustering to reveal correlation structure.
+Displays the original 28 x 28 scope: the 25 criteria with nonzero variance
+(PP5, BP3 and BP6 omitted) plus MJ, TJ and 3CA, using the original blue palette
+and layout.
 
-Uses EXISTING Pearson correlations and FDR values - does NOT recalculate.
-Clustering only affects display order, not statistics.
+Statistics are NOT recalculated here. Values are read from the corrected primary
+outputs of `calculate_pairwise_pearson_correlations.py`:
+  - eligible criterion-criterion pairs: Pearson r, '*' if family A BH-FDR q < 0.05
+  - eligible criterion-aggregate and aggregate-aggregate pairs: Pearson r,
+    '*' if family B BH-FDR q < 0.05
+  - any pair involving a sparse (ineligible) criterion: 'NE' on a neutral gray
+    background (not evaluated in the primary correlation analysis)
+
+Primary eligibility (exploratory): nonzero variance and positive Jaccard in >= 5/14
+instances; 3/14 and 7/14 are retained as sensitivity analyses in `sensitivity/`.
+
+Hierarchical clustering (average linkage, distance = 1 - Pearson r) uses only the
+valid matrix (eligible criteria + aggregates). Sparse criteria are shown
+in a separate block in conventional ACMG/AMP order and are not part of the dendrogram.
 """
 
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
-from matplotlib.colors import LinearSegmentedColormap
+from matplotlib.colors import LinearSegmentedColormap, Normalize
 import pandas as pd
 import numpy as np
 from pathlib import Path
 from scipy.cluster.hierarchy import dendrogram, linkage
 from scipy.spatial.distance import squareform
+from statsmodels.stats.multitest import multipletests
 
 print("=" * 80)
-print("PLOTTING CLUSTERED PAIRWISE PEARSON CORRELATION HEATMAP")
+print("PLOTTING CLUSTERED PAIRWISE PEARSON CORRELATION HEATMAP (FIGURE 5)")
 print("=" * 80)
 
-# Define paths
 input_dir = Path(__file__).resolve().parent
 output_dir = input_dir
-
-r_matrix_path = input_dir / 'pearson_r_matrix.csv'
-fdr_matrix_path = input_dir / 'pearson_fdr_matrix.csv'
-
-# Verify files exist
-for path in [r_matrix_path, fdr_matrix_path]:
+paths = {
+    'master': input_dir / 'correlation_master_table.csv',
+    'qc': input_dir / 'criterion_correlation_qc.csv',
+    'r': input_dir / 'pearson_r_matrix.csv',
+    'fdr': input_dir / 'pearson_fdr_matrix.csv',
+    'long': input_dir / 'pearson_pairwise_long.csv',
+}
+for path in paths.values():
     if not path.exists():
-        raise FileNotFoundError(f"Required file not found: {path}")
+        raise FileNotFoundError(f"Required file not found: {path} "
+                                "(run calculate_pairwise_pearson_correlations.py first)")
 
-print(f"\n1. Loading EXISTING Pearson correlation matrices...")
-print(f"   r: {r_matrix_path}")
-print(f"   FDR: {fdr_matrix_path}")
-
-# Load matrices
-df_r = pd.read_csv(r_matrix_path, index_col=0)
-df_fdr = pd.read_csv(fdr_matrix_path, index_col=0)
-
-print(f"   Loaded: {df_r.shape[0]} × {df_r.shape[1]}")
-
-# Define variable order (ALL 31)
 ALL_CRITERIA_ORDER = [
     'PVS1',
     'PS1', 'PS2', 'PS3', 'PS4',
@@ -55,308 +60,252 @@ ALL_CRITERIA_ORDER = [
     'BS1', 'BS2', 'BS3', 'BS4',
     'BP1', 'BP2', 'BP3', 'BP4', 'BP5', 'BP6', 'BP7'
 ]
+AGGREGATES = ['Mean_Criterion_Jaccard', 'Total_Criterion_Jaccard', 'Accuracy_3class']
+AGGREGATE_LABELS = {'Mean_Criterion_Jaccard': 'MJ', 'Total_Criterion_Jaccard': 'TJ',
+                    'Accuracy_3class': '3CA'}
+FAMILY_A = 'A_criterion_criterion'
+FAMILY_B = 'B_criterion_aggregate_and_aggregate_aggregate'
+MIN_POSITIVE = 5   # exploratory primary threshold; 3/14, 4/14 and 7/14 are sensitivity analyses
+SENSITIVITY_TEXT = '3/14, 4/14 and 7/14'
+ALPHA = 0.05
+EXPECTED_ZERO_VAR = ['PP5', 'BP3', 'BP6']
+EXPECTED_ELIGIBLE = ['PVS1', 'PS1', 'PS3', 'PM1', 'PM2', 'PM4', 'PM5', 'PP2', 'PP3',
+                     'BA1', 'BS1', 'BS2', 'BP1', 'BP4', 'BP7']
+EXPECTED_SPARSE = ['PS2', 'PS4', 'PM3', 'PM6', 'PP1', 'PP4',
+                   'BS3', 'BS4', 'BP2', 'BP5']
 
-AGGREGATES = [
-    'Mean_Criterion_Jaccard',
-    'Total_Criterion_Jaccard',
-    'Accuracy_3class'
-]
+# Original Figure 5 palette and mapping (unchanged)
+PALETTE = ["#E3F2FD", "#90CAF9", "#0D47A1"]
+VMIN, VMAX = 0, 1
+NE_COLOR = '#D9D9D9'      # neutral gray, not part of the Pearson colour scale
+NE_TEXT_COLOR = '#616161'
+DIVIDER_COLOR = '#757575'
 
-# Zero-variance criteria to omit
-ZERO_VAR_CRITERIA = ['PP5', 'BP3', 'BP6']
+# ---------------------------------------------------------------------------
+# 1. Load inputs and verify eligibility programmatically
+# ---------------------------------------------------------------------------
+print("\n1. Loading inputs and verifying eligibility...")
+master = pd.read_csv(paths['master'])
+qc = pd.read_csv(paths['qc']).set_index('Criterion')
+df_r = pd.read_csv(paths['r'], index_col=0)
+df_fdr = pd.read_csv(paths['fdr'], index_col=0)
+long = pd.read_csv(paths['long'])
+assert master.shape == (14, 32), f"Master table shape {master.shape}"
+n_obs = len(master)
 
-# Variables to display (25 criteria + 3 aggregates = 28)
-CRITERIA_DISPLAY = [c for c in ALL_CRITERIA_ORDER if c not in ZERO_VAR_CRITERIA]
-VARIABLE_ORDER = CRITERIA_DISPLAY + AGGREGATES
+n_pos = (master[ALL_CRITERIA_ORDER] > 0).sum()
+sd = master[ALL_CRITERIA_ORDER].std()
+zero_var = [c for c in ALL_CRITERIA_ORDER if sd[c] == 0]
+eligible_rule = [c for c in ALL_CRITERIA_ORDER if n_pos[c] >= MIN_POSITIVE and sd[c] > 0]
+displayed_criteria = [c for c in ALL_CRITERIA_ORDER if c not in zero_var]
+sparse = [c for c in displayed_criteria if c not in eligible_rule]
 
-# Display labels for aggregates
-AGGREGATE_LABELS = {
-    'Mean_Criterion_Jaccard': 'MJ',
-    'Total_Criterion_Jaccard': 'TJ',
-    'Accuracy_3class': '3CA'
-}
+assert zero_var == EXPECTED_ZERO_VAR, f"Zero-variance criteria: {zero_var}"
+assert eligible_rule == EXPECTED_ELIGIBLE, f"Eligible criteria: {eligible_rule}"
+assert sparse == EXPECTED_SPARSE, f"Sparse criteria: {sparse}"
+assert list(qc.index[qc['Eligible_primary']]) == eligible_rule, \
+    f"QC file disagrees with the {MIN_POSITIVE}/{n_obs} rule"
+assert set(long['Analysis']) == {f'primary_min{MIN_POSITIVE}of{n_obs}'}, \
+    f"Correlation outputs were not generated with the {MIN_POSITIVE}/{n_obs} rule: {set(long['Analysis'])}"
+assert (qc.loc[ALL_CRITERIA_ORDER, 'N_positive_jaccard'] == n_pos[ALL_CRITERIA_ORDER]).all()
+assert len(displayed_criteria) == 25
+print(f"   Zero variance (omitted): {', '.join(zero_var)}")
+print(f"   Eligible ({len(eligible_rule)}): {', '.join(eligible_rule)}")
+print(f"   Sparse, displayed as NE ({len(sparse)}): {', '.join(sparse)}")
 
-# Create display labels
-display_labels_dict = {}
-for var in VARIABLE_ORDER:
-    if var in AGGREGATE_LABELS:
-        display_labels_dict[var] = AGGREGATE_LABELS[var]
-    else:
-        display_labels_dict[var] = var
+# ---------------------------------------------------------------------------
+# 2. Validate corrected statistical outputs
+# ---------------------------------------------------------------------------
+print("\n2. Validating corrected statistical outputs...")
+valid_vars = eligible_rule + AGGREGATES
+assert list(df_r.index) == list(df_r.columns) == valid_vars
+assert list(df_fdr.index) == list(df_fdr.columns) == valid_vars
+n_elig = len(eligible_rule)
+EXPECTED_N = {FAMILY_A: n_elig * (n_elig - 1) // 2, FAMILY_B: n_elig * len(AGGREGATES) + 3}
+assert EXPECTED_N == {FAMILY_A: 105, FAMILY_B: 48}, EXPECTED_N
+fam_counts = long['FDR_family'].value_counts()
+assert all(fam_counts.get(f, 0) == n for f, n in EXPECTED_N.items()), fam_counts
+assert set(long['FDR_family']) == {FAMILY_A, FAMILY_B}
+tested_vars = set(long['Variable_1']) | set(long['Variable_2'])
+assert tested_vars == set(valid_vars), "Ineligible variables present in FDR families"
+assert not tested_vars & set(sparse) and not tested_vars & set(zero_var)
+for fam, n in EXPECTED_N.items():
+    sub = long[long['FDR_family'] == fam]
+    assert (sub['FDR_family_size'] == n).all()
+    # Independent BH recomputation within the family must reproduce the saved q-values
+    q_check = multipletests(sub['P_value'], method='fdr_bh')[1]
+    assert np.allclose(q_check, sub['FDR_q_value'], rtol=0, atol=1e-15), f"BH mismatch in {fam}"
+    assert ((q_check < ALPHA) == sub['FDR_significant'].values).all()
+fam_lookup = {}
+for row in long.itertuples():
+    assert df_r.loc[row.Variable_1, row.Variable_2] == row.Pearson_r == df_r.loc[row.Variable_2, row.Variable_1]
+    assert df_fdr.loc[row.Variable_1, row.Variable_2] == row.FDR_q_value == df_fdr.loc[row.Variable_2, row.Variable_1]
+    assert bool(row.FDR_significant) == (row.FDR_q_value < ALPHA)
+    fam_lookup[frozenset((row.Variable_1, row.Variable_2))] = row.FDR_family
+assert np.allclose(np.diag(df_r.values), 1.0)
 
-print(f"\n2. Data preparation...")
-print(f"   Total variables in full matrix: 31")
-print(f"   Zero-variance variables (omitted): {len(ZERO_VAR_CRITERIA)}")
-print(f"   Variables to display: {len(VARIABLE_ORDER)}")
-print(f"     - Criteria: {len(CRITERIA_DISPLAY)}")
-print(f"     - Aggregates: {len(AGGREGATES)}")
+# r values must be the full-sample (n = 14) Pearson r of the unchanged master table
+for row in long.itertuples():
+    r_check = np.corrcoef(master[row.Variable_1], master[row.Variable_2])[0, 1]
+    assert np.isclose(r_check, row.Pearson_r, rtol=0, atol=1e-12), (row.Variable_1, row.Variable_2)
+print(f"   ✓ Family A: {fam_counts[FAMILY_A]} tests; family B: {fam_counts[FAMILY_B]} tests")
+print("   ✓ No sparse or zero-variance criterion in either FDR family")
+print("   ✓ r matches full-sample Pearson r from the master table (n = 14)")
 
-# Subset matrices to displayed variables
-df_r = df_r.loc[VARIABLE_ORDER, VARIABLE_ORDER]
-df_fdr = df_fdr.loc[VARIABLE_ORDER, VARIABLE_ORDER]
+# The original palette maps only [0, 1]; stop rather than misrepresent negatives
+off = ~np.eye(len(valid_vars), dtype=bool)
+min_r = float(df_r.values[off].min())
+if min_r < 0:
+    neg = long.loc[long['Pearson_r'] < 0, ['Variable_1', 'Variable_2', 'Pearson_r']]
+    raise ValueError("Negative eligible correlations found; the original 0-1 blue palette cannot "
+                     f"represent them without clipping. Review the design:\n{neg.to_string(index=False)}")
+print(f"   ✓ No negative eligible correlations (minimum off-diagonal r = {min_r:.3f})")
 
-# Validation
-print(f"\n3. Validation...")
-assert df_r.shape == (28, 28), f"Expected 28×28, got {df_r.shape}"
-assert df_fdr.shape == (28, 28), f"Expected 28×28, got {df_fdr.shape}"
-print(f"   ✓ Exactly 28 variables")
-
-# Check PP5, BP3, BP6 are absent
-for var in ZERO_VAR_CRITERIA:
-    assert var not in df_r.index, f"{var} should be excluded"
-print(f"   ✓ PP5, BP3, BP6 are absent")
-
-# Check diagonal is 1.0
-diagonal_vals = np.diag(df_r.values)
-assert np.allclose(diagonal_vals, 1.0, rtol=1e-5), "Diagonal should be 1.0"
-print(f"   ✓ Diagonal is 1.0")
-
-# Check symmetry
-assert np.allclose(df_r.values, df_r.values.T, rtol=1e-10), "Matrix should be symmetric"
-print(f"   ✓ Matrix is symmetric")
-
-# Perform hierarchical clustering
-print(f"\n4. Performing hierarchical clustering...")
-print(f"   Distance metric: 1 - Pearson r")
-print(f"   Linkage method: average")
-
-# Convert correlation to distance
-# For valid correlations, distance = 1 - r
-# This ensures perfect positive correlation (r=1) has distance 0
-r_array = df_r.values.astype(float)
-
-# Create distance matrix
-distance_matrix = 1 - r_array
-
-# Ensure diagonal is exactly 0
+# ---------------------------------------------------------------------------
+# 3. Clustering on the valid 16-variable matrix only
+# ---------------------------------------------------------------------------
+print("\n3. Hierarchical clustering (eligible variables only)...")
+print("   Distance: 1 - Pearson r; linkage: average")
+distance_matrix = 1 - df_r.values.astype(float)
 np.fill_diagonal(distance_matrix, 0)
+linkage_matrix = linkage(squareform(distance_matrix, checks=False), method='average')
+clustered_valid = [valid_vars[i] for i in dendrogram(linkage_matrix, no_plot=True)['leaves']]
+VARIABLE_ORDER = clustered_valid + sparse
+n_valid, n_vars = len(clustered_valid), len(VARIABLE_ORDER)
+assert n_vars == 28 and len(set(VARIABLE_ORDER)) == 28
+assert not set(VARIABLE_ORDER) & set(zero_var)
+display_labels = [AGGREGATE_LABELS.get(v, v) for v in VARIABLE_ORDER]
 
-# Convert to condensed distance matrix (upper triangle)
-condensed_dist = squareform(distance_matrix, checks=False)
+# ---------------------------------------------------------------------------
+# 4. Display-only matrix (NE for any pair involving a sparse criterion)
+# ---------------------------------------------------------------------------
+display = pd.DataFrame('NE', index=VARIABLE_ORDER, columns=VARIABLE_ORDER, dtype=object)
+r_plot = np.full((n_vars, n_vars), np.nan)
+for i, v1 in enumerate(VARIABLE_ORDER):
+    for j, v2 in enumerate(VARIABLE_ORDER):
+        if v1 in sparse or v2 in sparse:
+            continue
+        r_plot[i, j] = df_r.loc[v1, v2]
+        if i == j:
+            display.iloc[i, j] = ''
+        else:
+            q = df_fdr.loc[v1, v2]
+            display.iloc[i, j] = f"{r_plot[i, j]:.2f}" + ('*' if q < ALPHA else '')
+for s in sparse:
+    display.loc[s, s] = ''
+assert (display.values == display.values.T).all()
+assert np.array_equal(np.isnan(r_plot), np.isnan(r_plot.T))
+assert np.allclose(r_plot[~np.isnan(r_plot)], r_plot.T[~np.isnan(r_plot.T)])
+display.index = display.columns = display_labels
+display.to_csv(output_dir / 'figure5_display_matrix.csv')
 
-# Perform hierarchical clustering
-linkage_matrix = linkage(condensed_dist, method='average')
-
-# Get dendrogram to extract order
-dend = dendrogram(linkage_matrix, no_plot=True)
-clustered_indices = dend['leaves']
-
-# Reorder variables based on clustering
-clustered_var_order = [VARIABLE_ORDER[i] for i in clustered_indices]
-
-print(f"   ✓ Clustering complete")
-
-# Reorder matrices
-df_r_clustered = df_r.loc[clustered_var_order, clustered_var_order]
-df_fdr_clustered = df_fdr.loc[clustered_var_order, clustered_var_order]
-
-# Validation after clustering
-print(f"\n5. Post-clustering validation...")
-assert df_r_clustered.shape == (28, 28), "Shape changed after clustering"
-print(f"   ✓ Shape preserved (28×28)")
-
-# Check row order == column order
-assert list(df_r_clustered.index) == list(df_r_clustered.columns), \
-    "Row and column order must match"
-print(f"   ✓ Clustered row order == clustered column order")
-
-# Check symmetry preserved
-assert np.allclose(df_r_clustered.values, df_r_clustered.values.T, rtol=1e-10), \
-    "Symmetry lost after clustering"
-print(f"   ✓ Matrix remains symmetric after reordering")
-
-# Check diagonal still 1.0
-diagonal_clustered = np.diag(df_r_clustered.values)
-assert np.allclose(diagonal_clustered, 1.0, rtol=1e-5), "Diagonal changed"
-print(f"   ✓ Diagonal remains 1.0")
-
-# Check values unchanged (just reordered)
-original_values_sorted = np.sort(df_r.values.flatten())
-clustered_values_sorted = np.sort(df_r_clustered.values.flatten())
-assert np.allclose(original_values_sorted, clustered_values_sorted, rtol=1e-10), \
-    "Values changed during clustering"
-print(f"   ✓ All r values identical to original (only reordered)")
-
-# Create display labels in clustered order
-clustered_display_labels = [display_labels_dict[var] for var in clustered_var_order]
-
-print(f"\n6. Creating clustered heatmap with dendrogram...")
-
-# Set up figure with dendrogram and heatmap
+# ---------------------------------------------------------------------------
+# 5. Figure (original layout)
+# ---------------------------------------------------------------------------
+print("\n4. Creating clustered heatmap with dendrogram...")
 fig = plt.figure(figsize=(14, 13))
-
-# Create grid: dendrogram on left, heatmap on right
 gs = fig.add_gridspec(1, 2, width_ratios=[0.6, 5], wspace=0.08)
 
-# Panel a: Dendrogram
 ax_dend = fig.add_subplot(gs[0, 0])
-
-# Keep the original linkage matrix for clustering/order.
-# Create a copy only for dendrogram visualization.
 linkage_plot = linkage_matrix.copy()
-
-# Square-root transform expands very small linkage distances
-# while preserving their ordering.
-linkage_plot[:, 2] = np.power(linkage_plot[:, 2], 0.35)
-
-# Plot dendrogram
-dend_plot = dendrogram(
-    linkage_plot, 
-    orientation='left',
-    ax=ax_dend,
-    color_threshold=0,
-    above_threshold_color='black',
-    no_labels=True
-)
-
-# Make dendrogram branches more visible
+linkage_plot[:, 2] = np.power(linkage_plot[:, 2], 0.35)  # display-only branch stretch (as original)
+dendrogram(linkage_plot, orientation='left', ax=ax_dend, color_threshold=0,
+           above_threshold_color='black', no_labels=True)
 for line in ax_dend.get_lines():
     line.set_linewidth(1.3)
-
 for collection in ax_dend.collections:
     collection.set_linewidth(1.3)
-    
+# Leaf k is drawn at y = 10k + 5; invert and extend so the 16 leaves align with
+# heatmap rows 0..15 and the sparse block (rows 16..27) has no branches.
+ax_dend.set_ylim(10 * n_vars, 0)
 ax_dend.set_xticks([])
 ax_dend.set_yticks([])
 for spine in ax_dend.spines.values():
     spine.set_visible(False)
-ax_dend.set_ylabel('')
-ax_dend.set_xlabel('')
+ax_dend.text(0.5, 10 * (n_valid + len(sparse) / 2), 'Sparse criteria\n(not clustered)',
+             transform=ax_dend.get_yaxis_transform(), ha='center', va='center',
+             fontsize=8, style='italic', color=NE_TEXT_COLOR)
 
-# Panel b: Heatmap
 ax_heat = fig.add_subplot(gs[0, 1])
+cmap = LinearSegmentedColormap.from_list("pearson_custom", PALETTE, N=256)
+norm = Normalize(vmin=VMIN, vmax=VMAX)
+# Background layer: neutral gray for NE cells (outside the Pearson colour scale)
+ax_heat.imshow(np.ones((n_vars, n_vars, 3)) * np.array(matplotlib.colors.to_rgb(NE_COLOR)),
+               aspect='auto', interpolation='nearest')
+im = ax_heat.imshow(np.ma.masked_invalid(r_plot), cmap=cmap, norm=norm,
+                    aspect='auto', interpolation='nearest')
 
-# Create masked array for NAs (shouldn't occur)
-r_array_clustered = df_r_clustered.values.astype(float)
-r_masked = np.ma.masked_where(np.isnan(r_array_clustered), r_array_clustered)
-
-# Use custom blue-centered diverging colormap
-cmap = LinearSegmentedColormap.from_list(
-    "pearson_custom",
-    [
-        "#E3F2FD",  #  0
-        "#90CAF9",  # +0.5
-        "#0D47A1"   # +1
-    ],
-    N=256
-)
-
-# Create heatmap
-im = ax_heat.imshow(r_masked, cmap=cmap, aspect='auto', 
-                    vmin=0, vmax=1, interpolation='nearest')
-
-# Add colorbar
 cbar = plt.colorbar(im, ax=ax_heat, fraction=0.046, pad=0.04, aspect=20)
 cbar.set_label('Pearson r', rotation=270, labelpad=20, fontsize=11)
 cbar.ax.tick_params(labelsize=9)
 
-# Set ticks and labels
-ax_heat.set_xticks(np.arange(len(clustered_display_labels)))
-ax_heat.set_yticks(np.arange(len(clustered_display_labels)))
-ax_heat.set_xticklabels(clustered_display_labels, rotation=90, ha='center', fontsize=8)
-ax_heat.set_yticklabels(clustered_display_labels, fontsize=8)
+ax_heat.set_xticks(np.arange(n_vars))
+ax_heat.set_yticks(np.arange(n_vars))
+ax_heat.set_xticklabels(display_labels, rotation=90, ha='center', fontsize=8)
+ax_heat.set_yticklabels(display_labels, fontsize=8)
 ax_heat.tick_params(axis='y', which='major', pad=2)
+for tick in ax_heat.get_xticklabels() + ax_heat.get_yticklabels():
+    if tick.get_text() in sparse:
+        tick.set_color(NE_TEXT_COLOR)
+        tick.set_style('italic')
 
-# Add Pearson r values and EXISTING FDR significance markers
-print(f"   Adding Pearson r values and EXISTING FDR significance markers...")
-n_markers = 0
-
-for i in range(len(clustered_var_order)):
-    for j in range(len(clustered_var_order)):
-        # Skip diagonal (self-correlations)
+n_markers = {FAMILY_A: 0, FAMILY_B: 0}
+n_ne = 0
+for i, v1 in enumerate(VARIABLE_ORDER):
+    for j, v2 in enumerate(VARIABLE_ORDER):
         if i == j:
             continue
-        
-        var1 = clustered_var_order[i]
-        var2 = clustered_var_order[j]
-        r = df_r_clustered.loc[var1, var2]
-        fdr_val = df_fdr_clustered.loc[var1, var2]
-        
-        # Skip if NA
-        if pd.isna(r):
+        text = display.iloc[i, j]
+        if text == 'NE':
+            n_ne += 1
+            ax_heat.text(j, i, 'NE', ha='center', va='center', fontsize=6, color=NE_TEXT_COLOR)
             continue
-        
-        # Avoid displaying "-0.00"
-        r_display = 0.0 if abs(r) < 0.005 else r
-        
-        # Display Pearson r with two decimals
-        text = f'{r_display:.2f}'
-        
-        # Add marker if EXISTING global FDR significant
-        if not pd.isna(fdr_val) and fdr_val < 0.05:
-            text += '*'
-            n_markers += 1
-        
-        # Choose text color based on background
-        text_color = 'white' if abs(r) > 0.5 else 'black'
-        
-        ax_heat.text(j, i, text, ha='center', va='center',
-                    fontsize=6, color=text_color, fontweight='normal')
+        r = r_plot[i, j]
+        if text.endswith('*') and i < j:
+            n_markers[fam_lookup[frozenset((v1, v2))]] += 1
+        ax_heat.text(j, i, text, ha='center', va='center', fontsize=6,
+                     color='white' if abs(r) > 0.5 else 'black', fontweight='normal')
 
-print(f"   Significance markers added: {n_markers}")
+for pos in [n_valid - 0.5]:
+    ax_heat.axhline(pos, color=DIVIDER_COLOR, linewidth=1.0)
+    ax_heat.axvline(pos, color=DIVIDER_COLOR, linewidth=1.0)
 
-# Add footnotes
-fig.text(0.5, 0.02, 
-         '* FDR q < 0.05 (Benjamini–Hochberg correction, global pairwise analysis)\n' +
-         'PP5, BP3, and BP6 were omitted because of zero variance.',
-         ha='center', fontsize=9, style='italic')
-
-# Adjust layout
-plt.tight_layout(rect=[0, 0.04, 1, 1])
-
-# Save outputs
-print(f"\n7. Saving outputs...")
+plt.tight_layout(rect=[0, 0.085, 1, 1])
 
 pdf_path = output_dir / 'Figure5_clustered_pairwise_pearson_heatmap.pdf'
 png_path = output_dir / 'Figure5_clustered_pairwise_pearson_heatmap.png'
-
 plt.savefig(pdf_path, dpi=300, bbox_inches='tight')
-
-print(f"   ✓ PDF: {pdf_path}")
-
+plt.savefig(png_path, dpi=300, bbox_inches='tight')
 plt.close()
 
-# Print clustered variable order
-print("\n" + "=" * 80)
-print("FINAL CLUSTERED VARIABLE ORDER")
-print("=" * 80)
-print("\nVariables ordered by hierarchical clustering (average linkage, distance = 1 - r):")
-for i, var in enumerate(clustered_var_order, 1):
-    display_label = display_labels_dict[var]
-    if var != display_label:
-        print(f"{i:2d}. {var:<30} ({display_label})")
-    else:
-        print(f"{i:2d}. {var}")
+# ---------------------------------------------------------------------------
+# 6. Post-plot validation
+# ---------------------------------------------------------------------------
+n_sparse_pairs = n_vars * (n_vars - 1) - n_valid * (n_valid - 1)
+assert n_ne == n_sparse_pairs, (n_ne, n_sparse_pairs)
+for fam in [FAMILY_A, FAMILY_B]:
+    expected = int(long.loc[long['FDR_family'] == fam, 'FDR_significant'].sum())
+    assert n_markers[fam] == expected, (fam, n_markers[fam], expected)
+pos_of = {v: k for k, v in enumerate(VARIABLE_ORDER)}
+for fam, sub in long.groupby('FDR_family'):
+    q_check = multipletests(sub['P_value'], method='fdr_bh')[1]
+    for row, q in zip(sub.itertuples(), q_check):
+        i, j = pos_of[row.Variable_1], pos_of[row.Variable_2]
+        for cell in (display.iloc[i, j], display.iloc[j, i]):
+            assert cell == f"{row.Pearson_r:.2f}" + ('*' if q < ALPHA else ''), (row.Variable_1, row.Variable_2)
+for s in sparse:
+    k = pos_of[s]
+    assert set(display.iloc[k, :]) <= {'NE', ''} and set(display.iloc[:, k]) <= {'NE', ''}
 
-# Summary
-print("\n" + "=" * 80)
-print("CLUSTERED PAIRWISE PEARSON HEATMAP COMPLETE")
-print("=" * 80)
-
-print(f"\nDimensions: {len(clustered_var_order)} × {len(clustered_var_order)}")
-print(f"  - Criteria: {len(CRITERIA_DISPLAY)}")
-print(f"  - Aggregates: {len(AGGREGATES)}")
-print(f"  - Omitted zero-variance: {', '.join(ZERO_VAR_CRITERIA)}")
-
-print(f"\nClustering:")
-print(f"  - Method: Hierarchical (average linkage)")
-print(f"  - Distance: 1 - Pearson r")
-print(f"  - Effect: Display order only (statistics unchanged)")
-
-print(f"\nSignificance markers: {n_markers} (from EXISTING global FDR analysis)")
-
-print(f"\nOutput files:")
-print(f"  ✓ {pdf_path}")
-
-print(f"\nVisualization notes:")
-print(f"  - Symmetric 28×28 matrix with dendrogram")
-print(f"  - Same clustered order on both axes")
-print(f"  - Correlation scale: -1 to +1, centered at 0")
-print(f"  - Custom blue-centered diverging colormap")
-print(f"  - Pearson r values in cells (2 decimals)")
-print(f"  - Uses EXISTING global FDR q-values (NOT recalculated)")
-
-print("\n" + "=" * 80)
-print("No existing files were modified.")
-print("Clustering changed only display order, not statistics.")
+print(f"   Dimensions: {n_vars} x {n_vars} ({n_valid} clustered + {len(sparse)} sparse)")
+print(f"   Significance markers (unique pairs): family A {n_markers[FAMILY_A]}/{EXPECTED_N[FAMILY_A]}, "
+      f"family B {n_markers[FAMILY_B]}/{EXPECTED_N[FAMILY_B]}")
+print("   ✓ Every plotted marker agrees with BH-FDR recomputed within its family")
+print(f"   NE cells (off-diagonal): {n_ne}")
+print(f"   ✓ PDF: {pdf_path}")
+print(f"   ✓ PNG: {png_path}")
+print(f"   ✓ Display-only matrix: {output_dir / 'figure5_display_matrix.csv'}")
+print("\nDisplay order:")
+for i, lab in enumerate(display_labels, 1):
+    print(f"   {i:2d}. {lab}{'  (sparse, NE)' if VARIABLE_ORDER[i - 1] in sparse else ''}")
 print("=" * 80)

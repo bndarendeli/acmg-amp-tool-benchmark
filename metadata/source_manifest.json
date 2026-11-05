@@ -241,14 +241,14 @@
     "source": "fig5/build_correlation_master_table.py",
     "path": "analysis/fig5/build_correlation_master_table.py",
     "source_sha256": "bc5adc655a7d3463d925b9c5f392e633ca0be4b390fdf3c442ff57fef2b6997b",
-    "sha256": "fcc0e93bbf7f518513ea624a67d04d746d83f2dc9f6cb45886ebffcef6cd4306",
+    "sha256": "3d4627b16ce0903d6f5eecf4b16b97741d20de12d82bf932ea33348a14e767db",
     "status": "repository_paths_or_documentation"
   },
   {
     "source": "fig5/calculate_pairwise_pearson_correlations.py",
     "path": "analysis/fig5/calculate_pairwise_pearson_correlations.py",
     "source_sha256": "962f09cfe3f9bc518ac689dbfa2c7e12c1c8218b72d785e681ecf03d1e91b931",
-    "sha256": "49173f9bb9b21a74448de66765bbdf33bcf7dd4697cbedc4a770bf64b54d715e",
+    "sha256": "6deb45c39a060d012748f51e3c503c94bf9b0ca08617dc4af7a8da3f7df7f932",
     "status": "repository_paths_or_documentation"
   },
   {
@@ -262,28 +262,28 @@
     "source": "fig5/Figure5_clustered_pairwise_pearson_heatmap.pdf",
     "path": "analysis/fig5/Figure5_clustered_pairwise_pearson_heatmap.pdf",
     "source_sha256": "1d932922f94d18d25176ff762d565c44733cdffe9a89b56134ca701516b86c74",
-    "sha256": "c231a75b49979d133415242450feb1b7a229e27b43d26c26997af705ceb77efa",
+    "sha256": "7c8d05fd5f5f2260f5488f741927572e41a40de0ef53df7abe9401d19606e077",
     "status": "regenerated_repository_output"
   },
   {
     "source": "fig5/pearson_fdr_matrix.csv",
     "path": "analysis/fig5/pearson_fdr_matrix.csv",
     "source_sha256": "105e1384f32190cfc5535bf0225f97feb9b498bade4570ddddca2454b8659a1c",
-    "sha256": "105e1384f32190cfc5535bf0225f97feb9b498bade4570ddddca2454b8659a1c",
+    "sha256": "ac4cd25889b6e2b6e5bf4e62d4ec160d9120bd80bab4009edee63b10cdab5ffb",
     "status": "copied_unchanged"
   },
   {
     "source": "fig5/pearson_r_matrix.csv",
     "path": "analysis/fig5/pearson_r_matrix.csv",
     "source_sha256": "f9558a7562660fb97dfc5d7e22c21a8ab66ac9a89b4c39ea87bc7b043743ad5a",
-    "sha256": "f9558a7562660fb97dfc5d7e22c21a8ab66ac9a89b4c39ea87bc7b043743ad5a",
+    "sha256": "1ddf8a04b6018a218425246901befd7c246ad239e37c25ab7087518cd5efa284",
     "status": "copied_unchanged"
   },
   {
     "source": "fig5/plot_clustered_pairwise_pearson_heatmap.py",
     "path": "analysis/fig5/plot_clustered_pairwise_pearson_heatmap.py",
     "source_sha256": "550353ac489b30f056d55886188993793e8af52dd4df5c2e3d10430d5c9daed3",
-    "sha256": "fe77261cb3be09712db72b9a1cae5a0723ac64284f0f59a10e41b0ad4f35466b",
+    "sha256": "d49a6eb61abb5641d8ebceebbd876d389f7899269cd7f81e380f36a6b0aee43d",
     "status": "repository_paths_or_documentation"
   },
   {
@@ -295,16 +295,16 @@
   },
   {
     "source": "fig6/generate_supplementary_figure_s4.py",
-    "path": "analysis/fig6/generate_supplementary_figure_s3.py",
-    "source_sha256": "dbd3cda62e60994a0ec0c69a05c11d37721642affa6742016dac5d6696f9daa1",
-    "sha256": "9cebc84809d6bd629e93f1921be3c81f343ff0e73bd38a040b8cf282870c8f3a",
-    "status": "repository_paths_or_documentation"
+    "path": "analysis/fig6/generate_supplementary_figure_s4.py",
+    "source_sha256": "d18ebfe212189e3bac0010dd48134d50d1a0647a67b875ce520daaaac8d53168",
+    "sha256": "d18ebfe212189e3bac0010dd48134d50d1a0647a67b875ce520daaaac8d53168",
+    "status": "user_updated"
   },
   {
     "source": "fig6/README.md",
     "path": "analysis/fig6/README.md",
     "source_sha256": "a7bcc423a4891837ee641424f5526dae9915e4f0e28d7266ae23a4045d1086df",
-    "sha256": "13cd767687a9be87edc6eb8aca9f5fa181517febf82f17cf9f56bfb446195d17",
+    "sha256": "8bc461dc220f8f0d64f9a890aeb4d8350ec2cd553a4b7834a62da13d15522d1f",
     "status": "repository_paths_or_documentation"
   },
   {
@@ -350,11 +350,11 @@
     "status": "copied_unchanged"
   },
   {
-    "source": "fig6/outputs/foxl2_supplementary/Supplementary_Figure_S3.pdf",
-    "path": "analysis/fig6/outputs/foxl2_supplementary/Supplementary_Figure_S3.pdf",
+    "source": "fig6/outputs/foxl2_supplementary/Supplementary_Figure_S4.pdf",
+    "path": "analysis/fig6/outputs/foxl2_supplementary/Supplementary_Figure_S4.pdf",
     "source_sha256": "58ca12492ae684629f832e40e4be2318ccd3bccf8e588b8366725a8a8eaca5f7",
     "sha256": "58ca12492ae684629f832e40e4be2318ccd3bccf8e588b8366725a8a8eaca5f7",
-    "status": "copied_unchanged"
+    "status": "user_updated"
   },
   {
     "source": "Current repository analysis, reduced to the selected Jaccard table",
