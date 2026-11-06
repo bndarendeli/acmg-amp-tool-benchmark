@@ -6,7 +6,7 @@ Two-panel design for both ClinGen and FOXL2:
 - Panel a: Criterion assignment counts (tools + Ground truth column)
 - Panel b: Criterion-level Jaccard similarity
 
-Uses corrected pipeline with proper missing-reference handling.
+Handles missing reference annotations explicitly.
 """
 
 import matplotlib.pyplot as plt
@@ -38,7 +38,7 @@ JACCARD_FOXL2 = script_dir / 'jaccard_per_criterion_foxl2.csv'
 output_dir = script_dir / 'figures'
 output_dir.mkdir(parents=True, exist_ok=True)
 
-# Selected ACMG/AMP criteria (from original Figure 3 design)
+# Selected ACMG/AMP criteria
 # Organized by category
 CATEGORIES = {
     'Population': ['BA1', 'BS1', 'BS2', 'PM2', 'PS4'],
@@ -256,11 +256,11 @@ def create_figure_for_dataset(dataset_name, count_matrix, ground_truth_counts,
     # Panel b: Jaccard similarity
     ax_b = fig.add_subplot(gs[1])
     
-    # Plot Jaccard heatmap (original RdBu_r color scale - keep as original)
+    # Plot Jaccard heatmap using the RdBu_r color scale
     sns.heatmap(
         jaccard_matrix,
         ax=ax_b,
-        cmap='RdBu_r',  # Original red-blue color scale
+        cmap='RdBu_r',  # Red-blue color scale
         vmin=0,
         vmax=1,
         cbar=True,

@@ -1,0 +1,30 @@
+{
+  "date": "2026-11-06",
+  "scope": "Figure 5 only; no new full-pipeline run",
+  "environment": "Ubuntu WSL, existing acmg-benchmarking Conda environment",
+  "python": "3.9.23",
+  "packages": {
+    "numpy": "2.0.2",
+    "pandas": "2.3.1",
+    "scipy": "1.13.1",
+    "matplotlib": "3.9.4",
+    "statsmodels": "0.14.5"
+  },
+  "completed_steps": [
+    "build_correlation_master_table.py",
+    "calculate_pairwise_pearson_correlations.py",
+    "compare_criterion_assignment_counts_with_jaccard.py",
+    "plot_clustered_pairwise_pearson_heatmap.py"
+  ],
+  "all_saved_fig5_csvs_match": true,
+  "comparison_tolerance": {
+    "rtol": 1e-12,
+    "atol": 1e-12
+  },
+  "matrix_dimension": 18,
+  "criterion_count": 15,
+  "aggregate_count": 3,
+  "family_A_tests": 105,
+  "family_B_tests": 48,
+  "repository_validation": "PASS: 32 inputs, 43 Python files, ClinGen 11409 and FOXL2 288"
+}

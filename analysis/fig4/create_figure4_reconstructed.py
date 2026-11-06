@@ -3,7 +3,6 @@
 Figure 4: Classification Performance - DOT PLOT DESIGN
 1x2 Multi-Panel Layout with Horizontal Multi-Marker Dot Plots
 
-UPDATED: 2026-09-21
 Uses reconstructed metrics with 3-class Accuracy (NOT Weighted F1)
 
 Design:

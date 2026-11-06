@@ -3,7 +3,6 @@
 Figure 4 Supplementary: Classification Performance with Precision/Recall - DOT PLOT DESIGN
 1x2 Multi-Panel Layout with Horizontal Multi-Marker Dot Plots + Precision/Recall Values
 
-UPDATED: 2026-09-26
 Uses reconstructed metrics with 3-class Accuracy (NOT Weighted F1)
 ADDS: Precision and Recall values displayed for each tool
 

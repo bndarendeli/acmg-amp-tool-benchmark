@@ -3,7 +3,7 @@
 FOXL2 Capability-Adjusted Evidence Analysis
 
 Performs capability-adjusted evidence concordance analysis for FOXL2 dataset
-using the same methodology as the corrected ClinGen analysis.
+using the same methodology as the ClinGen analysis.
 """
 
 import pandas as pd
@@ -278,7 +278,7 @@ def main():
     print("FOXL2 CAPABILITY-ADJUSTED ANALYSIS")
     print("="*80)
     print()
-    print("Using same methodology as corrected ClinGen analysis")
+    print("Using the ClinGen analysis methodology")
     print()
     
     # Load data

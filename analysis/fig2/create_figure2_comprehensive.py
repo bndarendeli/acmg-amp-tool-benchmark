@@ -38,8 +38,8 @@ print(f"   ClinGen variants: {total_clingen:,}")
 # ==============================================================================
 print("\n2. Loading Panel A: Call Rate Spectrum from CSV...")
 
-# Load corrected call rates from CSV
-call_rates_csv = Path(__file__).resolve().parent / 'corrected_call_rates.csv'
+# Load call rates from CSV
+call_rates_csv = Path(__file__).resolve().parent / 'call_rates.csv'
 call_rates_df = pd.read_csv(call_rates_csv)
 
 # Pivot to get tools x datasets
@@ -170,7 +170,7 @@ bar_height = 0.35
 spacing = 0.05
 y_positions = np.arange(n_tools)
 
-# Dataset colors (matching original)
+# Dataset colors
 colors = {
     'ClinGen': '#2E5090',
     'FOXL2': '#C4515C'

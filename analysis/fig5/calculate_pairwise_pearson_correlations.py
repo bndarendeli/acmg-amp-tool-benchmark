@@ -15,7 +15,7 @@ Analysis design
 2. Primary eligibility rule (exploratory, not a prespecified or established cutoff):
    strictly positive Jaccard in >= 5 of the 14 tool instances and nonzero variance.
    All 14 observations (including zeros) are kept for every eligible criterion.
-   The 3/14 and 7/14 thresholds are retained as sensitivity analyses.
+   The 3/14, 4/14 and 7/14 thresholds are evaluated in sensitivity analyses.
 3. Two Benjamini-Hochberg FDR families:
    Family A - all unique criterion-criterion pairs among eligible criteria.
    Family B - eligible criterion x aggregate pairs plus the three
@@ -25,7 +25,7 @@ Analysis design
    minimum positive-Jaccard thresholds (3, 4, 5, 7 of 14), leave-one-tool-instance-out
    and one-representative-per-related-tool-family subsets (for the 5/14 primary and the
    7/14 comparison eligibility sets; files tagged `_min5of14` / `_min7of14`), and a reference reproduction
-   of the original zero-variance-only (378-test) analysis.
+   of the zero-variance-only (378-test) sensitivity analysis.
 
 Pearson p-values assume independent, bivariate-normal observations; with 14
 partly related tool instances and zero-inflated variables they are descriptive.
@@ -70,7 +70,7 @@ AGGREGATES = ['Mean_Criterion_Jaccard', 'Total_Criterion_Jaccard', 'Accuracy_3cl
 AGGREGATE_LABELS = {'Mean_Criterion_Jaccard': 'MJ', 'Total_Criterion_Jaccard': 'TJ',
                     'Accuracy_3class': '3CA'}
 
-PRIMARY_MIN_POSITIVE = 5   # exploratory threshold; 3/14 and 7/14 retained as sensitivity analyses
+PRIMARY_MIN_POSITIVE = 5   # exploratory threshold; 3/14 and 7/14 evaluated in sensitivity analyses
 SENSITIVITY_THRESHOLDS = [3, 4, 5, 7]
 ROBUSTNESS_THRESHOLDS = [PRIMARY_MIN_POSITIVE, 7]   # leave-one-out / tool-family analyses
 ALPHA = 0.05
@@ -311,35 +311,35 @@ q_matrix.to_csv(output_dir / 'pearson_fdr_matrix.csv')
 fam_matrix.to_csv(output_dir / 'pearson_fdr_family_matrix.csv')
 
 # ---------------------------------------------------------------------------
-# 4. Reference: original zero-variance-only analysis (378 tests, one family)
+# 4. Sensitivity: zero-variance-only analysis (378 tests, one family)
 # ---------------------------------------------------------------------------
-print("\n4. Reference reproduction of original analysis (zero-variance exclusion only)...")
+print("\n4. Sensitivity analysis (zero-variance exclusion only)...")
 nonzero_var = [c for c in CRITERIA_ORDER if data[c].std() > 0]
-legacy_vars = nonzero_var + AGGREGATES
-legacy = []
-for v1, v2 in itertools.combinations(legacy_vars, 2):
+nonzero_variance_sensitivity_vars = nonzero_var + AGGREGATES
+nonzero_variance_sensitivity = []
+for v1, v2 in itertools.combinations(nonzero_variance_sensitivity_vars, 2):
     r, p = pearson(data[v1], data[v2])
-    legacy.append({'Variable_1': v1, 'Variable_2': v2, 'Pair_type': pair_type(v1, v2),
-                   'FDR_family': 'legacy_single_family_all_pairs', 'n': n_obs,
+    nonzero_variance_sensitivity.append({'Variable_1': v1, 'Variable_2': v2, 'Pair_type': pair_type(v1, v2),
+                   'FDR_family': 'nonzero_variance_sensitivity_single_family_all_pairs', 'n': n_obs,
                    'Pearson_r': r, 'P_value': p})
-legacy = apply_bh(pd.DataFrame(legacy))
-legacy.insert(0, 'Analysis', 'legacy_zero_variance_exclusion_only')
-assert len(legacy) == 378
-legacy.to_csv(sens_dir / 'legacy_zero_variance_only_pairwise_long.csv', index=False)
-print(f"   378 tests; q < {ALPHA}: {int(legacy['FDR_significant'].sum())}")
+nonzero_variance_sensitivity = apply_bh(pd.DataFrame(nonzero_variance_sensitivity))
+nonzero_variance_sensitivity.insert(0, 'Analysis', 'nonzero_variance_sensitivity_zero_variance_exclusion_only')
+assert len(nonzero_variance_sensitivity) == 378
+nonzero_variance_sensitivity.to_csv(sens_dir / 'sensitivity_nonzero_variance_pairwise_long.csv', index=False)
+print(f"   378 tests; q < {ALPHA}: {int(nonzero_variance_sensitivity['FDR_significant'].sum())}")
 
 # ---------------------------------------------------------------------------
 # 5. Sensitivity: minimum positive-Jaccard thresholds
 # ---------------------------------------------------------------------------
 print("\n5. Threshold sensitivity analysis...")
-legacy_cc = legacy[(legacy.Pair_type == 'criterion-criterion') & legacy.FDR_significant]
-legacy_top = legacy_cc.reindex(legacy_cc['Pearson_r'].abs().sort_values(ascending=False).index).head(10)
+nonzero_variance_sensitivity_cc = nonzero_variance_sensitivity[(nonzero_variance_sensitivity.Pair_type == 'criterion-criterion') & nonzero_variance_sensitivity.FDR_significant]
+nonzero_variance_sensitivity_top = nonzero_variance_sensitivity_cc.reindex(nonzero_variance_sensitivity_cc['Pearson_r'].abs().sort_values(ascending=False).index).head(10)
 def top_sig(res, k=5):
     a = res[(res.FDR_family == FAMILY_A) & res.FDR_significant]
     return a.reindex(a['Pearson_r'].abs().sort_values(ascending=False).index).head(k)
 
 
-major_sources = [('legacy_top10_abs_r_FDR_sig', legacy_top)]
+major_sources = [('nonzero_variance_sensitivity_top10_abs_r_FDR_sig', nonzero_variance_sensitivity_top)]
 for t in sorted(set(ROBUSTNESS_THRESHOLDS), reverse=True):
     res_t = primary if t == PRIMARY_MIN_POSITIVE else correlate(data, eligible_criteria(data, CRITERIA_ORDER, t))
     major_sources.append((f'min{t}of{n_obs}{"_primary" if t == PRIMARY_MIN_POSITIVE else ""}'
@@ -393,7 +393,7 @@ print(thr_summary[['Min_positive_jaccard', 'N_eligible_criteria', 'N_family_A_pa
 
 # ---------------------------------------------------------------------------
 # 6-7. Robustness: leave-one-out and tool-instance dependence
-#      Run for the primary threshold and for every retained comparison threshold;
+#      Run for the primary threshold and for each comparison threshold;
 #      outputs carry an explicit `_min{k}of14` tag.
 # ---------------------------------------------------------------------------
 print("\n6-7. Robustness analyses (leave-one-out; tool-instance dependence)...")
@@ -586,7 +586,7 @@ lines = ['# Figure 5 correlation analysis summary', '',
          f'- Primary eligibility: strictly positive criterion-level Jaccard in >= {PRIMARY_MIN_POSITIVE}/{n_obs} '
          'instances and nonzero variance; all 14 observations (including zeros) retained. '
          'This is an exploratory threshold (not an established or prospectively prespecified cutoff); '
-         '3/14 and 7/14 results are retained as sensitivity analyses.',
+         '3/14 and 7/14 results are evaluated in sensitivity analyses.',
          '- Zero criterion-level Jaccard = no overlap with the reference for that criterion; it does not imply '
          'that the tool never assigned it (see `criterion_assignment_vs_jaccard_*.csv`).',
          f'- Included criteria ({len(eligible)}): {", ".join(eligible)}',
@@ -596,17 +596,17 @@ lines = ['# Figure 5 correlation analysis summary', '',
          f'- FDR family B ({FAMILY_B}): {n_b} tests = {len(eligible) * 3} criterion-aggregate + 3 aggregate-aggregate, BH within family.',
          '- MJ, TJ and 3CA are used exactly as supplied (not recomputed after filtering).', '',
          '## Significant correlations (BH q < 0.05)']
-leg_by_type = legacy.groupby('Pair_type')['FDR_significant'].agg(['size', 'sum'])
-lines.append(f"- Before (original single family, 378 tests): {int(legacy.FDR_significant.sum())} significant "
+leg_by_type = nonzero_variance_sensitivity.groupby('Pair_type')['FDR_significant'].agg(['size', 'sum'])
+lines.append(f"- Nonzero-variance sensitivity analysis (single FDR family, 378 tests): {int(nonzero_variance_sensitivity.FDR_significant.sum())} significant "
              f"(criterion-criterion {int(leg_by_type.loc['criterion-criterion', 'sum'])}/{int(leg_by_type.loc['criterion-criterion', 'size'])}, "
              f"criterion-aggregate {int(leg_by_type.loc['criterion-aggregate', 'sum'])}/{int(leg_by_type.loc['criterion-aggregate', 'size'])}, "
              f"aggregate-aggregate {int(leg_by_type.loc['aggregate-aggregate', 'sum'])}/{int(leg_by_type.loc['aggregate-aggregate', 'size'])}).")
 pa = primary[primary.FDR_family == FAMILY_A]
 pb = primary[primary.FDR_family == FAMILY_B]
-lines.append(f"- After, family A: {int(pa.FDR_significant.sum())}/{n_a} "
+lines.append(f"- Primary analysis, family A: {int(pa.FDR_significant.sum())}/{n_a} "
              f"({int((pa.FDR_significant & (pa.Pearson_r > 0)).sum())} positive, "
              f"{int((pa.FDR_significant & (pa.Pearson_r < 0)).sum())} negative); robust: {int(pa.Robust.sum())}.")
-lines.append(f"- After, family B: {int(pb.FDR_significant.sum())}/{n_b} "
+lines.append(f"- Primary analysis, family B: {int(pb.FDR_significant.sum())}/{n_b} "
              f"(criterion-aggregate {int(pb[pb.Pair_type == 'criterion-aggregate'].FDR_significant.sum())}/{len(eligible) * 3}, "
              f"aggregate-aggregate {int(pb[pb.Pair_type == 'aggregate-aggregate'].FDR_significant.sum())}/3); robust: {int(pb.Robust.sum())}.")
 lines += ['', '## Aggregate-aggregate correlations (family B)']
@@ -627,7 +627,7 @@ lines += ['', '## Threshold sensitivity (family A)', md_table(thr_summary[[
     'Min_positive_jaccard', 'N_eligible_criteria', 'N_family_A_pairs_tested', 'N_family_A_FDR_significant',
     'Highest_positive_pair', 'Highest_positive_r', 'Most_negative_pair', 'Most_negative_r',
     'N_family_B_FDR_significant']]),
-    '', 'Major pairs (legacy top-10 |r| and top-5 |r| FDR-significant pairs at each robustness threshold) '
+    '', 'Major pairs (nonzero-variance sensitivity top-10 |r| and top-5 |r| FDR-significant pairs at each robustness threshold) '
     'by threshold: `sensitivity/sensitivity_threshold_major_pairs.csv`.', '']
 thr_long_df = pd.concat(thr_long, ignore_index=True)
 cons = []
@@ -650,7 +650,7 @@ lines += ['## Consistency of primary pairs across thresholds',
 f7 = robust_results.get(7, {}).get('flagged')
 if f7 is not None and PRIMARY_MIN_POSITIVE != 7:
     a7, b7 = f7[f7.FDR_family == FAMILY_A], f7[f7.FDR_family == FAMILY_B]
-    lines += [f'## Retained 7/{n_obs} comparison analysis',
+    lines += [f'## Sensitivity analysis at 7/{n_obs} comparison analysis',
               f"- Eligible ({len(robust_results[7]['eligible'])}): {', '.join(robust_results[7]['eligible'])}",
               f"- Family A: {int(a7.FDR_significant.sum())}/{len(a7)} q < 0.05; robust {int(a7.Robust.sum())}.",
               f"- Family B: {int(b7.FDR_significant.sum())}/{len(b7)} q < 0.05; robust {int(b7.Robust.sum())}.",

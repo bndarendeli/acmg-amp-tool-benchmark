@@ -162,7 +162,7 @@ def perform_variant_level_analysis(df_master, operational_sets):
     print("\nPerforming variant-level capability-adjusted analysis...")
     
     # Filter to ClinGen, classification-concordant, evidence-evaluable
-    # IMPORTANT: Use SAME filter as original analysis (criterion_jaccard.notna())
+    # Use evidence-evaluable rows (criterion_jaccard.notna())
     # to ensure population consistency
     df_clingen = df_master[df_master['dataset'] == 'clingen_28012026'].copy()
     print(f"  ClinGen predictions: {len(df_clingen):,}")
@@ -171,7 +171,7 @@ def perform_variant_level_analysis(df_master, operational_sets):
     print(f"  Classification-concordant: {len(df_concordant):,}")
     
     # Evidence-evaluable: criterion_jaccard is not NA
-    # This matches the original evidence distribution analysis
+    # Use the evidence distribution analysis filter
     df_evaluable = df_concordant[df_concordant['criterion_jaccard'].notna()].copy()
     print(f"  Evidence-evaluable (criterion_jaccard notna): {len(df_evaluable):,}")
     
@@ -566,7 +566,7 @@ def generate_report(df_summary, df_pooled, df_tool_specific):
     
     # Highlight major criteria
     lines.append("")
-    lines.append("Previously Identified Major Missing Criteria:")
+    lines.append("Major Missing Criteria:")
     lines.append("")
     
     major_criteria = ['PP4', 'PS4', 'PM3', 'BP4', 'PP1']

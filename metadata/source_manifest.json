@@ -1,7 +1,7 @@
 [
   {
-    "source": "fig2/corrected_call_rates.csv",
-    "path": "analysis/fig2/corrected_call_rates.csv",
+    "source": "fig2/call_rates.csv",
+    "path": "analysis/fig2/call_rates.csv",
     "source_sha256": "709d85b838cf4ca331d88a757bbf76ecf08e5e29425f79b7a6e29f070b8904db",
     "sha256": "709d85b838cf4ca331d88a757bbf76ecf08e5e29425f79b7a6e29f070b8904db",
     "status": "copied_unchanged"
@@ -10,7 +10,7 @@
     "source": "fig2/create_figure2_comprehensive.py",
     "path": "analysis/fig2/create_figure2_comprehensive.py",
     "source_sha256": "457306f24e83dd10b4389497f92969d18c425a38c18a5cc847692f37278ffeb7",
-    "sha256": "28246577e8296b9b6c582a3ce9969cd14f1cd70ac3baca1c5e3887d02b63db34",
+    "sha256": "425af59fa8d4b54d4f64f3d6fb667bea537a860d83adbdc60795e87663c4c914",
     "status": "repository_paths_or_documentation"
   },
   {
@@ -38,7 +38,7 @@
     "source": "fig2/recalculate_call_rates.py",
     "path": "analysis/fig2/recalculate_call_rates.py",
     "source_sha256": "6ae133317691688ec1a62de137461d68af6ec957a445abf20823f06e6e73f2b4",
-    "sha256": "12d36d06305158b1c6fc9c524082116a353b9bda855f2ae258d9149d15c1bc73",
+    "sha256": "7dd2799d43989942b67127c5fae153a9708d88db5ae6bfe946bdeaa452838c94",
     "status": "repository_paths_or_documentation"
   },
   {
@@ -164,7 +164,7 @@
     "source": "fig3/create_figure3_criterion_counts_and_jaccard.py",
     "path": "analysis/fig3/create_figure3_criterion_counts_and_jaccard.py",
     "source_sha256": "f17eb57d0303cf215a1cf2ac380d43f3007505fbeee5d09c585e300e4d4f7fc7",
-    "sha256": "c20cb61b6aec7fe9c84da91993d6a8d2803f64347ac1d943eed43c6c350a09f9",
+    "sha256": "48de667bad470b3b6c079f70cc3d0f2c8ba1c1e1153a0252305aa855041158ec",
     "status": "repository_paths_or_documentation"
   },
   {
@@ -192,14 +192,14 @@
     "source": "fig4/create_figure4_reconstructed.py",
     "path": "analysis/fig4/create_figure4_reconstructed.py",
     "source_sha256": "2fe60cfdd468af3341e78f9351482561bfaeefe985ea63de69a33b68b6d66bca",
-    "sha256": "a3e79eb7304e388968c08faa6b84451699edcbe390e7c1fb6c153acfce8a6120",
+    "sha256": "180cbb48d495cb802261476d3a55cd54cc81aa68eae58c28cf82c82f0dafb4aa",
     "status": "repository_paths_or_documentation"
   },
   {
     "source": "fig4/create_figure4_supplementary.py",
     "path": "analysis/fig4/create_figure4_supplementary.py",
     "source_sha256": "40510d67b09987f36b0a9dc148eb9591480a7c312a866efa8b3191d187832a73",
-    "sha256": "75db0af85617b7bbbc65d76a5551c43e61db4522de03cb881ecbc38bab5943db",
+    "sha256": "bf6e4aa36af3f41c042b0d81b7f608061c740586e4917b16c3669e7fab5cae12",
     "status": "repository_paths_or_documentation"
   },
   {
@@ -248,7 +248,7 @@
     "source": "fig5/calculate_pairwise_pearson_correlations.py",
     "path": "analysis/fig5/calculate_pairwise_pearson_correlations.py",
     "source_sha256": "962f09cfe3f9bc518ac689dbfa2c7e12c1c8218b72d785e681ecf03d1e91b931",
-    "sha256": "6deb45c39a060d012748f51e3c503c94bf9b0ca08617dc4af7a8da3f7df7f932",
+    "sha256": "711202b3855cf49cdaeb7e10f4668e1a83abff6486a7fecb742284a5c0069de1",
     "status": "repository_paths_or_documentation"
   },
   {
@@ -262,7 +262,7 @@
     "source": "fig5/Figure5_clustered_pairwise_pearson_heatmap.pdf",
     "path": "analysis/fig5/Figure5_clustered_pairwise_pearson_heatmap.pdf",
     "source_sha256": "1d932922f94d18d25176ff762d565c44733cdffe9a89b56134ca701516b86c74",
-    "sha256": "7c8d05fd5f5f2260f5488f741927572e41a40de0ef53df7abe9401d19606e077",
+    "sha256": "9754f54664c4728ffdcd5b5889de119939b648e4d78aeeb4309ffa4d8bdb5ed3",
     "status": "regenerated_repository_output"
   },
   {
@@ -283,14 +283,14 @@
     "source": "fig5/plot_clustered_pairwise_pearson_heatmap.py",
     "path": "analysis/fig5/plot_clustered_pairwise_pearson_heatmap.py",
     "source_sha256": "550353ac489b30f056d55886188993793e8af52dd4df5c2e3d10430d5c9daed3",
-    "sha256": "d49a6eb61abb5641d8ebceebbd876d389f7899269cd7f81e380f36a6b0aee43d",
+    "sha256": "b7b8c1f11ab0fe6fb0129b4d25a96481dc209028c3606b8d2c138271539003f9",
     "status": "repository_paths_or_documentation"
   },
   {
     "source": "fig6/generate_figure6_five_panel_v3.py",
     "path": "analysis/fig6/generate_figure6.py",
     "source_sha256": "379363e0d9cd842d1f9a065e1387f2cfdf0c98f19bc9262e68bb40f53303629b",
-    "sha256": "491baaf5c8cda02128e109bdd7b426ddee260e036077e71d673265b357069809",
+    "sha256": "2cee03e64c517a6476ed50b8c15ded0cd2a5198f6cc0d1ca15926f40b06ba4b5",
     "status": "repository_paths_or_documentation"
   },
   {
@@ -298,13 +298,13 @@
     "path": "analysis/fig6/generate_supplementary_figure_s4.py",
     "source_sha256": "d18ebfe212189e3bac0010dd48134d50d1a0647a67b875ce520daaaac8d53168",
     "sha256": "d18ebfe212189e3bac0010dd48134d50d1a0647a67b875ce520daaaac8d53168",
-    "status": "user_updated"
+    "status": "repository_artifact"
   },
   {
     "source": "fig6/README.md",
     "path": "analysis/fig6/README.md",
     "source_sha256": "a7bcc423a4891837ee641424f5526dae9915e4f0e28d7266ae23a4045d1086df",
-    "sha256": "8bc461dc220f8f0d64f9a890aeb4d8350ec2cd553a4b7834a62da13d15522d1f",
+    "sha256": "d57c80d0b24bb9b32243358c20f2fd6195223884266ee6fff2ca6c87a9c83646",
     "status": "repository_paths_or_documentation"
   },
   {
@@ -354,7 +354,7 @@
     "path": "analysis/fig6/outputs/foxl2_supplementary/Supplementary_Figure_S4.pdf",
     "source_sha256": "58ca12492ae684629f832e40e4be2318ccd3bccf8e588b8366725a8a8eaca5f7",
     "sha256": "58ca12492ae684629f832e40e4be2318ccd3bccf8e588b8366725a8a8eaca5f7",
-    "status": "user_updated"
+    "status": "repository_artifact"
   },
   {
     "source": "Current repository analysis, reduced to the selected Jaccard table",
@@ -388,14 +388,14 @@
     "source_sha256": "3540cb82034465efd3e38fcaaab1bd68f97efff0ee9315cd1938214aa7cbba76",
     "path": "analysis/fig6/perform_capability_adjusted_analysis.py",
     "status": "copied_and_adapted_for_repository_inputs",
-    "sha256": "8c0836b854b8097f483fb749e22cf3206349083a6a5d99f22cf862137f032c30",
+    "sha256": "03a31ecf83e1974106384ec1a54a9aebb536d4328c1ff264426769300d26b9ca",
     "source": "analysis_last/fig5_archive/perform_capability_adjusted_analysis.py"
   },
   {
     "source_sha256": "cdc64e30e703c7e3dbaf0325c17afe88b23b34067a07cc47c24c95d9e8e1c666",
     "path": "analysis/fig6/perform_foxl2_capability_adjusted_analysis.py",
     "status": "copied_and_adapted_for_repository_inputs",
-    "sha256": "1a7d6febb1815a2192a445feb04f993350b35a90f26b18a08dd0e66d4d7b9aa8",
+    "sha256": "ce3f0d0d000cbb2fcc31b2d99cb4da4a475f445b2ce6a74ca763781d2517d714",
     "source": "analysis_last/fig5_archive/perform_foxl2_capability_adjusted_analysis.py"
   },
   {

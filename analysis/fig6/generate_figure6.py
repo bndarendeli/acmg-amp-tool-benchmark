@@ -1,21 +1,11 @@
 #!/usr/bin/env python3
 """
-Generate Figure 6 - Five-Panel Design (v3)
+Generate Figure 6: five panels showing classification and evidence concordance.
 
-Changes relative to v2:
-1. Larger scatter points in panels A-C.
-2. Panels D-E show the number of operationally supported ACMG/AMP
-   criteria for each tool in "n/28" format.
-3. Capability counts are read directly from:
-       reference/tool_acmg_capabilities.csv
-4. Franklin is shown as "–" because its operational criterion scope
-   was not established with sufficient confidence for the
-   capability-adjusted analysis.
-
-IMPORTANT:
-This is a visualization-only revision.
-No performance metrics, Jaccard values, classification concordance
-values, population filters, or capability-adjusted values are recalculated.
+Panels D-E show operationally supported ACMG/AMP criteria as n/28, using
+reference/tool_acmg_capabilities.csv. Franklin is shown as a dash because
+its operational criterion scope could not be established confidently.
+The plotting script reads supplied performance, Jaccard and capability tables.
 """
 
 import pandas as pd
@@ -1123,7 +1113,7 @@ def generate_five_panel_figure_v3(
 
     pdf_path = (
         output_dir /
-        'Figure6_five_panel_preview_v3.pdf'
+        'Figure6.pdf'
     )
 
 
@@ -1171,7 +1161,7 @@ def generate_report(
         "   ✓ Figure6.png"
     )
     print(
-        "   ✓ Figure6_five_panel_preview_v3.pdf"
+        "   ✓ Figure6.pdf"
     )
 
 

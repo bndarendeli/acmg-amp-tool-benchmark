@@ -4,7 +4,7 @@ The repository includes the selected Figure 6 and Supplementary Figure S4, their
 
 | Figure | Script | Outputs |
 | --- | --- | --- |
-| Figure 6 (selected five-panel v3 design) | `generate_figure6.py` | `outputs/figures/Figure6_five_panel_preview_v3.pdf` |
+| Figure 6 (selected five-panel v3 design) | `generate_figure6.py` | `outputs/figures/Figure6.pdf` |
 | Supplementary Figure S4 (FOXL2) | `generate_supplementary_figure_s4.py` | `outputs/foxl2_supplementary/Supplementary_Figure_S4.pdf` |
 
 Run the complete repository pipeline from the repository root with:
